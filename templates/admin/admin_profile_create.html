@@ -1,0 +1,9 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+<form action="{% url 'admin profile create'%}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button class="btn">Create</button>
+</form>
+{% endblock %}
+

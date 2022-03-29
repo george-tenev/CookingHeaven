@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block page_content %}
+    <header>
+    {% if request.user.is_superuser %}
+        <a href="{% url 'admin profile create'%}">SuperUser Create Profile</a>
+    {% endif %}
+
+    {% for recipe in recipes %}
+        <ul>
+        <li>{{ recipe.name }}</li>
+            {% if recipe.photo %}
+                <li><img src="{{ recipe.photo.url }}" alt="{{ recipe.description }}"></li>
+            {% else %}
+                <li>{{ recipe.description }}</li>
+            {% endif %}
+
+        </ul>
+
+    {% endfor %}
+
+    </header>
+{% endblock %}

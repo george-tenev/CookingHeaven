@@ -1,0 +1,9 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+    <div class="mr-auto">
+    <ul>
+        <li><a href="{% url 'product create' %}">Add product</a></li>
+        <li><a href="{% url 'food type create' %}">Add food type</a></li>
+    </ul>
+    </div>
+{% endblock %}

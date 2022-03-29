@@ -1,0 +1,86 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+    <style>
+        .ingredient-form {
+            border-bottom: 1px solid black;
+        }
+
+        .hidden {
+            display: none
+        }
+    </style>
+
+    <form id="form-container" action="{% url 'recipe create' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <h3>Ingredients</h3>
+        {{ ingredient_formset.management_form }}
+        <div id='ingredient-form-list'>
+            {% for form in ingredient_formset %}
+                <div class='ingredient-form'>
+                    {{ form.as_p }}
+                </div>
+            {% endfor %}
+        </div>
+        <div id='ingredient-empty-form' class='hidden'>{{ ingredient_formset.empty_form.as_p }}</div>
+        <button id='add-ingredient' type='button'>Add ingredient</button>
+
+        <h3>Recipe Step</h3>
+        {{ recipe_step_formset.management_form }}
+        <div id='recipe-step-form-list'>
+            {% for form in recipe_step_formset %}
+                <div class='recipe-step-form'>
+                    {{ form.as_p }}
+                </div>
+            {% endfor %}
+        </div>
+        <div id='recipe-step-empty-form' class='hidden'>{{ recipe_step_formset.empty_form.as_p }}</div>
+        <button id='add-recipe-step' type='button'>Add step</button>
+
+        <button class="btn">Create recipe</button>
+    </form>
+
+    <script>
+        const addIngredientBtn = document.getElementById('add-ingredient')
+        const totalNewIngredientForms = document.getElementById('id_ingredient-form-TOTAL_FORMS')
+        addIngredientBtn.addEventListener('click', add_new_ingredient_form)
+        function add_new_ingredient_form(event) {
+            if (event) {
+                event.preventDefault()
+            }
+            const currentIngredientForms = document.getElementsByClassName('ingredient-form')
+            const currentIngredientFormCount = currentIngredientForms.length // + 1
+            const IngredientFormCopyTarget = document.getElementById('ingredient-form-list')
+            const copyEmptyIngredientFormEl = document.getElementById('ingredient-empty-form').cloneNode(true)
+            copyEmptyIngredientFormEl.setAttribute('class', 'ingredient-form')
+            copyEmptyIngredientFormEl.setAttribute('id', `ingredient-form-${currentIngredientFormCount}`)
+            const regex = new RegExp('__prefix__', 'g')
+            copyEmptyIngredientFormEl.innerHTML = copyEmptyIngredientFormEl.innerHTML.replace(regex, currentIngredientFormCount)
+            totalNewIngredientForms.setAttribute('value', currentIngredientFormCount + 1)
+            // now add new empty form element to our html form
+            IngredientFormCopyTarget.append(copyEmptyIngredientFormEl)
+        }
+    </script>
+    <script>
+        const addRecipeStepBtn = document.getElementById('add-recipe-step')
+        const totalNewRecipeStepForms = document.getElementById('id_recipe-step-form-TOTAL_FORMS')
+        addRecipeStepBtn.addEventListener('click', add_new_recipe_step_form)
+        function add_new_recipe_step_form(event) {
+            if (event) {
+                event.preventDefault()
+            }
+            const currentIngredientForms = document.getElementsByClassName('recipe-step-form')
+            const currentRecipeStepFormCount = currentIngredientForms.length // + 1
+            const recipeStepFormCopyTarget = document.getElementById('recipe-step-form-list')
+            const copyEmptyRecipeStepFormEl = document.getElementById('recipe-step-empty-form').cloneNode(true)
+            copyEmptyRecipeStepFormEl.setAttribute('class', 'recipe-step-form')
+            copyEmptyRecipeStepFormEl.setAttribute('id', `recipe-step-form-${currentRecipeStepFormCount}`)
+            const regex = new RegExp('__prefix__', 'g')
+            copyEmptyRecipeStepFormEl.innerHTML = copyEmptyRecipeStepFormEl.innerHTML.replace(regex, currentRecipeStepFormCount)
+            totalNewRecipeStepForms.setAttribute('value', currentRecipeStepFormCount + 1)
+            // now add new empty form element to our html form
+            recipeStepFormCopyTarget.append(copyEmptyRecipeStepFormEl)
+        }
+    </script>
+
+{% endblock %}

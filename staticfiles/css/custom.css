@@ -1,0 +1,20 @@
+/** ADD YOUR AWESOME CODES HERE **/
+
+.btn-orange {
+    color: #fff;
+    background-color: #C7781C;
+}
+
+.btn-orange:hover {
+    color: #fff;
+    background-color: #CE5310;
+}
+
+.custom-nav{
+    background-color: #aeca4f;
+}
+
+
+.hidden {
+    display: none
+}
