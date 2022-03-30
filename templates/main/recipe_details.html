@@ -1,5 +1,69 @@
 {% extends 'base/base.html' %}
 {% block page_content %}
-    {{ recipe.name }}
+    <section class="py-1 text-secondary fill">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center border-bottom border-2 pb-1">
+                <div class="col-md-6">
+                    <img class="card-img-top mb-5 mb-md-0 rounded-3" src="{{ recipe.photo.url }}"
+                         alt="{{ recipe.description }}"></div>
+                <div class="col-md-6">
+                    <ul class="list-inline ">
+                        <h4 class="d-inline ">Tags: </h4>
+                        {% for food_type in food_types %}
+                            <li class="list-inline-item">{{ food_type }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <h1 class="display-5 fw-bolder">{{ recipe.name }}</h1>
+                    {% if recipe.description %}
+                        <h4 class="display-5, fw-bolder">Recipe description</h4>
+                        <p class="display-6"> {{ recipe.description }}</p>
+                    {% endif %}
+
+                    <div class="d-flex">
+                        <h5>Likes: {{ recipe.likes.count }}</h5>
+{#                        {% if  not request.user == pet_photo.user %}#}
+
+{#                        {% endif %}#}
+                    </div>
+                    <a class="btn btn-orange" role="button" href="{% url 'recipe like' recipe.pk %}">
+                        Like
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="row gx-lg-5 align-items-center pt-1">
+                <div class="col-md-6 bg-custom-green card">
+                    <div class="card-body text-white">
+                        <h4>Ingredients</h4>
+                        <ul class="list-group-flush">
+                            {% for ingredient in ingredients %}
+                                <li class="list-group-item bg-custom-green text-white">
+                                    {{ ingredient.name }} {{ ingredient.amount }} {{ ingredient.unit.name }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <table class="table">
+                        <thead class="text-secondary">
+                        <tr>
+                            <th scope="col">Steps</th>
+                        </tr>
+                        <tbody class="text-secondary">
+                        {% for step in recipe_steps %}
+                            <tr>
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td>{{ step.description }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

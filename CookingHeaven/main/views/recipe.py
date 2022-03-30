@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.views import generic as views
 
 from CookingHeaven.main.forms import RecipeCreateForm, IngredientFormset, RecipeStepFormset, RecipeUpdateForm
-from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep
+from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep, FoodType
 
 
 class RecipeCreateView(LoginRequiredMixin, views.CreateView):
@@ -123,12 +123,13 @@ class RecipeUpdateView(LoginRequiredMixin, views.UpdateView):
         if form.is_valid() and all(fset.is_valid() for fset in formsets):
             form.save()
             for formset in formsets:
-                formset.save(commit=False)
-                for obj in formset.deleted_objects:
-                    obj.delete()
-                formset.recipe_id = recipe.pk
-                formset.save()
-                return redirect(reverse_lazy('home'))
+                objects = formset.save(commit=False)
+                for del_obj in formset.deleted_objects:
+                    del_obj.delete()
+                for obj in objects:
+                    obj.recipe_id = recipe.pk
+                    obj.save()
+            return redirect(reverse_lazy('home'))
 
         context = self.get_context_data(**kwargs)
         context.update(
@@ -157,5 +158,29 @@ class RecipeDeleteView(LoginRequiredMixin, views.DeleteView):
 
 class RecipeDetailsView(views.DetailView):
     model = Recipe
-    template_name = 'main/recipe_delete.html'
+    template_name = 'main/recipe_details.html'
     context_object_name = 'recipe'
+
+    def get_context_data(self, **kwargs):
+        context = super(RecipeDetailsView, self).get_context_data(**kwargs)
+        ingredients = Ingredient.objects.filter(recipe=self.object)
+        for ingredient in ingredients:
+            print(ingredient)
+        data = {
+            'food_types': FoodType.objects.filter(recipe=self.object),
+            'recipe_steps': RecipeStep.objects.filter(recipe=self.object),
+            'ingredients': Ingredient.objects.filter(recipe=self.object),
+        }
+        context.update(data)
+        return context
+
+
+def like_button(request, pk, ):
+    recipe = Recipe.objects.prefetch_related('likes').get(pk=pk)
+    if request.user not in recipe.likes.all():
+        recipe.likes.add(request.user)
+    else:
+        recipe.likes.remove(request.user)
+        recipe.save()
+
+    return redirect('recipe details', pk=recipe.pk)

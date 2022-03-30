@@ -13,6 +13,7 @@ urlpatterns = [
     path('recipe/update/<int:pk>/', recipe.RecipeUpdateView.as_view(), name='recipe update'),
     path('recipe/delete/<int:pk>/', recipe.RecipeDeleteView.as_view(), name='recipe delete'),
     path('recipe/details/<int:pk>/', recipe.RecipeDetailsView.as_view(), name='recipe details'),
+    path('recipe/like/<int:pk>/', recipe.like_button, name='recipe like'),
 
     path('food_type/create/', food_type.FoodtypeCreateView.as_view(), name='food type create'),
 

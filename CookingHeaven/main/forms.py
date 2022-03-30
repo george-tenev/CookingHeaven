@@ -13,7 +13,9 @@ class RecipeCreateForm(ModelForm):
     def save(self, commit=True, *args, **kwargs):
         recipe = super(RecipeCreateForm, self).save(commit=False)
         recipe.publisher = self.user
-        recipe.save()
+        if commit:
+            recipe.save()
+            self.save_m2m()
         return recipe
 
     class Meta:
@@ -30,7 +32,9 @@ class RecipeUpdateForm(ModelForm):
     def save(self, commit=True, *args, **kwargs):
         recipe = super().save(commit=False)
         recipe.publisher = self.user
-        recipe.save()
+        if commit:
+            recipe.save()
+            self.save_m2m()
         return recipe
 
     class Meta:

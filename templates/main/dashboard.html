@@ -1,17 +1,25 @@
 {% extends 'base/base.html' %}
 
 {% block page_content %}
-    {% if recipes  %}
-        {% for recipe in recipes  %}
+    {% if recipes %}
+        {% for recipe in recipes %}
             <ul>
-            <li><p>{{ recipe.name }}</p></li>
-            <li><a class=" btn btn-orange" role="button" href="{% url 'recipe update' recipe.pk %}">Update Recipe</a></li>
-            <li><form action="{% url 'recipe delete' recipe.pk%}" method="post">
-                {% csrf_token %}
-                <button class="btn btn-orange">Delete recipe</button>
-            </form></li>
+                <li>
+                    <p>{{ recipe.name }}</p>
+                </li>
+                <li>
+                    <a class=" btn btn-orange" role="button" href="{% url 'recipe details' recipe.pk %}">View recipe</a>
+                </li>
+                <li>
+                    <a class=" btn btn-orange" role="button" href="{% url 'recipe update' recipe.pk %}">Update Recipe</a></li>
+                <li>
+                    <form action="{% url 'recipe delete' recipe.pk %}" method="post">
+                        {% csrf_token %}
+                        <button class="btn btn-orange">Delete recipe</button>
+                    </form>
+                </li>
             </ul>
-{#            <a class=" btn btn-orange" role="button" href="{% url 'recipe delete' recipe.pk %}">Delete Recipe</a>#}
+            {#            <a class=" btn btn-orange" role="button" href="{% url 'recipe delete' recipe.pk %}">Delete Recipe</a>#}
         {% endfor %}
 
     {% else %}
