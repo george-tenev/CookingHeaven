@@ -46,8 +46,6 @@ class Recipe(models.Model):
     )
 
     photo = models.ImageField(
-        null=True,
-        blank=True,
         upload_to='recipe'
     )
 

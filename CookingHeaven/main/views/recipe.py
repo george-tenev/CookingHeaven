@@ -14,6 +14,10 @@ class RecipeCreateView(LoginRequiredMixin, views.CreateView):
     context_object_name = 'recipe'
     success_url = reverse_lazy('home')
 
+    def dispatch(self, request, *args, **kwargs):
+        data = super(RecipeCreateView, self).dispatch(request, *args, **kwargs)
+        return data
+
     def get(self, request, *args, **kwargs):
         super(RecipeCreateView, self).get(request, *args, **kwargs)
         context = self.get_context_data(**kwargs)
@@ -149,6 +153,11 @@ class RecipeUpdateView(LoginRequiredMixin, views.UpdateView):
     def get_success_url(self):
         return self.success_url
 
+    def dispatch(self, request, *args, **kwargs):
+        data = super(RecipeUpdateView, self).dispatch(request, *args, **kwargs)
+        if request.user != self.object.publisher:
+            return redirect(reverse_lazy('home'))
+        return data
 
 class RecipeDeleteView(LoginRequiredMixin, views.DeleteView):
     model = Recipe

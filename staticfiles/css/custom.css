@@ -12,7 +12,6 @@
     background-color: #aeca4f;
 }
 
-
 .hidden {
     display: none
 }
@@ -34,14 +33,31 @@
     background-color: #aeca4f;
 }
 
-
+html {
+    height: auto;
+}
 html, body{
-    height: 100%;
-}
-body > div {
-    height: 90%;
+    /*height: 100%;*/
+    height: auto;
 }
 
-body > footer {
-    height: 10%;
+
+
+.header {
+    height: 6%;
+}
+
+.main   {
+    /*height: 88%;*/
+    min-height: 88%;
+    height: fit-content;
+}
+
+.footer {
+    height: 6%;
+}
+.min-vh-87{min-height: 87vh!important}
+
+.main-wrapper {
+  height: 100vh;
 }

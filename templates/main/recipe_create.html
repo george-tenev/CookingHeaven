@@ -9,7 +9,7 @@
             display: none
         }
     </style>
-
+    <div class="container-fluid justify-content-center p-5">
     <form id="form-container" action="{% url 'recipe create' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
@@ -39,7 +39,7 @@
 
         <button class="btn">Create recipe</button>
     </form>
-
+</div>
     <script>
         const addIngredientBtn = document.getElementById('add-ingredient')
         const totalNewIngredientForms = document.getElementById('id_ingredient-form-TOTAL_FORMS')

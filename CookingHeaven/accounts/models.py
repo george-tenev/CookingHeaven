@@ -7,7 +7,7 @@ from django.db import models
 from CookingHeaven.accounts.managers import CookingHeavenUsersManager
 from CookingHeaven.common.validators import is_alpha
 
-User
+
 class CookingHeavenUser(AbstractBaseUser, PermissionsMixin):
 
     username_validator = UnicodeUsernameValidator()

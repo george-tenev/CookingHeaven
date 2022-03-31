@@ -16,12 +16,13 @@ class IndexTemplateView(views.TemplateView):
 
 
 
-class DashboardView(LoginRequiredMixin, views.ListView):
+class DashboardView(views.ListView):
     model = Recipe
     template_name = 'main/dashboard.html'
     context_object_name = 'recipes'
+
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
-        recipes = Recipe.objects.filter(publisher=self.request.user)
+        recipes = Recipe.objects.all()
         self.object_list = recipes
         return context
