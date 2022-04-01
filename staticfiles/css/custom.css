@@ -61,3 +61,11 @@ html, body{
 .main-wrapper {
   height: 100vh;
 }
+
+.index-image {
+    height: 600px;
+}
+
+#demo > div.carousel-inner > div:nth-child(1){
+
+}
