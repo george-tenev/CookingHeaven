@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from django.urls import reverse_lazy
@@ -94,9 +95,7 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = 'media/'
-MEDIAFILES_DIRS = [
-    BASE_DIR / "media",
-]
+MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
