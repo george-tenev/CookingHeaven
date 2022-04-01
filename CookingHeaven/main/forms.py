@@ -4,27 +4,7 @@ from django.forms import ModelForm, modelformset_factory, BaseModelFormSet
 from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep
 
 
-class RecipeCreateForm(ModelForm):
-
-    def __init__(self, user, *args, **kwargs):
-        self.user = user
-        super(RecipeCreateForm, self).__init__(*args, **kwargs)
-        self.fields['preparation_time'].label = "Preparation time in minutes:"
-        self.fields['cooking_time'].label = "Cooking time in minutes:"
-
-    def save(self, commit=True, *args, **kwargs):
-        recipe = super(RecipeCreateForm, self).save(commit=False)
-        recipe.publisher = self.user
-        if commit:
-            recipe.save()
-            self.save_m2m()
-        return recipe
-
-    class Meta:
-        model = Recipe
-        fields = ('name', 'description', 'photo', 'preparation_time', 'cooking_time', 'types',)
-
-class RecipeUpdateForm(ModelForm):
+class RecipeCreateUpdateForm(ModelForm):
 
     def __init__(self, user, *args, **kwargs):
         self.user = user

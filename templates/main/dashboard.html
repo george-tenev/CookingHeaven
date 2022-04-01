@@ -1,9 +1,10 @@
 {% extends 'base/base.html' %}
 {% block page_content %}
-    <div class="container-fluid justify-content-center p-5">
+    <div class="container-fluid p-5">
         {% if recipes %}
+            <div class="card-group mb-3  text-center">
             {% for recipe in recipes %}
-                <div class="card" style="width: 18rem;">
+                <div class="card text-center m-1" style="width: 18rem;">
                     <img class="card-img-top" src="{{ recipe.photo.url }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{ recipe.name}}</h5>
@@ -11,32 +12,11 @@
                         <p class="card-text">{{ recipe.description }}</p>
                         {% endif %}
                         <a href="{% url 'recipe details' recipe.pk %}" class="btn btn-orange">View recipe</a>
-                        {% if request.user == recipe.publisher %}
-                        <a class=" btn btn-orange" role="button" href="{% url 'recipe update' recipe.pk %}">Update Recipe</a>
-                            <form action="{% url 'recipe delete' recipe.pk %}" method="post">
-                                {% csrf_token %}
-                                <button class="btn btn-orange">Delete recipe</button>
-                            </form>
-                        {% endif %} 
+
                     </div>
                 </div>
-                {#            <ul>#}
-                {#                <li>#}
-                {#                    <p>{{ recipe.name }}</p>#}
-                {#                </li>#}
-                {#                <li>#}
-                {#                    <a class=" btn btn-orange" role="button" href="{% url 'recipe details' recipe.pk %}">View recipe</a>#}
-                {#                </li>#}
-                {#                <li>#}
-                {#                    <a class=" btn btn-orange" role="button" href="{% url 'recipe update' recipe.pk %}">Update Recipe</a></li>#}
-                {#                <li>#}
-                {#                    <form action="{% url 'recipe delete' recipe.pk %}" method="post">#}
-                {#                        {% csrf_token %}#}
-                {#                        <button class="btn btn-orange">Delete recipe</button>#}
-                {#                    </form>#}
-                {#                </li>#}
-                {#            </ul>#}
             {% endfor %}
+            </div>
         {% else %}
             <div class="d-flex justify-content-center">
                 <h3>There are no Any Recipes</h3>
