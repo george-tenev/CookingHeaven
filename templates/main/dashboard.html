@@ -1,10 +1,11 @@
 {% extends 'base/base.html' %}
 {% block page_content %}
-    <div class="container-fluid p-5">
+    <div class="container p-5">
         {% if recipes %}
-            <div class="card-group mb-3  text-center">
-            {% for recipe in recipes %}
-                <div class="card text-center m-1" style="width: 18rem;">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            {% for recipe in page_obj %}
+                <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
                     <img class="card-img-top" src="{{ recipe.photo.url }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{ recipe.name}}</h5>
@@ -12,11 +13,28 @@
                         <p class="card-text">{{ recipe.description }}</p>
                         {% endif %}
                         <a href="{% url 'recipe details' recipe.pk %}" class="btn btn-orange">View recipe</a>
-
                     </div>
+                </div>
                 </div>
             {% endfor %}
             </div>
+            <div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a class="btn btn-orange" href="?page=1">&laquo; first</a>
+            <a class="btn btn-orange" href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a class="btn btn-orange" href="?page={{ page_obj.next_page_number }}">next</a>
+            <a class="btn btn-orange" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
         {% else %}
             <div class="d-flex justify-content-center">
                 <h3>There are no Any Recipes</h3>
