@@ -62,6 +62,11 @@ class Recipe(models.Model):
         to=FoodType,
     )
 
+    created_at = models.DateTimeField(
+        auto_now_add=True
+    )
+
+
     class Meta:
         unique_together = ('publisher', 'name')
 
