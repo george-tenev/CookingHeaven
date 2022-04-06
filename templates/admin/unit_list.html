@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+    <ul class="no-bullets">
+        {% for unit in units %}
+            <li>
+                <h5>{{ unit.name }}</h5>
+                <a href="{% url 'unit update' unit.pk %}" class="btn btn-orange w-auto">Edit unit</a>
+                <a href="{% url 'unit delete' unit.pk %}" class="btn btn-orange w-auto">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

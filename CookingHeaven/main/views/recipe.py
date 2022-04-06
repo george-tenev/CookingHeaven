@@ -133,7 +133,6 @@ class RecipeUpdateView(LoginRequiredMixin, RecipeUpdateCheckCorrectUserMixin, Re
 
 class RecipeDeleteView(LoginRequiredMixin, RecipeUpdateCheckCorrectUserMixin, views.DeleteView):
     model = Recipe
-    template_name = 'main/recipe_delete.html'
     success_url = reverse_lazy('dashboard')
 
 

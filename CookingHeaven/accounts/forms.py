@@ -8,7 +8,9 @@ from django.dispatch import receiver
 from django.forms import ModelForm
 
 from CookingHeaven.accounts.models import CookingHeavenUser, Profile
+
 UserModel = get_user_model()
+
 
 class AbstractCookingHeavenUserFrom(UserCreationForm):
     first_name = forms.CharField(
@@ -69,7 +71,7 @@ class AbstractCookingHeavenUserFrom(UserCreationForm):
 
 class UserRegisterForm(AbstractCookingHeavenUserFrom):
     class Meta:
-        model = CookingHeavenUser
+        model = UserModel
         fields = ['username', 'password1', 'password2', 'first_name', 'last_name', 'email']
 
         widgets = {
@@ -102,7 +104,7 @@ class SuperUserProfileCreationForm(AbstractCookingHeavenUserFrom):
 
     class Meta:
         exclude = ['last_login']
-        model = CookingHeavenUser
+        model = UserModel
 
         widgets = {
             'username': forms.TextInput(
@@ -139,3 +141,8 @@ class ProfileUpdateForm(ModelForm):
         model = Profile
         fields = ('first_name', 'last_name')
 
+
+class UserUpdateForm(ModelForm):
+    class Meta:
+        model = UserModel
+        fields = ('username', 'email', 'is_superuser', 'is_staff', 'user_permissions', 'groups')

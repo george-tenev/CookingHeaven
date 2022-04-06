@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+    <ul class="no-bullets">
+        {% for group in groups %}
+            <li>
+                <h5>{{ group.name }}</h5>
+                <a href="{% url 'admin group update' group.pk %}" class="btn btn-orange w-auto">Edit Group</a>
+                <form action="{% url 'admin group delete' group.pk %}" method="post">
+                    {% csrf_token %}
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

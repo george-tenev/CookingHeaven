@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+    <ul class="no-bullets">
+        {% for category in categories %}
+            <li>
+                <h5>{{ category.name }}</h5>
+                <a href="{% url 'category update' category.pk %}" class="btn btn-orange w-auto">Edit Category</a>
+                <form action="{% url 'category delete' category.pk %}" method="post">
+                    {% csrf_token %}
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+<form action="{% url 'unit update' unit.pk%}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-orange">Update unit</button>
+</form>
+{% endblock %}

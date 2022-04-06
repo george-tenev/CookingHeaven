@@ -16,8 +16,14 @@ urlpatterns = [
     path('recipe/like/<int:pk>/', recipe.LikeButtonView.as_view(), name='recipe like'),
 
     path('category/create/', category.CategoryCreateView.as_view(), name='category create'),
+    path('category/list/', category.CategoryListView.as_view(), name='category list'),
+    path('category/update/<int:pk>', category.CategoryUpdateView.as_view(), name='category update'),
+    path('category/delete/<int:pk>', category.CategoryDeleteView.as_view(), name='category delete'),
 
     path('unit/create/', unit.UnitCreateView.as_view(), name='unit create'),
+    path('unit/list/', unit.UnitListView.as_view(), name='unit list'),
+    path('unit/update/<int:pk>', unit.UnitUpdateView.as_view(), name='unit update'),
+    path('unit/delete/<int:pk>', unit.UnitDeleteView.as_view(), name='unit delete'),
 
     path('admin-panel/', admin_panel.AdminPanelView.as_view(), name='admin panel')
 
