@@ -1,14 +1,16 @@
 from django import forms
+from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.core.exceptions import ValidationError
 from django.db.models import signals
 from django.dispatch import receiver
+from django.forms import ModelForm
 
 from CookingHeaven.accounts.models import CookingHeavenUser, Profile
+UserModel = get_user_model()
 
-
-class AbstractCookingHeavenUserCreationFrom(UserCreationForm):
+class AbstractCookingHeavenUserFrom(UserCreationForm):
     first_name = forms.CharField(
         max_length=Profile.FIRST_NAME_MAX_LENGTH
     )
@@ -45,7 +47,7 @@ class AbstractCookingHeavenUserCreationFrom(UserCreationForm):
         )
 
     def save(self, commit=True):
-        user = super(AbstractCookingHeavenUserCreationFrom, self).save(commit=False)
+        user = super(AbstractCookingHeavenUserFrom, self).save(commit=False)
         profile = Profile(
             first_name=self.cleaned_data['first_name'],
             last_name=self.cleaned_data['last_name'],
@@ -57,7 +59,7 @@ class AbstractCookingHeavenUserCreationFrom(UserCreationForm):
         return user
 
     def clean(self):
-        cleaned_data = super(AbstractCookingHeavenUserCreationFrom, self).clean()
+        cleaned_data = super(AbstractCookingHeavenUserFrom, self).clean()
         if not self.cleaned_data['first_name'].isalpha():
             self.add_error('first_name', "Enter only alphabetic symbols!")
         if not self.cleaned_data['last_name'].isalpha():
@@ -65,7 +67,7 @@ class AbstractCookingHeavenUserCreationFrom(UserCreationForm):
         return cleaned_data
 
 
-class UserRegisterForm(AbstractCookingHeavenUserCreationFrom):
+class UserRegisterForm(AbstractCookingHeavenUserFrom):
     class Meta:
         model = CookingHeavenUser
         fields = ['username', 'password1', 'password2', 'first_name', 'last_name', 'email']
@@ -93,46 +95,13 @@ class UserRegisterForm(AbstractCookingHeavenUserCreationFrom):
             )
         }
 
-#
-# class AdminProfileCreateForm(AbstractCookingHeavenUserCreationFrom):
-#
-#     def __init__(self, *args, **kwargs):
-#         super().__init__(*args, **kwargs)
-#
-#     class Meta:
-#         model = CookingHeavenUser
-#         fields = ['username', 'password1', 'password2', 'first_name', 'last_name', 'email', 'is_staff']
-#
-#         widgets = {
-#             'username': forms.TextInput(
-#                 attrs={
-#                     'placeholder': 'Enter username',
-#                 },
-#             ),
-#             'first_name': forms.TextInput(
-#                 attrs={
-#                     'placeholder': 'Enter first name',
-#                 },
-#             ),
-#             'last_name': forms.TextInput(
-#                 attrs={
-#                     'placeholder': 'Enter last name',
-#                 },
-#             ),
-#             'email': forms.EmailInput(
-#                 attrs={
-#                     'placeholder': 'Enter email'
-#                 }
-#             )
-#         }
 
-
-class SuperUserProfileCreationForm(AbstractCookingHeavenUserCreationFrom):
+class SuperUserProfileCreationForm(AbstractCookingHeavenUserFrom):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
     class Meta:
-        fields = '__all__'
+        exclude = ['last_login']
         model = CookingHeavenUser
 
         widgets = {
@@ -157,3 +126,16 @@ class SuperUserProfileCreationForm(AbstractCookingHeavenUserCreationFrom):
                 }
             )
         }
+
+
+class SuperUserGroupCreateForm(ModelForm):
+    class Meta:
+        model = Group
+        fields = '__all__'
+
+
+class ProfileUpdateForm(ModelForm):
+    class Meta:
+        model = Profile
+        fields = ('first_name', 'last_name')
+

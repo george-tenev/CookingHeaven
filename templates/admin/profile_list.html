@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+    <ul class="no-bullets">
+        {% for profile in profiles %}
+            <li>
+                <h5>{{ profile.full_name }}</h5>
+                <a href="{% url 'profile update' profile.pk %}" class="btn btn-orange w-auto">Edit</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

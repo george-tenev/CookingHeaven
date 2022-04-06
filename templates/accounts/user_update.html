@@ -1,10 +1,10 @@
 {% extends 'base/base.html' %}
 {% block page_content %}
     <div class="d-flex justify-content-center p-5">
-    <form action="{% url 'register' %}" method="post">
+    <form action="{% url 'profile update' profile.pk  %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button class="btn btn-orange" type="submit">Register</button>
+    <button class="btn btn-orange" type="submit">Update</button>
     </form>
     </div>
 {% endblock %}

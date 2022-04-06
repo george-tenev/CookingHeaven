@@ -1,9 +1,14 @@
 {% extends 'base/base.html' %}
 
 {% block page_content %}
-    <form action="{% url 'delete' request.user.pk %}" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <button class="btn-dark">Delete</button>
-    </form>
+    <div class="container d-flex justify-content-center ">
+            <div class=" p-5 text-center">
+                <h5 class="">Are you sure you want to delete your profile?</h5>
+                <form class="m-3" action="{% url 'delete' request.user.pk %}" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-danger">Delete Profile</button>
+                </form>
+                </div>
+        </div>
 {% endblock %}

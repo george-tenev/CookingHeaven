@@ -9,3 +9,5 @@ class SuperuserRequiredMixin(UserPassesTestMixin):
 class AdminPermissionsRequiredMixin(UserPassesTestMixin):
     def test_func(self):
         return self.request.user.is_staff
+
+

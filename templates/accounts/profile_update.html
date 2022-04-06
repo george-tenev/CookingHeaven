@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base/base.html' %}
 
-</body>
-</html>
+{% block page_content %}
+    <div class="d-flex justify-content-center p-5">
+
+        <form action="{% url 'profile update' profile.pk %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-orange">Update Profile</button>
+        </form>
+    </div>
+
+
+
+
+{% endblock %}

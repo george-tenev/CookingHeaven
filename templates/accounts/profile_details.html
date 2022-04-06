@@ -1,8 +1,42 @@
 {% extends 'base/base.html' %}
 {% block page_content %}
-    <div class="d-flex flex-column">
-    <h5><u>Name: </u>{{ profile.full_name }}</h5>
+    <section class="py-1 text-secondary">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center border-bottom border-2 pb-1">
+                <div class="col-md-6">
+                    <h5>Name: {{ profile.full_name }}</h5>
+                    <h5>Username: {{ profile.user.username }}</h5>
+                    <div class="row">
+                        <a class='btn btn-orange w-auto' href="{% url 'password_change' %}">Change Password</a>
+                    </div>
+                    <div class="row my-1">
+                        <a href="{% url 'profile update' profile.user.pk %}" class="btn btn-orange w-auto">Edit</a>
+                    </div>
 
-    </div>
+                    <div class="row">
+                        <a href="{% url 'delete' profile.user.pk %}" class="btn btn-danger w-auto">Delete</a>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6">
+                    <h5 class="mt-2">Total recipes: {{ recipes.count }}</h5>
+                    <h5 class="mt-2 pb-3">Total Likes: {{ total_likes }}</h5>
+
+                    {% for recipe in recipes %}
+                        <div class="mb-3">
+                            <h5><b>Recipe:</b> {{ recipe.name }}</h5>
+                            <p class="mb-1"><b>Likes:</b> {{ recipe.likes.count }}</p>
+                            <a href="{% url 'recipe update' recipe.pk %}" class="btn btn-orange mb-1">Edit</a>
+                            <form action="{% url 'recipe delete' recipe.pk %}" method="post">
+                                {% csrf_token %}
+                                <button class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

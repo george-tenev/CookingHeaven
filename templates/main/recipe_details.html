@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %}
 {% block page_content %}
-    <section class="min-vh-87 py-1 text-secondary">
+    <section class="py-1 text-secondary">
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center border-bottom border-2 pb-1">
                 <div class="col-md-6">
@@ -13,18 +13,15 @@
                                                             href="{% url 'recipe update' recipe.pk %}">Update
                                 Recipe</a></li>
                             <li class="list-inline-item">
-                                <form action="{% url 'recipe delete' recipe.pk %}" method="post">
-                                    {% csrf_token %}
-                                    <button class="btn btn-orange">Delete recipe</button>
-                                </form>
+
                             </li>
                         </ul>
                     {% endif %}
 
                     <ul class="list-inline ">
                         <h4 class="d-inline ">Tags: </h4>
-                        {% for food_type in food_types %}
-                            <li class="list-inline-item">{{ food_type }}</li>
+                        {% for category in categories %}
+                            <li class="list-inline-item">{{ category }}</li>
                         {% endfor %}
                     </ul>
 

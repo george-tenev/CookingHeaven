@@ -37,10 +37,8 @@
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Profile
                             </button>
-                            <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenuButton">
+                            <div class="dropdown-menu dropdown dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                                 <a class='dropdown-item' href="{% url 'logout' %}">Logout</a>
-                                <a class='dropdown-item' href="{% url 'password_change' %}">Change Password</a>
-                                <a class='dropdown-item' href="{% url 'delete' request.user.pk %}">Delete Profile</a>
                                 <a class='dropdown-item' href="{% url 'profile details' request.user.pk %}">Profile</a>
                             </div>
                         </div>

@@ -1,0 +1,8 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+<form action="{% url 'admin group create'%}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-orange">Create group</button>
+</form>
+{% endblock %}

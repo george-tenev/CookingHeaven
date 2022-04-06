@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from CookingHeaven.accounts.models import Profile, CookingHeavenUser
-from CookingHeaven.main.models import FoodType, Recipe, RecipeStep, Unit, Ingredient
+from CookingHeaven.main.models import Category, Recipe, RecipeStep, Unit, Ingredient
 
 
 class ProfileInlineAdmin(admin.StackedInline):
@@ -14,8 +14,8 @@ class AppUserAdmin(admin.ModelAdmin):
 
 
 
-@admin.register(FoodType)
-class FoodTypeAdmin(admin.ModelAdmin):
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
     pass
 
 

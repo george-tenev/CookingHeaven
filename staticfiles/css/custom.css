@@ -66,6 +66,9 @@ html, body{
     height: 600px;
 }
 
-#demo > div.carousel-inner > div:nth-child(1){
-
+.card-image {
+    height: 250px;
+}
+.no-bullets {
+    list-style: none;
 }

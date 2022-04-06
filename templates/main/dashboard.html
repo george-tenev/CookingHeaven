@@ -6,7 +6,7 @@
             {% for recipe in page_obj %}
                 <div class="col">
                 <div class="card mb-4 rounded-3 shadow-sm">
-                    <img class="card-img-top" src="{{ recipe.photo.url }}" alt="Card image cap">
+                    <img class="card-img-top card-image" src="{{ recipe.photo.url }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{ recipe.name}}</h5>
                         {% if recipe.description %}

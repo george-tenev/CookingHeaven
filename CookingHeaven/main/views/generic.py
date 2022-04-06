@@ -14,6 +14,7 @@ class IndexTemplateView(views.ListView):
         queryset = Recipe.objects.order_by('-created_at')[:3]
         return queryset
 
+
 class DashboardView(views.ListView):
     model = Recipe
     template_name = 'main/dashboard.html'

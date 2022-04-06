@@ -1,7 +1,7 @@
 from django import forms
 from django.forms import ModelForm, modelformset_factory, BaseModelFormSet
 
-from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep
+from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep, Category, Unit
 
 
 class RecipeCreateUpdateForm(ModelForm):
@@ -22,7 +22,7 @@ class RecipeCreateUpdateForm(ModelForm):
 
     class Meta:
         model = Recipe
-        fields = ('name', 'description', 'photo', 'preparation_time', 'cooking_time', 'types',)
+        fields = ('name', 'description', 'photo', 'preparation_time', 'cooking_time', 'category',)
 
 
 class IngredientCreateForm(ModelForm):
@@ -39,6 +39,16 @@ class RecipeStepCreateForm(ModelForm):
         model = RecipeStep
         fields = ('description',)
 
+
+class CategoryCreateForm(ModelForm):
+    class Meta:
+        model = Category
+        fields = '__all__'
+
+class UnitCreateForm(ModelForm):
+    class Meta:
+        model = Unit
+        fields = '__all__'
 
 class CustomModelFormSet(BaseModelFormSet):
     def __init__(self, *args, **kwargs):

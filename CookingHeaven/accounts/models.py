@@ -9,14 +9,14 @@ from CookingHeaven.common.validators import is_alpha
 
 
 class CookingHeavenUser(AbstractBaseUser, PermissionsMixin):
-
     username_validator = UnicodeUsernameValidator()
-
+    USERNAME_MAX_LENGTH = 150
+    USERNAME_UNIQUE_ERROR_MESSAGE = "A user with that username already exists."
     username = models.CharField(
-        max_length=150,
+        max_length=USERNAME_MAX_LENGTH,
         unique=True,
         validators=[username_validator],
-        error_messages={"unique": "A user with that username already exists.",},
+        error_messages={"unique": USERNAME_UNIQUE_ERROR_MESSAGE, },
     )
     email = models.EmailField(
         unique=True,
@@ -34,7 +34,6 @@ class CookingHeavenUser(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'username'
     EMAIL_FIELD = 'email'
     objects = CookingHeavenUsersManager()
-
 
 
 class Profile(models.Model):

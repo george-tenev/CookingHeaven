@@ -2,8 +2,12 @@
 {% block page_content %}
     <div class="mr-auto">
     <ul>
-        <li><a href="{% url 'product create' %}">Add product</a></li>
-        <li><a href="{% url 'food type create' %}">Add food type</a></li>
+        <li><a href="{% url 'profile list' %}">Profiles</a></li>
+        <li><a href="{% url 'admin profile create' %}">Create profile</a></li>
+        <li><a href="{% url 'admin group create' %}">Create group</a></li>
+        <li><a href="{% url 'category create' %}">Create Category</a></li>
+        <li><a href="{% url 'unit create' %}">Create unit</a></li>
+
     </ul>
     </div>
 {% endblock %}

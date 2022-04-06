@@ -1,18 +1,22 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.exceptions import ValidationError, PermissionDenied
+from django.http import Http404
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.views import generic as views
+from django.views import generic as views, View
+from django.views.generic import UpdateView
+from django.views.generic.detail import SingleObjectMixin
 
 from CookingHeaven.main.forms import IngredientFormset, RecipeStepFormset, RecipeCreateUpdateForm
-from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep, FoodType
+from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep, Category
 
 
-class CheckCorrectUserMixin:
+class RecipeUpdateCheckCorrectUserMixin:
     def dispatch(self, request, *args, **kwargs):
-        data = super().dispatch(request, *args, **kwargs)
-        if request.user != self.object.publisher:
-            return redirect(reverse_lazy('home'))
-        return data
+        response = super().dispatch(request, *args, **kwargs)
+        if request.user == self.object.publisher or request.user.is_staff:
+            return response
+        return redirect(reverse_lazy('home'))
 
 
 class RecipeCreateUpdateMixin:
@@ -103,7 +107,7 @@ class RecipeCreateView(LoginRequiredMixin, RecipeCreateUpdateMixin, views.Create
         return super().post(request, *args, **kwargs)
 
 
-class RecipeUpdateView(LoginRequiredMixin, CheckCorrectUserMixin, RecipeCreateUpdateMixin, views.UpdateView):
+class RecipeUpdateView(LoginRequiredMixin, RecipeUpdateCheckCorrectUserMixin, RecipeCreateUpdateMixin, views.UpdateView):
     template_name = 'main/recipe_update.html'
 
     def get(self, request, *args, **kwargs):
@@ -127,9 +131,7 @@ class RecipeUpdateView(LoginRequiredMixin, CheckCorrectUserMixin, RecipeCreateUp
         return super().post(request, *args, **kwargs)
 
 
-
-
-class RecipeDeleteView(LoginRequiredMixin, CheckCorrectUserMixin, views.DeleteView):
+class RecipeDeleteView(LoginRequiredMixin, RecipeUpdateCheckCorrectUserMixin, views.DeleteView):
     model = Recipe
     template_name = 'main/recipe_delete.html'
     success_url = reverse_lazy('dashboard')
@@ -146,7 +148,7 @@ class RecipeDetailsView(views.DetailView):
         for ingredient in ingredients:
             print(ingredient)
         data = {
-            'food_types': FoodType.objects.filter(recipe=self.object),
+            'categories': Category.objects.filter(recipe=self.object),
             'recipe_steps': RecipeStep.objects.filter(recipe=self.object),
             'ingredients': Ingredient.objects.filter(recipe=self.object),
         }
@@ -154,12 +156,20 @@ class RecipeDetailsView(views.DetailView):
         return context
 
 
-def like_button(request, pk, ):
-    recipe = Recipe.objects.prefetch_related('likes').get(pk=pk)
-    if request.user not in recipe.likes.all():
-        recipe.likes.add(request.user)
-    else:
-        recipe.likes.remove(request.user)
-        recipe.save()
+class LikeButtonView(LoginRequiredMixin, View, SingleObjectMixin):
+    model = Recipe
 
-    return redirect('recipe details', pk=recipe.pk)
+    def get(self, request, *args, **kwargs):
+        recipe = self.get_object()
+        if request.user not in recipe.likes.all():
+            recipe.likes.add(request.user)
+        else:
+            recipe.likes.remove(request.user)
+            recipe.save()
+
+        return redirect(
+            reverse_lazy(
+                'recipe details',
+                kwargs={'pk': recipe.pk}
+            )
+        )

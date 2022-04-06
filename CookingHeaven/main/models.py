@@ -10,7 +10,7 @@ from CookingHeaven.accounts.models import CookingHeavenUser
 from CookingHeaven.common.validators import is_alpha
 
 
-class FoodType(models.Model):
+class Category(models.Model):
     NAME_MAX_LENGTH = 50
     name = models.CharField(
         max_length=NAME_MAX_LENGTH,
@@ -58,8 +58,10 @@ class Recipe(models.Model):
         related_name='recipe_likes_set',
     )
 
-    types = models.ManyToManyField(
-        to=FoodType,
+    category = models.ManyToManyField(
+        null=True,
+        blank=True,
+        to=Category,
     )
 
     created_at = models.DateTimeField(
