@@ -8,9 +8,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4&$cc5m%y)6p#8k9q++#q#@!#389$6#+43#6zt8c-8lb^h+6*z'
 
 DEBUG = True
-# DEBUG = False
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*',]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -32,6 +31,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'CookingHeaven.middlewares.handle_exception',
 ]
 
 ROOT_URLCONF = 'CookingHeaven.urls'
@@ -54,6 +55,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'CookingHeaven.wsgi.application'
+
 
 DATABASES = {
     'default': {

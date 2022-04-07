@@ -21,8 +21,8 @@ class ProfileUpdateCheckCorrectUserMixin:
         response = super().dispatch(request, *args, **kwargs)
         if request.user.pk == self.object.pk or request.user.is_superuser:
             return response
-        return redirect(reverse_lazy('home'))
-
+        # return redirect(reverse_lazy('home'))
+        raise PermissionError
 class GroupCreateView(LoginRequiredMixin, PermissionRequiredHomeRedirectMixin, views.CreateView):
     template_name = 'admin/group_create.html'
     success_url = reverse_lazy('home')
@@ -115,7 +115,7 @@ class ProfileDetailsView(LoginRequiredMixin, ProfileUpdateCheckCorrectUserMixin,
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        recipes = Recipe.objects.filter(publisher=self.object.pk)
+        recipes = list(Recipe.objects.filter(publisher=self.object.pk))
         context['recipes'] = recipes
         context['total_likes'] = sum(recipe.likes.count() for recipe in recipes)
         return context

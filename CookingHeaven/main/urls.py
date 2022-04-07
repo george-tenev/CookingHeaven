@@ -2,7 +2,7 @@ from django.urls import path, include
 
 from CookingHeaven.accounts import admin
 from CookingHeaven.main import views
-from CookingHeaven.main.views import generic, category, admin_panel, unit
+from CookingHeaven.main.views import generic, category, admin_panel, unit, err
 from CookingHeaven.main.views import recipe
 
 urlpatterns = [
@@ -24,6 +24,9 @@ urlpatterns = [
     path('unit/list/', unit.UnitListView.as_view(), name='unit list'),
     path('unit/update/<int:pk>', unit.UnitUpdateView.as_view(), name='unit update'),
     path('unit/delete/<int:pk>', unit.UnitDeleteView.as_view(), name='unit delete'),
+
+    path('400/', err.bad_request, name= '400'),
+    path('500/', err.internal_error, name='500'),
 
     path('admin-panel/', admin_panel.AdminPanelView.as_view(), name='admin panel')
 

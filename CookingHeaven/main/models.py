@@ -1,3 +1,4 @@
+from django.contrib.auth import get_user_model
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.core.validators import MinLengthValidator
@@ -9,6 +10,7 @@ from django.forms.models import inlineformset_factory, formset_factory, modelfor
 from CookingHeaven.accounts.models import CookingHeavenUser
 from CookingHeaven.common.validators import is_alpha
 
+UserModel = get_user_model()
 
 class Category(models.Model):
     NAME_MAX_LENGTH = 50
@@ -36,7 +38,7 @@ class Recipe(models.Model):
     )
 
     publisher = models.ForeignKey(
-        to=CookingHeavenUser,
+        to=UserModel,
         on_delete=models.CASCADE
     )
 
@@ -54,7 +56,7 @@ class Recipe(models.Model):
     cooking_time = models.FloatField()
 
     likes = models.ManyToManyField(
-        to=CookingHeavenUser,
+        to=UserModel,
         related_name='recipe_likes_set',
     )
 

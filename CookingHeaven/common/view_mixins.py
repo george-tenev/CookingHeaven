@@ -20,4 +20,5 @@ class AdminRequiredMixin(UserPassesTestMixin):
 
 class PermissionRequiredHomeRedirectMixin(PermissionRequiredMixin):
     def handle_no_permission(self):
-        return redirect(reverse_lazy('home'))
+        # return redirect(reverse_lazy('home'))
+        raise PermissionError
