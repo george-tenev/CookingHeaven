@@ -9,8 +9,7 @@ from django.views.generic import DeleteView
 from CookingHeaven.accounts.forms import UserRegisterForm, SuperUserProfileCreationForm, \
     SuperUserGroupCreateForm, ProfileUpdateForm, UserUpdateForm
 from CookingHeaven.accounts.models import CookingHeavenUser, Profile
-from CookingHeaven.common.view_mixins import SuperuserRequiredMixin, AdminRequiredMixin, \
-    PermissionRequiredHomeRedirectMixin
+from CookingHeaven.common.view_mixins import SuperuserRequiredMixin, AdminRequiredMixin
 from CookingHeaven.main.models import Recipe
 
 UserModel = get_user_model()
@@ -21,15 +20,16 @@ class ProfileUpdateCheckCorrectUserMixin:
         response = super().dispatch(request, *args, **kwargs)
         if request.user.pk == self.object.pk or request.user.is_superuser:
             return response
-        # return redirect(reverse_lazy('home'))
         raise PermissionError
-class GroupCreateView(LoginRequiredMixin, PermissionRequiredHomeRedirectMixin, views.CreateView):
+
+class GroupCreateView(LoginRequiredMixin, PermissionRequiredMixin, views.CreateView):
     template_name = 'admin/group_create.html'
     success_url = reverse_lazy('home')
     form_class = SuperUserGroupCreateForm
     permission_required = 'auth.add_group'
 
-class GroupUpdateView(LoginRequiredMixin, PermissionRequiredHomeRedirectMixin, views.UpdateView):
+
+class GroupUpdateView(LoginRequiredMixin, PermissionRequiredMixin, views.UpdateView):
     model = Group
     template_name = 'admin/group_update.html'
     success_url = reverse_lazy('home')
@@ -37,10 +37,18 @@ class GroupUpdateView(LoginRequiredMixin, PermissionRequiredHomeRedirectMixin, v
     permission_required = 'auth.change_group'
     context_object_name = 'group'
 
-class GroupDeleteView(LoginRequiredMixin, AdminRequiredMixin, PermissionRequiredHomeRedirectMixin, DeleteView):
+
+class GroupDeleteView(LoginRequiredMixin, AdminRequiredMixin, PermissionRequiredMixin, DeleteView):
     model = Group
     success_url = reverse_lazy('dashboard')
     permission_required = 'main.delete_group'
+
+
+class GroupListView(PermissionRequiredMixin, views.ListView):
+    model = Group
+    context_object_name = 'groups'
+    template_name = 'admin/group_list.html'
+    permission_required = 'auth.view_group'
 
 
 class SuperUserProfileCreateView(LoginRequiredMixin, SuperuserRequiredMixin, views.CreateView):
@@ -90,7 +98,7 @@ class ProfileUpdateView(LoginRequiredMixin, ProfileUpdateCheckCorrectUserMixin, 
             }
         )
 
-class AdminUserUpdateView(LoginRequiredMixin, PermissionRequiredHomeRedirectMixin, views.UpdateView):
+class AdminUserUpdateView(LoginRequiredMixin, PermissionRequiredMixin, views.UpdateView):
     model = UserModel
     template_name = 'accounts/user_update.html'
     form_class = UserUpdateForm
@@ -121,17 +129,13 @@ class ProfileDetailsView(LoginRequiredMixin, ProfileUpdateCheckCorrectUserMixin,
         return context
 
 
-class ProfileListView(PermissionRequiredHomeRedirectMixin, views.ListView):
+class ProfileListView(PermissionRequiredMixin, views.ListView):
     model = Profile
     context_object_name = 'profiles'
     template_name = 'admin/profile_list.html'
     permission_required = 'accounts.view_cookingheavenuser'
 
 
-class GroupListView(PermissionRequiredHomeRedirectMixin, views.ListView):
-    model = Group
-    context_object_name = 'groups'
-    template_name = 'admin/group_list.html'
-    permission_required = 'auth.view_group'
+
 
 
