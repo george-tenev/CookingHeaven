@@ -3,14 +3,12 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.core.validators import MinLengthValidator
 from django.db import models
-from django.forms.models import inlineformset_factory, formset_factory, modelform_factory, modelformset_factory
-
-
 
 from CookingHeaven.accounts.models import CookingHeavenUser
 from CookingHeaven.common.validators import is_alpha
 
 UserModel = get_user_model()
+
 
 class Category(models.Model):
     NAME_MAX_LENGTH = 50
@@ -90,7 +88,8 @@ class Unit(models.Model):
     NAME_MAX_LENGTH = 60
     name = models.CharField(
         max_length=NAME_MAX_LENGTH,
-        unique=True
+        unique=True,
+        validators=[is_alpha,]
     )
 
     def __str__(self):

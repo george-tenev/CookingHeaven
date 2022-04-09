@@ -2,7 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import ValidationError, PermissionDenied
 from django.http import Http404
 from django.shortcuts import redirect
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views import generic as views, View
 from django.views.generic import UpdateView
 from django.views.generic.detail import SingleObjectMixin
@@ -11,12 +11,12 @@ from CookingHeaven.main.forms import IngredientFormset, RecipeStepFormset, Recip
 from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep, Category
 
 
-class RecipeUpdateCheckCorrectUserMixin:
+class RecipeCheckCorrectUserMixin:
     def dispatch(self, request, *args, **kwargs):
-        response = super().dispatch(request, *args, **kwargs)
-        if request.user == self.object.publisher or request.user.is_staff:
-            return response
-        return redirect(reverse_lazy('home'))
+        recipe = self.get_object()
+        if request.user != recipe.publisher and not request.user.is_staff:
+            raise PermissionError
+        return super(RecipeCheckCorrectUserMixin, self).dispatch(request, *args, **kwargs)
 
 
 class RecipeCreateUpdateMixin:
@@ -107,7 +107,7 @@ class RecipeCreateView(LoginRequiredMixin, RecipeCreateUpdateMixin, views.Create
         return super().post(request, *args, **kwargs)
 
 
-class RecipeUpdateView(LoginRequiredMixin, RecipeUpdateCheckCorrectUserMixin, RecipeCreateUpdateMixin, views.UpdateView):
+class RecipeUpdateView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, RecipeCreateUpdateMixin, views.UpdateView):
     template_name = 'main/recipe_update.html'
 
     def get(self, request, *args, **kwargs):
@@ -131,7 +131,7 @@ class RecipeUpdateView(LoginRequiredMixin, RecipeUpdateCheckCorrectUserMixin, Re
         return super().post(request, *args, **kwargs)
 
 
-class RecipeDeleteView(LoginRequiredMixin, RecipeUpdateCheckCorrectUserMixin, views.DeleteView):
+class RecipeDeleteView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, views.DeleteView):
     model = Recipe
     success_url = reverse_lazy('dashboard')
 
@@ -144,8 +144,6 @@ class RecipeDetailsView(views.DetailView):
     def get_context_data(self, **kwargs):
         context = super(RecipeDetailsView, self).get_context_data(**kwargs)
         ingredients = Ingredient.objects.filter(recipe=self.object)
-        for ingredient in ingredients:
-            print(ingredient)
         data = {
             'categories': Category.objects.filter(recipe=self.object),
             'recipe_steps': RecipeStep.objects.filter(recipe=self.object),
@@ -167,7 +165,7 @@ class LikeButtonView(LoginRequiredMixin, View, SingleObjectMixin):
             recipe.save()
 
         return redirect(
-            reverse_lazy(
+            reverse(
                 'recipe details',
                 kwargs={'pk': recipe.pk}
             )

@@ -12,7 +12,9 @@ from CookingHeaven.accounts.models import CookingHeavenUser, Profile
 UserModel = get_user_model()
 
 
-class AbstractCookingHeavenUserFrom(UserCreationForm):
+class AbstractCookingHeavenUserForm(UserCreationForm):
+    FIRST_NAME_ERROR_MESSAGE = "Enter only alphabetic symbols!"
+    LAST_NAME_ERROR_MESSAGE = "Enter only alphabetic symbols!"
     first_name = forms.CharField(
         max_length=Profile.FIRST_NAME_MAX_LENGTH
     )
@@ -49,7 +51,7 @@ class AbstractCookingHeavenUserFrom(UserCreationForm):
         )
 
     def save(self, commit=True):
-        user = super(AbstractCookingHeavenUserFrom, self).save(commit=False)
+        user = super(AbstractCookingHeavenUserForm, self).save(commit=False)
         profile = Profile(
             first_name=self.cleaned_data['first_name'],
             last_name=self.cleaned_data['last_name'],
@@ -61,15 +63,15 @@ class AbstractCookingHeavenUserFrom(UserCreationForm):
         return user
 
     def clean(self):
-        cleaned_data = super(AbstractCookingHeavenUserFrom, self).clean()
+        cleaned_data = super(AbstractCookingHeavenUserForm, self).clean()
         if not self.cleaned_data['first_name'].isalpha():
-            self.add_error('first_name', "Enter only alphabetic symbols!")
+            self.add_error('first_name', self.FIRST_NAME_ERROR_MESSAGE)
         if not self.cleaned_data['last_name'].isalpha():
-            self.add_error('first_name', "Enter only alphabetic symbols!")
+            self.add_error('first_name', self.LAST_NAME_ERROR_MESSAGE)
         return cleaned_data
 
 
-class UserRegisterForm(AbstractCookingHeavenUserFrom):
+class UserRegisterForm(AbstractCookingHeavenUserForm):
     class Meta:
         model = UserModel
         fields = ['username', 'password1', 'password2', 'first_name', 'last_name', 'email']
@@ -98,7 +100,7 @@ class UserRegisterForm(AbstractCookingHeavenUserFrom):
         }
 
 
-class SuperUserProfileCreationForm(AbstractCookingHeavenUserFrom):
+class SuperUserProfileCreationForm(AbstractCookingHeavenUserForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 

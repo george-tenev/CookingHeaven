@@ -1,12 +1,13 @@
 from django import test as django_test
 from django.contrib.auth import get_user_model
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 
 from CookingHeaven.accounts.models import Profile
 from CookingHeaven.accounts.views import ProfileDetailsView
 from CookingHeaven.main.models import Recipe
 
 UserModel = get_user_model()
+
 
 
 class ProfileDetailsViewTests(django_test.TestCase):
@@ -53,7 +54,7 @@ class ProfileDetailsViewTests(django_test.TestCase):
         )
         self.assertEqual(302, response.status_code)
 
-    def test_logged_in_opening_not_exising_profile__expect_404(self):
+    def test_logged_in_opening_not_exising_profile__expect_redirect_to_400(self):
         user, profile = self.__create_valid_user_and_profile()
         self.client.login(**self.VALID_USER_CREDENTIALS)
         response = self.client.get(
@@ -62,7 +63,7 @@ class ProfileDetailsViewTests(django_test.TestCase):
                 kwargs={'pk': 100, }
             )
         )
-        self.assertEqual(404, response.status_code)
+        self.assertEqual('/400/', response.url)
 
     def test_expect_correct_template(self):
         user, profile = self.__create_valid_user_and_profile()
@@ -138,3 +139,24 @@ class ProfileDetailsViewTests(django_test.TestCase):
         )
         total_likes = sum(recipe.likes.count() for recipe in response.context['recipes'])
         self.assertEqual(0, total_likes)
+
+    def test_when_not_owner__raise_permision_error(self):
+        user, profile = self.__create_valid_user_and_profile()
+        user_creds = {
+            'username': 'testuser2',
+            'password': '12345qwe2',
+            'email': 'testuser2@user.com',
+
+        }
+        user2 = self.__create_user(**user_creds)
+        self.client.login(**user_creds)
+        try:
+            response = self.client.get(
+                reverse(
+                    'profile details',
+                    kwargs={'pk': profile.pk, }
+                )
+            )
+        except PermissionError as ex:
+            self.assertRaises(PermissionError)
+
