@@ -1,3 +1,4 @@
+from cloudinary import models as cloudinary_models
 from django.contrib.auth import get_user_model
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
@@ -45,8 +46,8 @@ class Recipe(models.Model):
         blank=True,
     )
 
-    photo = models.ImageField(
-        upload_to='recipe'
+    photo = cloudinary_models.CloudinaryField(
+        'recipe'
     )
 
     preparation_time = models.FloatField()
