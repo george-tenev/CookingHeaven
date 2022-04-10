@@ -58,13 +58,24 @@ TEMPLATES = [
 WSGI_APPLICATION = 'CookingHeaven.wsgi.application'
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'cooking_heaven_db',
+#         'USER': 'postgres',
+#         'PASSWORD': '1123QwER',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cooking_heaven_db',
-        'USER': 'postgres',
-        'PASSWORD': '1123QwER',
-        'HOST': '127.0.0.1',
+        'NAME': 'dee4f75anl85o4',
+        'USER': 'pejglpbwwdcwih',
+        'PASSWORD': '8b6dde54e687a54f370366452f91503dc5c2165fe0a0399c6fde74097c3a0261',
+        'HOST': 'ec2-52-48-159-67.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
