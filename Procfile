@@ -1,2 +1,2 @@
-web: gunicorn --pythonpath CookingHeaven.wsgi
+web: gunicorn CookingHeaven.wsgi
 release: python manage.py migrate
