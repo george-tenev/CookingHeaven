@@ -106,6 +106,8 @@ class Ingredient(models.Model):
     amount = models.PositiveIntegerField()
 
     unit = models.ForeignKey(
+        blank=True,
+        null=True,
         to=Unit,
         on_delete=models.PROTECT
     )

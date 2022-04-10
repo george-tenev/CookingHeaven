@@ -3,13 +3,16 @@ from pathlib import Path
 
 from django.urls import reverse_lazy
 
+from CookingHeaven.utils import is_production, is_test
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-4&$cc5m%y)6p#8k9q++#q#@!#389$6#+43#6zt8c-8lb^h+6*z'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = True
-# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
-ALLOWED_HOSTS = ['*',]
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
+APP_ENVIRONMENT = os.getenv('APP_ENVIRONMENT', 'Development')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1 localhost').split(' ')
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -72,28 +75,32 @@ WSGI_APPLICATION = 'CookingHeaven.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dee4f75anl85o4',
-        'USER': 'pejglpbwwdcwih',
-        'PASSWORD': '8b6dde54e687a54f370366452f91503dc5c2165fe0a0399c6fde74097c3a0261',
-        'HOST': 'ec2-52-48-159-67.eu-west-1.compute.amazonaws.com',
-        'PORT': '5432',
+        'HOST': os.getenv('DB_HOST', '127.0.0.1'),
+        'PORT': os.getenv('DB_PORT', '5432'),
+        'NAME': os.getenv('DB_NAME', 'cooking_heaven_db'),
+        'USER': os.getenv('DB_USER', 'postgres'),
+        'PASSWORD': os.getenv('DB_PASSWORD', '1123QwER'),
+
     }
+
 }
 
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
-]
+AUTH_PASSWORD_VALIDATORS = []
+if is_production():
+    AUTH_PASSWORD_VALIDATORS.extend([
+        {
+            'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        },
+        {
+            'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        },
+        {
+            'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        },
+        {
+            'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        },
+    ])
 
 LANGUAGE_CODE = 'en-us'
 
@@ -117,6 +124,34 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+LOGGING_LEVEL = 'DEBUG'
+
+if is_production():
+    LOGGING_LEVEL = 'INFO'
+elif is_test():
+    LOGGING_LEVEL = 'CRITICAL'
+
+
+LOGGING = {
+    'version': 1,
+    'handlers': {
+        'console': {
+            'level': LOGGING_LEVEL,
+            'filters': [],
+            'class': 'logging.StreamHandler',
+        }
+    },
+    'loggers': {
+        'django.db.backends': {
+            'level': LOGGING_LEVEL,
+            'handlers': ['console'],
+        }
+    }
+}
+
 
 AUTH_USER_MODEL = 'accounts.CookingHeavenUser'
 
