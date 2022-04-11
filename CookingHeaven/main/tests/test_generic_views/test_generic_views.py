@@ -23,7 +23,7 @@ class TestGenericViews(TestCase):
     }
 
     VALID_RECIPE_DATA = {
-        'photo': 'asd.jpg',
+        'photo': '/imagetest.jpg',
         'preparation_time': 1,
         'cooking_time': 1,
     }

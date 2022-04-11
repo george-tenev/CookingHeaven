@@ -7,7 +7,7 @@ from django.views import generic as views
 from django.views.generic import DeleteView
 
 from CookingHeaven.accounts.forms import UserRegisterForm, SuperUserProfileCreationForm, \
-    SuperUserGroupCreateForm, ProfileUpdateForm, UserUpdateForm
+    SuperUserGroupCreateForm, ProfileUpdateForm, UserUpdateForm, AdminUserUpdateForm
 from CookingHeaven.accounts.models import CookingHeavenUser, Profile
 from CookingHeaven.common.view_mixins import SuperuserRequiredMixin, AdminRequiredMixin
 from CookingHeaven.main.models import Recipe
@@ -87,11 +87,10 @@ class UserDeleteView(LoginRequiredMixin, ProfileCheckCorrectUserMixin, views.Del
 
 
 class ProfileUpdateView(LoginRequiredMixin, ProfileCheckCorrectUserMixin,Success_Url_ProfileDetailsViewMixin, views.UpdateView):
-    model = Profile
+    model = UserModel
     template_name = 'accounts/profile_update.html'
-    form_class = ProfileUpdateForm
+    form_class = UserUpdateForm
     context_object_name = 'profile'
-
 
 class ProfileDetailsView(LoginRequiredMixin, ProfileCheckCorrectUserMixin, views.DetailView):
     model = Profile
@@ -109,7 +108,7 @@ class ProfileDetailsView(LoginRequiredMixin, ProfileCheckCorrectUserMixin, views
 class AdminUserUpdateView(LoginRequiredMixin, PermissionRequiredMixin, Success_Url_ProfileDetailsViewMixin, views.UpdateView):
     model = UserModel
     template_name = 'accounts/user_update.html'
-    form_class = UserUpdateForm
+    form_class = AdminUserUpdateForm
     context_object_name = 'user'
     permission_required = 'accounts.change_cookingheavenuser'
 
