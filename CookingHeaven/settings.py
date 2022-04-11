@@ -135,22 +135,30 @@ if is_production():
 elif is_test():
     LOGGING_LEVEL = 'CRITICAL'
 
+LOGS_DIR = BASE_DIR / 'logs'
+
+try:
+    os.mkdir(LOGS_DIR)
+except:
+    pass
+
+
 
 LOGGING = {
     'version': 1,
+    'disable_existing_loggers': False,
     'handlers': {
         'console': {
             'level': LOGGING_LEVEL,
             'filters': [],
             'class': 'logging.StreamHandler',
-        }
-    },
-    'loggers': {
-        'django.db.backends': {
+        },
+        'file': {
             'level': LOGGING_LEVEL,
-            'handlers': ['console'],
-        }
-    }
+            'class': 'logging.FileHandler',
+            'filename': LOGS_DIR / 'Log.txt',
+        },
+    },
 }
 
 

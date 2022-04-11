@@ -23,7 +23,7 @@
             {% endfor %}
         </div>
         <div id='ingredient-empty-form' class='hidden'>{{ ingredient_formset.empty_form.as_p }}</div>
-        <button id='add-ingredient' type='button'>Add ingredient</button>
+        <button class="btn btn-orange" id='add-ingredient' type='button'>Add ingredient</button>
 
         <h3>Recipe Step</h3>
         {{ recipe_step_formset.management_form }}
@@ -35,9 +35,9 @@
             {% endfor %}
         </div>
         <div id='recipe-step-empty-form' class='hidden'>{{ recipe_step_formset.empty_form.as_p }}</div>
-        <button id='add-recipe-step' type='button'>Add step</button>
+        <button class="btn btn-orange" id='add-recipe-step' type='button'>Add step</button>
 
-        <button class="btn">Create recipe</button>
+        <button class="d-block my-1 btn btn-orange">Create recipe</button>
     </form>
 </div>
     <script>

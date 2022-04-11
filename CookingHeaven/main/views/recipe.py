@@ -1,3 +1,4 @@
+import cloudinary
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import ValidationError, PermissionDenied
 from django.http import Http404
@@ -135,6 +136,9 @@ class RecipeDeleteView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, views.De
     model = Recipe
     success_url = reverse_lazy('dashboard')
 
+    def form_valid(self, form):
+        cloudinary.uploader.destroy(self.object.photo.public_id, invalidate=True)
+        return super(RecipeDeleteView, self).form_valid()
 
 class RecipeDetailsView(views.DetailView):
     model = Recipe
