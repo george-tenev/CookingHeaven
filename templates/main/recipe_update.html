@@ -37,7 +37,7 @@
         <div id='recipe-step-empty-form' class='hidden'>{{ recipe_step_formset.empty_form.as_p }}</div>
         <button id='add-recipe-step' type='button'>Add step</button>
 
-        <button class="btn">Update recipe</button>
+        <button class="btn btn-orange">Update recipe</button>
     </form>
 
     <script>
@@ -60,8 +60,8 @@
             // now add new empty form element to our html form
             IngredientFormCopyTarget.append(copyEmptyIngredientFormEl)
         }
-    </script>
-    <script>
+{#    </script>#}
+{#    <script>#}
         const addRecipeStepBtn = document.getElementById('add-recipe-step')
         const totalNewRecipeStepForms = document.getElementById('id_recipe-step-form-TOTAL_FORMS')
         addRecipeStepBtn.addEventListener('click', add_new_recipe_step_form)
