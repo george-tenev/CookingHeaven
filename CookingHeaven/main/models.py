@@ -1,3 +1,5 @@
+import os
+
 from cloudinary import models as cloudinary_models
 from django.contrib.auth import get_user_model
 from django.contrib.auth.base_user import AbstractBaseUser
@@ -9,6 +11,14 @@ from CookingHeaven.accounts.models import CookingHeavenUser
 from CookingHeaven.common.validators import is_alpha
 
 UserModel = get_user_model()
+
+
+class RecipeCloudinaryField(cloudinary_models.CloudinaryField):
+    def pre_save(self, model_instance, add):
+        self.options.update(
+            {'folder': os.getenv('APP_ENVIRONMENT', 'Development')}
+        )
+        return super(RecipeCloudinaryField, self).pre_save(model_instance, add)
 
 
 class Category(models.Model):
@@ -46,9 +56,7 @@ class Recipe(models.Model):
         blank=True,
     )
 
-    photo = cloudinary_models.CloudinaryField(
-        'recipe'
-    )
+    photo = RecipeCloudinaryField()
 
     preparation_time = models.FloatField()
 

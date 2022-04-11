@@ -138,7 +138,7 @@ class RecipeDeleteView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, views.De
 
     def form_valid(self, form):
         cloudinary.uploader.destroy(self.object.photo.public_id, invalidate=True)
-        return super(RecipeDeleteView, self).form_valid()
+        return super(RecipeDeleteView, self).form_valid(form)
 
 class RecipeDetailsView(views.DetailView):
     model = Recipe
