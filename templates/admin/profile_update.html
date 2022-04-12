@@ -1,0 +1,9 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+<form action="{% url 'admin profile update' profile.pk%}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-orange">Update</button>
+</form>
+{% endblock %}
+

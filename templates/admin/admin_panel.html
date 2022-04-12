@@ -2,17 +2,17 @@
 {% block page_content %}
     <div class="mr-auto">
     <ul>
-        <li><a href="{% url 'profile list' %}">Profiles</a></li>
-        <li><a href="{% url 'admin profile create' %}">Create profile</a></li>
+        <li><a class="btn btn-orange mb-1" href="{% url 'profile list' %}">Profiles</a></li>
+        <li><a class="btn btn-orange mb-1" href="{% url 'admin profile create' %}">Create profile</a></li>
 
-        <a href="{% url 'admin group list' %}">Groups</a></li>
-        <li><a href="{% url 'admin group create' %}">Create group</a></li>
+        <a class="btn btn-orange mb-1" href="{% url 'admin group list' %}">Groups</a></li>
+        <li><a class="btn btn-orange mb-1" href="{% url 'admin group create' %}">Create group</a></li>
 
-        <a href="{% url 'category list' %}">Categories</a></li>
-        <li><a href="{% url 'category create' %}">Create Category</a></li>
+        <a class="btn btn-orange mb-1" href="{% url 'category list' %}">Categories</a></li>
+        <li><a class="btn btn-orange mb-1" href="{% url 'category create' %}">Create Category</a></li>
 
-        <a href="{% url 'unit list' %}">Units</a></li>
-        <li><a href="{% url 'unit create' %}">Create unit</a></li>
+        <a class="btn btn-orange mb-1" href="{% url 'unit list' %}">Units</a></li>
+        <li><a class="btn btn-orange mb-1" href="{% url 'unit create' %}">Create unit</a></li>
     </ul>
     </div>
 {% endblock %}

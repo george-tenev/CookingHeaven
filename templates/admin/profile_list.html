@@ -4,8 +4,8 @@
         {% for profile in profiles %}
             <li>
                 <h5>{{ profile.full_name }}</h5>
-                <a href="{% url 'profile update' profile.pk %}" class="btn btn-orange w-auto">Edit Profile</a>
-                <a href="{% url 'user update' profile.pk %}" class="btn btn-orange w-auto">Edit User</a>
+                <a href="{% url 'admin profile update' profile.pk %}" class="btn btn-orange w-auto">Edit Profile</a>
+{#                <a href="{% url 'user update' profile.pk %}" class="btn btn-orange w-auto">Edit User</a>#}
             </li>
         {% endfor %}
     </ul>

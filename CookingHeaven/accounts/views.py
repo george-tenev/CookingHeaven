@@ -61,7 +61,7 @@ class GroupListView(PermissionRequiredMixin, views.ListView):
 
 
 class SuperUserProfileCreateView(LoginRequiredMixin, SuperuserRequiredMixin, views.CreateView):
-    template_name = 'admin/admin_profile_create.html'
+    template_name = 'admin/profile_create.html'
     success_url = reverse_lazy('home')
     form_class = SuperUserProfileCreationForm
 
@@ -107,9 +107,9 @@ class ProfileDetailsView(LoginRequiredMixin, ProfileCheckCorrectUserMixin, views
 
 class AdminUserUpdateView(LoginRequiredMixin, PermissionRequiredMixin, Success_Url_ProfileDetailsViewMixin, views.UpdateView):
     model = UserModel
-    template_name = 'accounts/user_update.html'
+    template_name = 'admin/profile_update.html'
     form_class = AdminUserUpdateForm
-    context_object_name = 'user'
+    context_object_name = 'profile'
     permission_required = 'accounts.change_cookingheavenuser'
 
 

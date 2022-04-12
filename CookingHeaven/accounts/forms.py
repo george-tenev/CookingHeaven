@@ -12,10 +12,6 @@ from CookingHeaven.accounts.models import CookingHeavenUser, Profile
 UserModel = get_user_model()
 
 
-
-
-
-
 class AbstractCookingHeavenUserForm(UserCreationForm):
     FIRST_NAME_ERROR_MESSAGE = "Enter only alphabetic symbols!"
     LAST_NAME_ERROR_MESSAGE = "Enter only alphabetic symbols!"
@@ -30,6 +26,18 @@ class AbstractCookingHeavenUserForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        self.fields['password1'].widget = forms.PasswordInput(
+            attrs={
+                'placeholder': 'Enter password'
+            }
+        )
+
+        self.fields['password2'].widget = forms.PasswordInput(
+            attrs={
+                'placeholder': 'Confirm password'
+            }
+        )
 
         self.fields['first_name'].widget = forms.TextInput(
             attrs={
@@ -66,24 +74,7 @@ class AbstractCookingHeavenUserForm(UserCreationForm):
         return cleaned_data
 
 
-
-
 class UserRegisterForm(AbstractCookingHeavenUserForm):
-
-    def __init__(self, *args, **kwargs):
-        super(UserRegisterForm, self).__init__(*args, **kwargs)
-        self.fields['password1'].widget = forms.PasswordInput(
-            attrs={
-                'placeholder': 'Enter password'
-            }
-        )
-
-        self.fields['password2'].widget = forms.PasswordInput(
-            attrs={
-                'placeholder': 'Confirm password'
-            }
-        )
-
     class Meta:
         model = UserModel
         fields = ['username', 'password1', 'password2', 'first_name', 'last_name', 'email']
@@ -112,7 +103,7 @@ class UserRegisterForm(AbstractCookingHeavenUserForm):
         }
 
 
-class UserUpdateForm(UserChangeForm):
+class UserUpdateForm(ModelForm):
     FIRST_NAME_ERROR_MESSAGE = "Enter only alphabetic symbols!"
     LAST_NAME_ERROR_MESSAGE = "Enter only alphabetic symbols!"
 
@@ -146,51 +137,12 @@ class UserUpdateForm(UserChangeForm):
             self.add_error('first_name', self.LAST_NAME_ERROR_MESSAGE)
         return cleaned_data
 
-
     class Meta:
         model = UserModel
         fields = ['username', 'email']
-        # exclude = ['password']
-        # exclude = ['password1', 'password2']
-        # widgets = {
-        #     'username': forms.TextInput(
-        #         attrs={
-        #             'placeholder': 'Enter username',
-        #         },
-        #     ),
-        #     'first_name': forms.TextInput(
-        #         attrs={
-        #             'placeholder': 'Enter first name',
-        #         },
-        #     ),
-        #     'last_name': forms.TextInput(
-        #         attrs={
-        #             'placeholder': 'Enter last name',
-        #         },
-        #     ),
-        #     'email': forms.EmailInput(
-        #         attrs={
-        #             'placeholder': 'Enter email'
-        #         }
-        #     )
-        # }
 
 
 class SuperUserProfileCreationForm(AbstractCookingHeavenUserForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['password1'].widget = forms.PasswordInput(
-            attrs={
-                'placeholder': 'Enter password'
-            }
-        )
-
-        self.fields['password2'].widget = forms.PasswordInput(
-            attrs={
-                'placeholder': 'Confirm password'
-            }
-        )
-
     class Meta:
         exclude = ['last_login', 'password',]
         model = UserModel
