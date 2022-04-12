@@ -16,7 +16,7 @@ class RecipeCheckCorrectUserMixin:
     def dispatch(self, request, *args, **kwargs):
         recipe = self.get_object()
         if request.user != recipe.publisher and not request.user.is_staff:
-            raise PermissionError
+            raise PermissionError('You have no permission for this page')
         return super(RecipeCheckCorrectUserMixin, self).dispatch(request, *args, **kwargs)
 
 

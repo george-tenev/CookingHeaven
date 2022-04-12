@@ -11,5 +11,4 @@ def is_development():
 
 
 def is_test():
-    print(len(sys.argv) > 1 and sys.argv[1] == 'test')
     return len(sys.argv) > 1 and sys.argv[1] == 'test'

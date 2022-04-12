@@ -118,7 +118,7 @@ class ProfileListView(PermissionRequiredMixin, views.ListView):
     context_object_name = 'profiles'
     template_name = 'admin/profile_list.html'
     permission_required = 'accounts.view_cookingheavenuser'
-
+    permission_denied_message = ''
 
 class PasswordChangeView(LoginRequiredMixin, auth_views.PasswordChangeView):
     template_name = 'accounts/password_change.html'

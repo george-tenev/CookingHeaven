@@ -1,0 +1,200 @@
+Watching for file changes with StatReloader
+Bequest path: /favicon.ico Status code: 404
+Forbidden (Permission denied): /accounts/admin/profile/list/
+Traceback (most recent call last):
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\contrib\auth\mixins.py", line 108, in dispatch
+    return self.handle_no_permission()
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\contrib\auth\mixins.py", line 48, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+Bequest path: /accounts/admin/profile/list/ Status code: 403
+Bequest path: /favicon.ico Status code: 404
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\utils.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Bequest path: /favicon.ico Status code: 404
+Bequest path: /favicon.ico Status code: 404
+Forbidden (Permission denied): /accounts/admin/profile/list/
+Traceback (most recent call last):
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\contrib\auth\mixins.py", line 108, in dispatch
+    return self.handle_no_permission()
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\contrib\auth\mixins.py", line 48, in handle_no_permission
+    raise PermissionDenied(self.get_permission_denied_message())
+django.core.exceptions.PermissionDenied
+Bequest path: /accounts/admin/profile/list/ Status code: 403
+Bequest path: /favicon.ico Status code: 404
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /admin-panel/
+Traceback (most recent call last):
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+TypeError: process_exception() missing 1 required positional argument: 'exception'
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+TypeError: process_exception() missing 1 required positional argument: 'exception'
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+TypeError: process_exception() missing 1 required positional argument: 'exception'
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+TypeError: process_exception() missing 1 required positional argument: 'exception'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+TypeError: process_exception() missing 1 required positional argument: 'exception'
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+TypeError: process_exception() missing 1 required positional argument: 'exception'
+Watching for file changes with StatReloader
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+TypeError: process_exception() missing 1 required positional argument: 'exception'
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+TypeError: process_exception() missing 1 required positional argument: 'exception'
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/admin/profile/list/ Excpetion: 
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied
+Path: /recipe/update/20012/ Excpetion: Http404
+Path: /recipe/update/143/ Excpetion: Http404
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied('') Status code <function BaseHandler._get_response at 0x0000017BFEDFEB80>
+Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied('') Status code <function BaseHandler._get_response at 0x0000017BFEDFEB80>
+Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied('') Status code <function BaseHandler._get_response at 0x0000017BFEDFEB80>
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\err.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied('') Status code <function BaseHandler._get_response at 0x000001AE03A62310>
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\middlewares.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied('')
+Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied('')
+Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied('')

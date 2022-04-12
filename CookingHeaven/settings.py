@@ -13,7 +13,6 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'sk')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 APP_ENVIRONMENT = os.getenv('APP_ENVIRONMENT', 'Development')
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1 localhost').split(' ')
-print(ALLOWED_HOSTS)
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,7 +36,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'CookingHeaven.middlewares.handle_exception',
+    'CookingHeaven.middlewares.HandleExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'CookingHeaven.urls'
@@ -60,18 +59,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'CookingHeaven.wsgi.application'
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'cooking_heaven_db',
-#         'USER': 'postgres',
-#         'PASSWORD': '1123QwER',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     }
-# }
 
 DATABASES = {
     'default': {
@@ -111,12 +98,10 @@ USE_I18N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
+
 STATIC_ROOT = BASE_DIR /'staticfiles'
 STATIC_URL = '/static/'
 
-# Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -144,19 +129,26 @@ except:
 
 
 
+
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
         'console': {
-            'level': LOGGING_LEVEL,
-            'filters': [],
             'class': 'logging.StreamHandler',
+            'level': LOGGING_LEVEL,
         },
         'file': {
-            'level': LOGGING_LEVEL,
             'class': 'logging.FileHandler',
+            'level': LOGGING_LEVEL,
             'filename': LOGS_DIR / 'Log.txt',
+        },
+    },
+    'loggers': {
+        'root': {
+            'handlers': ['console', 'file'],
+            'level': LOGGING_LEVEL,
         },
     },
 }

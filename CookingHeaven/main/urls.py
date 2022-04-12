@@ -25,8 +25,7 @@ urlpatterns = [
     path('unit/update/<int:pk>', unit.UnitUpdateView.as_view(), name='unit update'),
     path('unit/delete/<int:pk>', unit.UnitDeleteView.as_view(), name='unit delete'),
 
-    path('400/', err.bad_request, name= '400'),
-    path('500/', err.internal_error, name='500'),
+    path('error_page/', err.error_page, name= 'error page'),
 
     path('admin-panel/', admin_panel.AdminPanelView.as_view(), name='admin panel')
 
