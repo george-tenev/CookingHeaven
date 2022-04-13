@@ -1,5 +1,8 @@
+from msilib.schema import ListView
+
 import cloudinary
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.postgres.search import SearchVector, SearchRank
 from django.core.exceptions import ValidationError, PermissionDenied
 from django.http import Http404
 from django.shortcuts import redirect
@@ -155,6 +158,21 @@ class RecipeDetailsView(views.DetailView):
         }
         context.update(data)
         return context
+
+
+class RecipeSearchView(views.ListView):
+    model = Recipe
+    context_object_name = 'recipes'
+    template_name = 'main/recipe_search_results.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get("q")
+        vector = SearchVector('name', 'category', 'description', 'ingredient__name')
+        recipes =  Recipe.objects.annotate(
+            rank=SearchRank(vector, query)
+        ).order_by('-rank')
+        return recipes
+
 
 
 class LikeButtonView(LoginRequiredMixin, View, SingleObjectMixin):

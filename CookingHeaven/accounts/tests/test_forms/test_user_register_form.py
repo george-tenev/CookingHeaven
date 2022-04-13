@@ -32,6 +32,7 @@ class ProfileFormsTests(django_test.TestCase):
     def test_user_register_form_first_name_not_only_alpha(self):
         form = UserRegisterForm(data=self.FIRST_NAME_UNVALID_USER_REGISTER)
         self.assertFalse(form.is_valid())
+
     def test_user_register_form_last_name_not_only_alpha(self):
         form = UserRegisterForm({
         'first_name': 'georgi',

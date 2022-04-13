@@ -66,11 +66,11 @@ class RecipeDeleteViewTests(django_test.TestCase):
 
         expected_recipe = self.__create_recipe(user=user, **self.VALID_RECIPE_DATA)
         self.client.login(**credentials)
-        with self.assertRaises(PermissionError) as context:
-            self.client.post(reverse('recipe delete', kwargs={'pk': expected_recipe.pk}))
+        # with self.assertRaises(PermissionError) as context:
+        response = self.client.post(reverse('recipe delete', kwargs={'pk': expected_recipe.pk}))
 
         recipe = list(Recipe.objects.filter(pk=expected_recipe.pk))
-
+        self.assertEqual('/error_page/', response.url)
         self.assertListEqual([expected_recipe], recipe)
 
 

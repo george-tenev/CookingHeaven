@@ -50,6 +50,8 @@ class ProfileDetailsViewTests(django_test.TestCase):
         self.client.post(
             reverse('profile update', kwargs={'pk': profile.pk}),
             data={
+                'username': 'newuser',
+                'email': 'new@mail.com',
                 'first_name': 'newfirst',
                 'last_name': 'newlast',
 
@@ -69,8 +71,14 @@ class ProfileDetailsViewTests(django_test.TestCase):
             }
         ),
             data={
+                'username': 'newuser',
+                'email': 'new@mail.com',
                 'first_name': 'newfirstname',
                 'last_name': 'newlastname'}
         )
-        expected_url = reverse('profile details', kwargs={'pk': profile.pk})
+        expected_url = reverse(
+                'profile details',
+                kwargs={'pk': profile.pk, }
+            )
+
         self.assertRedirects(response, expected_url)

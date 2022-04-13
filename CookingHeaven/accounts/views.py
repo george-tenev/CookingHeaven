@@ -22,14 +22,6 @@ class ProfileCheckCorrectUserMixin:
             return response
         raise PermissionError
 
-class Success_Url_ProfileDetailsViewMixin:
-    def get_success_url(self):
-        return reverse(
-            'profile details',
-            kwargs={
-                'pk': self.object.pk
-            }
-        )
 
 class GroupCreateView(LoginRequiredMixin, PermissionRequiredMixin, views.CreateView):
     template_name = 'admin/group_create.html'
@@ -86,11 +78,20 @@ class UserDeleteView(LoginRequiredMixin, ProfileCheckCorrectUserMixin, views.Del
     success_url = reverse_lazy('home')
 
 
-class ProfileUpdateView(LoginRequiredMixin, ProfileCheckCorrectUserMixin,Success_Url_ProfileDetailsViewMixin, views.UpdateView):
+class ProfileUpdateView(LoginRequiredMixin, ProfileCheckCorrectUserMixin, views.UpdateView):
     model = UserModel
     template_name = 'accounts/profile_update.html'
     form_class = UserUpdateForm
     context_object_name = 'profile'
+
+    def get_success_url(self):
+        return reverse(
+            'profile details',
+            kwargs={
+                'pk': self.object.pk
+            }
+        )
+
 
 class ProfileDetailsView(LoginRequiredMixin, ProfileCheckCorrectUserMixin, views.DetailView):
     model = Profile
@@ -105,7 +106,7 @@ class ProfileDetailsView(LoginRequiredMixin, ProfileCheckCorrectUserMixin, views
         return context
 
 
-class AdminUserUpdateView(LoginRequiredMixin, PermissionRequiredMixin, Success_Url_ProfileDetailsViewMixin, views.UpdateView):
+class AdminUserUpdateView(LoginRequiredMixin, PermissionRequiredMixin, views.UpdateView):
     model = UserModel
     template_name = 'admin/profile_update.html'
     form_class = AdminUserUpdateForm

@@ -63,7 +63,7 @@ class ProfileDetailsViewTests(django_test.TestCase):
                 kwargs={'pk': 100, }
             )
         )
-        self.assertEqual('/400/', response.url)
+        self.assertEqual('/error_page/', response.url)
 
     def test_expect_correct_template(self):
         user, profile = self.__create_valid_user_and_profile()

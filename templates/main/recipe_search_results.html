@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% block page_content %}
+    <div class="container">
+        <ul>
+        {% for recipe in recipes %}
+            <li>
+            <h5>
+                <a  href="{% url 'recipe details' recipe.pk %}">
+                   {{ recipe.name }}
+                </a>
+            </h5>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

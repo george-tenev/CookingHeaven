@@ -1,5 +1,4 @@
-from django.urls import path, include
-
+from django.urls import path
 from CookingHeaven.accounts import admin
 from CookingHeaven.main import views
 from CookingHeaven.main.views import generic, category, admin_panel, unit, err
@@ -14,7 +13,7 @@ urlpatterns = [
     path('recipe/delete/<int:pk>/', recipe.RecipeDeleteView.as_view(), name='recipe delete'),
     path('recipe/details/<int:pk>/', recipe.RecipeDetailsView.as_view(), name='recipe details'),
     path('recipe/like/<int:pk>/', recipe.LikeButtonView.as_view(), name='recipe like'),
-
+    path('recipe/search/', recipe.RecipeSearchView.as_view(), name='recipe search'),
     path('category/create/', category.CategoryCreateView.as_view(), name='category create'),
     path('category/list/', category.CategoryListView.as_view(), name='category list'),
     path('category/update/<int:pk>', category.CategoryUpdateView.as_view(), name='category update'),

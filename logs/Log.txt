@@ -198,3 +198,473 @@ Watching for file changes with StatReloader
 Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied('')
 Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied('')
 Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied('')
+Watching for file changes with StatReloader
+Not Found: /static/css/custom.css
+Not Found: /favicon.ico
+Not Found: /static/css/bootstrap.min.css
+Not Found: /static/css/custom.css
+Not Found: /static/js/bootstrap.bundle.js
+Not Found: /static/css/bootstrap.min.css
+Not Found: /static/css/custom.css
+Not Found: /static/js/bootstrap.bundle.js
+Not Found: /static/css/bootstrap.min.css
+Not Found: /static/css/custom.css
+Not Found: /static/js/bootstrap.bundle.js
+Watching for file changes with StatReloader
+Path: /accounts/details/21/ Excpetion: Http404('No profile found matching the query')
+Path: /accounts/details/21/ Excpetion: Http404('No profile found matching the query')
+Path: /recipe/delete/161/ Excpetion: TemplateDoesNotExist('main/recipe_confirm_delete.html')
+Path: /recipe/delete/161/ Excpetion: TemplateDoesNotExist('main/recipe_confirm_delete.html')
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\common\validators.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/admin/profile/list/ Excpetion: PermissionDenied('')
+Path: /accounts/admin/group/list/ Excpetion: PermissionDenied('')
+Path: /accounts/details/21/ Excpetion: Http404('No profile found matching the query')
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\models.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/delete/24 Excpetion: PermissionError()
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /recipe/search/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Watching for file changes with StatReloader
+Path: / Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Watching for file changes with StatReloader
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+Path: /recipe/search/ Excpetion: ViewDoesNotExist("'<CookingHeaven.main.views.recipe.RecipeSearchView object at 0x0000019A8AA97A30>' is not a callable or a dot-notation path")
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: / Excpetion: ViewDoesNotExist("'<CookingHeaven.main.views.generic.IndexTemplateView object at 0x0000019A8AAF2790>' is not a callable or a dot-notation path")
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: /error_page/ Excpetion: VariableDoesNotExist('Failed lookup for key [%s] in %r', ('view', [{'True': True, 'False': False, 'None': None}, {}, {}]))
+Path: / Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: /error_page/ Excpetion: ImproperlyConfigured("TemplateResponseMixin requires either a definition of 'template_name' or an implementation of 'get_template_names()'")
+Path: / Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Path: /error_page/ Excpetion: ImportError("Could not import '/recipe/partial/search/'. The path must be fully qualified.")
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\settings.py changed, reloading.
+Watching for file changes with StatReloader

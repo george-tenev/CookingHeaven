@@ -8,7 +8,7 @@ from django.core.validators import MinLengthValidator
 from django.db import models
 
 from CookingHeaven.accounts.models import CookingHeavenUser
-from CookingHeaven.common.validators import is_alpha
+from CookingHeaven.common.validators import is_alpha, is_alpha_and_space
 
 UserModel = get_user_model()
 
@@ -42,7 +42,7 @@ class Recipe(models.Model):
         unique=True,
         validators=[
             MinLengthValidator(NAME_MIN_LENGTH),
-            is_alpha,
+            is_alpha_and_space,
         ]
     )
 
