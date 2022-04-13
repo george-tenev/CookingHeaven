@@ -11,8 +11,16 @@ from CookingHeaven.accounts.models import CookingHeavenUser, Profile
 
 UserModel = get_user_model()
 
+class CookingHeavenCleanMixin:
+    def clean(self):
+        cleaned_data = super().clean()
+        if not self.cleaned_data['first_name'].isalpha():
+            self.add_error('first_name', self.FIRST_NAME_ERROR_MESSAGE)
+        if not self.cleaned_data['last_name'].isalpha():
+            self.add_error('first_name', self.LAST_NAME_ERROR_MESSAGE)
+        return cleaned_data
 
-class AbstractCookingHeavenUserForm(UserCreationForm):
+class AbstractCookingHeavenUserForm(CookingHeavenCleanMixin, UserCreationForm):
     FIRST_NAME_ERROR_MESSAGE = "Enter only alphabetic symbols!"
     LAST_NAME_ERROR_MESSAGE = "Enter only alphabetic symbols!"
 
@@ -27,6 +35,7 @@ class AbstractCookingHeavenUserForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+
         self.fields['password1'].widget = forms.PasswordInput(
             attrs={
                 'placeholder': 'Enter password'
@@ -38,7 +47,16 @@ class AbstractCookingHeavenUserForm(UserCreationForm):
                 'placeholder': 'Confirm password'
             }
         )
-
+        self.fields['username'].widget = forms.TextInput(
+            attrs={
+                'placeholder': 'Enter username'
+            }
+        )
+        self.fields['email'].widget = forms.EmailInput(
+            attrs={
+                'placeholder': 'Enter email'
+            }
+        )
         self.fields['first_name'].widget = forms.TextInput(
             attrs={
                 'placeholder': 'Enter first name'
@@ -65,13 +83,6 @@ class AbstractCookingHeavenUserForm(UserCreationForm):
             profile.save()
         return user
 
-    def clean(self):
-        cleaned_data = super().clean()
-        if not self.cleaned_data['first_name'].isalpha():
-            self.add_error('first_name', self.FIRST_NAME_ERROR_MESSAGE)
-        if not self.cleaned_data['last_name'].isalpha():
-            self.add_error('first_name', self.LAST_NAME_ERROR_MESSAGE)
-        return cleaned_data
 
 
 class UserRegisterForm(AbstractCookingHeavenUserForm):
@@ -79,31 +90,7 @@ class UserRegisterForm(AbstractCookingHeavenUserForm):
         model = UserModel
         fields = ['username', 'password1', 'password2', 'first_name', 'last_name', 'email']
 
-        widgets = {
-            'username': forms.TextInput(
-                attrs={
-                    'placeholder': 'Enter username',
-                },
-            ),
-            'first_name': forms.TextInput(
-                attrs={
-                    'placeholder': 'Enter first name',
-                },
-            ),
-            'last_name': forms.TextInput(
-                attrs={
-                    'placeholder': 'Enter last name',
-                },
-            ),
-            'email': forms.EmailInput(
-                attrs={
-                    'placeholder': 'Enter email'
-                }
-            ),
-        }
-
-
-class UserUpdateForm(ModelForm):
+class UserUpdateForm(CookingHeavenCleanMixin, ModelForm):
     FIRST_NAME_ERROR_MESSAGE = "Enter only alphabetic symbols!"
     LAST_NAME_ERROR_MESSAGE = "Enter only alphabetic symbols!"
 
@@ -114,6 +101,7 @@ class UserUpdateForm(ModelForm):
     last_name = forms.CharField(
         max_length=Profile.LAST_NAME_MAX_LENGTH
     )
+
     def __init__(self, *args, **kwargs):
         super(UserUpdateForm, self).__init__(*args, **kwargs)
         self.profile = Profile.objects.get(user=self.instance)
@@ -129,46 +117,15 @@ class UserUpdateForm(ModelForm):
             self.profile.save()
         return user
 
-    def clean(self):
-        cleaned_data = super().clean()
-        if not self.cleaned_data['first_name'].isalpha():
-            self.add_error('first_name', self.FIRST_NAME_ERROR_MESSAGE)
-        if not self.cleaned_data['last_name'].isalpha():
-            self.add_error('first_name', self.LAST_NAME_ERROR_MESSAGE)
-        return cleaned_data
-
     class Meta:
         model = UserModel
-        fields = ['username', 'email']
+        fields = ['username', 'email', 'first_name', 'last_name']
 
 
 class SuperUserProfileCreationForm(AbstractCookingHeavenUserForm):
     class Meta:
         exclude = ['last_login', 'password',]
         model = UserModel
-
-        widgets = {
-            'username': forms.TextInput(
-                attrs={
-                    'placeholder': 'Enter username',
-                },
-            ),
-            'first_name': forms.TextInput(
-                attrs={
-                    'placeholder': 'Enter first name',
-                },
-            ),
-            'last_name': forms.TextInput(
-                attrs={
-                    'placeholder': 'Enter last name',
-                },
-            ),
-            'email': forms.EmailInput(
-                attrs={
-                    'placeholder': 'Enter email'
-                }
-            )
-        }
 
 
 class SuperUserGroupCreateForm(ModelForm):

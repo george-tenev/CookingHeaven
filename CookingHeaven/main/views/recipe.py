@@ -24,43 +24,25 @@ class RecipeCreateUpdateMixin:
     context_object_name = 'recipe'
     success_url = reverse_lazy('dashboard')
 
-    def post(self, request, *args, **kwargs):
-        recipe = self.object
-        if recipe is not None:
-            ingredient_qs = Ingredient.objects.filter(recipe=recipe)
-            recipe_step_qs = RecipeStep.objects.filter(recipe=recipe)
-        else:
-            ingredient_qs = Ingredient.objects.none()
-            recipe_step_qs = RecipeStep.objects.none()
-
+    def get_formsets(self, recipe, request_method=None):
+        ingredient_qs = Ingredient.objects.filter(recipe=recipe)
+        recipe_step_qs = RecipeStep.objects.filter(recipe=recipe)
         ingredient_formset = IngredientFormset(
-            request.POST,
+            request_method,
             queryset=ingredient_qs,
             prefix='ingredient-form',
         )
         recipe_step_formset = RecipeStepFormset(
-            request.POST,
+            request_method,
             queryset=recipe_step_qs,
             prefix='recipe-step-form'
         )
 
-        formsets = (
-            ingredient_formset,
-            recipe_step_formset,
-        )
-
-        if self.validate_forms(formsets):
-            return redirect(self.success_url)
-
-        context = self.get_context_data(**kwargs)
-        context.update(
-            {
-                'ingredient_formset': ingredient_formset,
-                'recipe_step_formset': recipe_step_formset,
-            }
-        )
-
-        return self.render_to_response(context)
+        formsets = {
+            'ingredient_formset': ingredient_formset,
+            'recipe_step_formset': recipe_step_formset
+        }
+        return formsets
 
     def validate_forms(self, formsets):
         form = self.get_form()
@@ -76,58 +58,38 @@ class RecipeCreateUpdateMixin:
             return True
         return False
 
+    def get(self, request, *args, **kwargs):
+        super().get(request, *args, **kwargs)
+        formsets = self.get_formsets(self.object)
+        context = self.get_context_data(**kwargs)
+        context.update(formsets)
+        return self.render_to_response(context)
+
+    def post(self, request, *args, **kwargs):
+        super(RecipeCreateUpdateMixin, self).post(request, *args, **kwargs)
+
+        formsets = self.get_formsets(self.object, request.POST)
+
+        if self.validate_forms(formsets.values()):
+            return redirect(self.success_url)
+
+        context = self.get_context_data(**kwargs)
+        context.update(formsets)
+
+        return self.render_to_response(context)
+
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
         kwargs['user'] = self.request.user
         return kwargs
 
-    def get_success_url(self):
-        return self.success_url
-
 
 class RecipeCreateView(LoginRequiredMixin, RecipeCreateUpdateMixin, views.CreateView):
     template_name = 'main/recipe_create.html'
 
-    def get(self, request, *args, **kwargs):
-        super(RecipeCreateView, self).get(request, *args, **kwargs)
-        context = self.get_context_data(**kwargs)
-        ingredient_formset = IngredientFormset(queryset=Ingredient.objects.none(), prefix='ingredient-form')
-        recipe_step_formset = RecipeStepFormset(queryset=Ingredient.objects.none(), prefix='recipe-step-form')
-        context.update(
-            {
-                'ingredient_formset': ingredient_formset,
-                'recipe_step_formset': recipe_step_formset,
-            }
-        )
-        return self.render_to_response(context)
-
-    def post(self, request, *args, **kwargs):
-        self.object = None
-        return super().post(request, *args, **kwargs)
-
 
 class RecipeUpdateView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, RecipeCreateUpdateMixin, views.UpdateView):
     template_name = 'main/recipe_update.html'
-
-    def get(self, request, *args, **kwargs):
-        super().get(request, *args, **kwargs)
-        recipe = self.object
-        context = self.get_context_data(**kwargs)
-        ingredient_qs = Ingredient.objects.filter(recipe=recipe)
-        recipe_step_qs = RecipeStep.objects.filter(recipe=recipe)
-        ingredient_formset = IngredientFormset(queryset=ingredient_qs, prefix='ingredient-form')
-        recipe_step_formset = RecipeStepFormset(queryset=recipe_step_qs, prefix='recipe-step-form')
-        context.update(
-            {
-                'ingredient_formset': ingredient_formset,
-                'recipe_step_formset': recipe_step_formset,
-            }
-        )
-        return self.render_to_response(context)
-
-    def post(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        return super().post(request, *args, **kwargs)
 
 
 class RecipeDeleteView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, views.DeleteView):
@@ -138,6 +100,7 @@ class RecipeDeleteView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, views.De
         cloudinary.uploader.destroy(self.object.photo.public_id, invalidate=True)
         return super(RecipeDeleteView, self).form_valid(form)
 
+
 class RecipeDetailsView(views.DetailView):
     model = Recipe
     template_name = 'main/recipe_details.html'
@@ -145,7 +108,6 @@ class RecipeDetailsView(views.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(RecipeDetailsView, self).get_context_data(**kwargs)
-        ingredients = Ingredient.objects.filter(recipe=self.object)
         data = {
             'categories': Category.objects.filter(recipe=self.object),
             'recipe_steps': RecipeStep.objects.filter(recipe=self.object),
@@ -167,7 +129,6 @@ class RecipeSearchView(views.ListView):
             rank=SearchRank(vector, query)
         ).order_by('-rank')
         return recipes
-
 
 
 class LikeButtonView(LoginRequiredMixin, View, SingleObjectMixin):

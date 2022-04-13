@@ -670,3 +670,125 @@ C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\settings.py changed, r
 Watching for file changes with StatReloader
 C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
 Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Watching for file changes with StatReloader
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Watching for file changes with StatReloader
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+Path: /accounts/register/ Excpetion: AttributeError("'tuple' object has no attribute 'is_hidden'")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\forms.py changed, reloading.
+Watching for file changes with StatReloader
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\views.py changed, reloading.
+Watching for file changes with StatReloader
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+Starting new HTTPS connection (1): api.cloudinary.com:443
+Starting new HTTPS connection (2): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+Connection pool is full, discarding connection: api.cloudinary.com. Connection pool size: 1
+Path: /recipe/create/ Excpetion: IntegrityError('duplicate key value violates unique constraint "main_recipe_publisher_id_name_2611d067_uniq"\nDETAIL:  Key (publisher_id, name)=(21, test) already exists.\n')
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/update/162/ Excpetion: AttributeError("'RecipeUpdateView' object has no attribute 'object'")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/create/ Excpetion: AttributeError("'RecipeCreateView' object has no attribute 'object'")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+Path: /accounts/details/21/ Excpetion: Http404('No profile found matching the query')
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+Path: /recipe/create/ Excpetion: TypeError("validate_forms() got an unexpected keyword argument 'ingredient_formset'")
+Path: /recipe/update/167/ Excpetion: TypeError("validate_forms() got an unexpected keyword argument 'ingredient_formset'")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader

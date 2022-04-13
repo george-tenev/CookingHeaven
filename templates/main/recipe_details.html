@@ -9,9 +9,10 @@
                 <div class="col-md-6">
                     {% if request.user == recipe.publisher %}
                         <ul class="list-inline">
-                            <li class="list-inline-item"><a class=" btn btn-orange" role="button"
-                                                            href="{% url 'recipe update' recipe.pk %}">Update
-                                Recipe</a></li>
+                            <li class="list-inline-item">
+                                <a class=" btn btn-orange" role="button" href="{% url 'recipe update' recipe.pk %}">
+                                    Update Recipe</a>
+                            </li>
                             <li class="list-inline-item">
 
                             </li>
