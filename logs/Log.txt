@@ -668,3 +668,5 @@ Watching for file changes with StatReloader
 Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
 C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\settings.py changed, reloading.
 Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
