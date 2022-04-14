@@ -66,8 +66,6 @@ class RecipeCreateUpdateMixin:
         return self.render_to_response(context)
 
     def post(self, request, *args, **kwargs):
-        super(RecipeCreateUpdateMixin, self).post(request, *args, **kwargs)
-
         formsets = self.get_formsets(self.object, request.POST)
 
         if self.validate_forms(formsets.values()):
@@ -87,10 +85,17 @@ class RecipeCreateUpdateMixin:
 class RecipeCreateView(LoginRequiredMixin, RecipeCreateUpdateMixin, views.CreateView):
     template_name = 'main/recipe_create.html'
 
+    def post(self, request, *args, **kwargs):
+        self.object = None
+        return  super().post(request, *args, **kwargs)
+
 
 class RecipeUpdateView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, RecipeCreateUpdateMixin, views.UpdateView):
     template_name = 'main/recipe_update.html'
 
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().post(request, *args, **kwargs)
 
 class RecipeDeleteView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, views.DeleteView):
     model = Recipe

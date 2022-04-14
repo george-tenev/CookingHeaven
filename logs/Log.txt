@@ -792,3 +792,38 @@ C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py c
 Watching for file changes with StatReloader
 C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/create/ Excpetion: AttributeError("'RecipeCreateView' object has no attribute 'object'")
+Path: /recipe/create/ Excpetion: AttributeError("'RecipeCreateView' object has no attribute 'object'")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /recipe/create/
+Traceback (most recent call last):
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\georg\DjangoProjects\CookingHeaven\venv\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view CookingHeaven.main.views.recipe.view didn't return an HttpResponse object. It returned None instead.
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+Path: /recipe/update/171/ Excpetion: TypeError('super(type, obj): obj must be an instance or subtype of type')
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+Path: /recipe/update/171/ Excpetion: TypeError('super(type, obj): obj must be an instance or subtype of type')
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\common\validators.py changed, reloading.
+Watching for file changes with StatReloader

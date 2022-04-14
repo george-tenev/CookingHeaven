@@ -26,7 +26,7 @@ class Category(models.Model):
     name = models.CharField(
         max_length=NAME_MAX_LENGTH,
         unique=True,
-        validators=[is_alpha],
+        validators=[is_alpha_and_space],
     )
 
     def __str__(self):
@@ -110,7 +110,7 @@ class Ingredient(models.Model):
 
     name = models.CharField(
         max_length=NAME_MAX_LENGTH,
-        validators=[is_alpha],
+        validators=[is_alpha_and_space],
     )
     amount = models.PositiveIntegerField()
 
