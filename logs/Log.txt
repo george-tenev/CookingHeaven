@@ -827,3 +827,52 @@ C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py c
 Watching for file changes with StatReloader
 C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\common\validators.py changed, reloading.
 Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'name_icontains' into field. Choices are: category, cooking_time, created_at, description, id, ingredient, likes, name, photo, preparation_time, publisher, publisher_id, recipestep")
+Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'name_icontains' into field. Choices are: category, cooking_time, created_at, description, id, ingredient, likes, name, photo, preparation_time, publisher, publisher_id, recipestep")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader

@@ -1,6 +1,6 @@
 import cloudinary
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.postgres.search import SearchVector, SearchRank
+from django.contrib.postgres.search import SearchVector, SearchRank, SearchQuery
 from django.shortcuts import redirect
 from django.urls import reverse_lazy, reverse
 from django.views import generic as views, View
@@ -131,7 +131,7 @@ class RecipeSearchView(views.ListView):
         query = self.request.GET.get("q")
         vector = SearchVector('name', 'category', 'description', 'ingredient__name')
         recipes =  Recipe.objects.annotate(
-            rank=SearchRank(vector, query)
+            rank=SearchRank(vector, SearchQuery(query))
         ).order_by('-rank')
         return recipes
 
