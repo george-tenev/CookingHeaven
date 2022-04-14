@@ -876,3 +876,113 @@ C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py c
 Watching for file changes with StatReloader
 C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
 Watching for file changes with StatReloader
+Path: / Excpetion: NoReverseMatch("Reverse for 'recipe details' with arguments '('',)' not found. 1 pattern(s) tried: ['recipe/details/(?P<pk>[0-9]+)/\\\\Z']")
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/search/ Excpetion: TypeError('__init__() takes 3 positional arguments but 5 were given')
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/search/ Excpetion: FieldError('Expression contains mixed types: BigAutoField, CharField. You must set output_field.')
+Path: /recipe/search/ Excpetion: FieldError('Expression contains mixed types: BigAutoField, CharField. You must set output_field.')
+Path: /recipe/search/ Excpetion: FieldError('Expression contains mixed types: BigAutoField, CharField. You must set output_field.')
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'ingredient_name' into field. Choices are: category, cooking_time, created_at, description, id, ingredient, likes, name, photo, preparation_time, publisher, publisher_id, recipestep")
+Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'ingredient_name' into field. Choices are: category, cooking_time, created_at, description, id, ingredient, likes, name, photo, preparation_time, publisher, publisher_id, recipestep")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'ingredient_name' into field. Choices are: category, cooking_time, created_at, description, id, ingredient, likes, name, photo, preparation_time, publisher, publisher_id, recipestep")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'icontains' into field. Join on 'name' not permitted.")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'document' into field. Choices are: category, cooking_time, created_at, description, id, ingredient, likes, name, photo, preparation_time, publisher, publisher_id, rank, recipestep")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'search' into field. Choices are: category, cooking_time, created_at, description, id, ingredient, likes, name, photo, preparation_time, publisher, publisher_id, rank, recipestep")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'ingredient_name' into field. Choices are: category, cooking_time, created_at, description, id, ingredient, likes, name, photo, preparation_time, publisher, publisher_id, recipestep")
+Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'ingredient_name' into field. Choices are: category, cooking_time, created_at, description, id, ingredient, likes, name, photo, preparation_time, publisher, publisher_id, recipestep")
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
+Watching for file changes with StatReloader
