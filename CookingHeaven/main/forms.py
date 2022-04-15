@@ -55,6 +55,9 @@ class CustomModelFormSet(BaseModelFormSet):
         for form in self.forms:
             form.empty_permitted = False
 
+class RecipeCategoryFilterForm(forms.Form):
+    CATEGORY_CHOICES = [(category, category) for category in Category.objects.all()]
+    filter = forms.ChoiceField(choices=CATEGORY_CHOICES)
 
 IngredientFormset = modelformset_factory(
     Ingredient,

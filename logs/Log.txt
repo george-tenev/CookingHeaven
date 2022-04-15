@@ -986,3 +986,53 @@ Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'ingredient_
 Path: /recipe/search/ Excpetion: FieldError("Cannot resolve keyword 'ingredient_name' into field. Choices are: category, cooking_time, created_at, description, id, ingredient, likes, name, photo, preparation_time, publisher, publisher_id, recipestep")
 C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\recipe.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /dashboard/dashboard.html
+Not Found: /dashboard/dashboard.html
+Not Found: /dashboard/dashboard.html
+Not Found: /dashboard/dashboard.html
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /dashboard/dashboard.html
+Not Found: /dashboard/dashboard.html
+Not Found: /dashboard/dashboard.html
+Watching for file changes with StatReloader
+Path: /dashboard/ Excpetion: ValueError('Cannot use None as a query value')
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /dashboard/ Excpetion: TypeError('QuerySet.aggregate() received non-expression(s): None.')
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /dashboard/ Excpetion: TypeError('QuerySet.aggregate() received non-expression(s): *.')
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
+Watching for file changes with StatReloader

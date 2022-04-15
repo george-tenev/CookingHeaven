@@ -2,21 +2,27 @@
 {% block page_content %}
     <div class="container p-5">
         {% if recipes %}
-            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-            {% for recipe in page_obj %}
-                <div class="col">
-                <div class="card mb-4 rounded-3 shadow-sm">
-                    <img class="card-img-top card-image" src="{{ recipe.photo.url }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ recipe.name}}</h5>
-                        {% if recipe.description %}
-                        <p class="card-text">{{ recipe.description }}</p>
-                        {% endif %}
-                        <a href="{% url 'recipe details' recipe.pk %}" class="btn btn-orange">View recipe</a>
+            <form action="." method="get">
+                {% csrf_token %}
+                <button class="btn btn-orange">Filter by category</button>
+            {{ filter_form }}
+            </form>
+
+            <div class="row row-cols-1 row-cols-md-3 my-2 text-center">
+                {% for recipe in page_obj %}
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <img class="card-img-top card-image" src="{{ recipe.photo.url }}" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ recipe.name }}</h5>
+                                {% if recipe.description %}
+                                    <p class="card-text">{{ recipe.description }}</p>
+                                {% endif %}
+                                <a href="{% url 'recipe details' recipe.pk %}" class="btn btn-orange">View recipe</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
             </div>
             <div class="pagination">
     <span class="step-links">
@@ -34,7 +40,7 @@
             <a class="btn btn-orange" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
         {% endif %}
     </span>
-</div>
+            </div>
         {% else %}
             <div class="d-flex justify-content-center">
                 <h3>There are no Any Recipes</h3>
