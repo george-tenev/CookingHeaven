@@ -68,7 +68,7 @@ class Recipe(models.Model):
     )
 
     category = models.ManyToManyField(
-        null=True,
+        # null=True,
         blank=True,
         to=Category,
     )

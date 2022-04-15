@@ -1036,3 +1036,15 @@ C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py 
 Watching for file changes with StatReloader
 C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\views\generic.py changed, reloading.
 Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\main\models.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/hhy2golqc/image/upload HTTP/1.1" 200 None
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\views.py changed, reloading.
+Watching for file changes with StatReloader

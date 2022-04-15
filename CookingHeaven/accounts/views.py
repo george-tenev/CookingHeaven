@@ -1,4 +1,4 @@
-from django.contrib.auth import views as auth_views, get_user_model
+from django.contrib.auth import views as auth_views, get_user_model, login
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.models import User, Group
 from django.shortcuts import redirect
@@ -63,6 +63,10 @@ class UserRegisterView(views.CreateView):
     form_class = UserRegisterForm
     success_url = reverse_lazy('home')
 
+    def form_valid(self, form):
+        result = super().form_valid(form)
+        login(self.request, self.object)
+        return result
 
 class UserLoginView(auth_views.LoginView):
     template_name = 'accounts/user_login.html'
