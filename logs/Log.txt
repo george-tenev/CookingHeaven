@@ -1048,3 +1048,4 @@ C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\views.py chan
 Watching for file changes with StatReloader
 C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\views.py changed, reloading.
 Watching for file changes with StatReloader
+Not Found: /dashboard/dashboard.html
