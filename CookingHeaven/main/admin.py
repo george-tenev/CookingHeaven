@@ -13,7 +13,6 @@ class AppUserAdmin(admin.ModelAdmin):
     inlines = (ProfileInlineAdmin,)
 
 
-
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     pass
