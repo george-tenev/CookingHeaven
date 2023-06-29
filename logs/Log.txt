@@ -1049,3 +1049,178 @@ Watching for file changes with StatReloader
 C:\Users\georg\DjangoProjects\CookingHeaven\CookingHeaven\accounts\views.py changed, reloading.
 Watching for file changes with StatReloader
 Not Found: /dashboard/dashboard.html
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/migrations/0001_initial.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /static/css/bootstrap.min.css
+Not Found: /static/css/custom.css
+Not Found: /static/js/bootstrap.bundle.js
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/login.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/js/nav_sidebar.js
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/css/login.css
+Not Found: /static/admin/js/nav_sidebar.js
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/login.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/js/nav_sidebar.js
+Watching for file changes with StatReloader
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/login.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/js/nav_sidebar.js
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/dashboard.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/js/nav_sidebar.js
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/dashboard.css
+Not Found: /static/admin/css/responsive.css
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /static/css/custom.css
+Not Found: /static/css/bootstrap.min.css
+Not Found: /static/js/bootstrap.bundle.js
+Not Found: /static/css/bootstrap.min.css
+Not Found: /static/css/custom.css
+Not Found: /static/js/bootstrap.bundle.js
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/dashboard.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/js/nav_sidebar.js
+Watching for file changes with StatReloader
+Not Found: /static/admin/css/base.css
+Not Found: /static/admin/css/nav_sidebar.css
+Not Found: /static/admin/css/dashboard.css
+Not Found: /static/admin/css/responsive.css
+Not Found: /static/admin/js/nav_sidebar.js
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/details/1/ Excpetion: Http404('No profile found matching the query')
+Path: /accounts/details/1/ Excpetion: Http404('No profile found matching the query')
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/admin.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /recipe/create/ Excpetion: ValueError('Must supply api_key')
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /recipe/create/ Excpetion: ValueError('Must supply api_key')
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/views/generic.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/views/generic.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /dashboard/ Excpetion: TemplateSyntaxError("Invalid block tag on line 19: 'static', expected 'endif'. Did you forget to register or load this tag?")
+Path: /dashboard/ Excpetion: TemplateSyntaxError("Invalid block tag on line 19: 'static', expected 'endif'. Did you forget to register or load this tag?")
+Watching for file changes with StatReloader
+Path: /dashboard/ Excpetion: TemplateSyntaxError("Invalid block tag on line 19: 'staticfiles', expected 'endif'. Did you forget to register or load this tag?")
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None

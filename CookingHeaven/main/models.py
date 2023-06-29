@@ -13,14 +13,6 @@ from CookingHeaven.common.validators import is_alpha, is_alpha_and_space
 UserModel = get_user_model()
 
 
-class RecipeCloudinaryField(cloudinary_models.CloudinaryField):
-    def pre_save(self, model_instance, add):
-        self.options.update(
-            {'folder': os.getenv('APP_ENVIRONMENT', 'Development')}
-        )
-        return super(RecipeCloudinaryField, self).pre_save(model_instance, add)
-
-
 class Category(models.Model):
     NAME_MAX_LENGTH = 50
     name = models.CharField(
@@ -56,8 +48,6 @@ class Recipe(models.Model):
         blank=True,
     )
 
-    photo = RecipeCloudinaryField()
-
     preparation_time = models.FloatField()
 
     cooking_time = models.FloatField()
@@ -77,12 +67,28 @@ class Recipe(models.Model):
         auto_now_add=True
     )
 
-
     class Meta:
         unique_together = ('publisher', 'name')
 
     def __str__(self):
         return self.name
+
+
+class RecipeCloudinaryField(cloudinary_models.CloudinaryField):
+    def pre_save(self, model_instance, add):
+        self.options.update(
+            {'folder': os.getenv('APP_ENVIRONMENT', 'Development')}
+        )
+        return super(RecipeCloudinaryField, self).pre_save(model_instance, add)
+
+
+class RecipePhoto(models.Model):
+    photo = RecipeCloudinaryField()
+    recipe = models.ForeignKey(
+        to=Recipe,
+        on_delete=models.CASCADE,
+        related_name='photos',
+    )
 
 
 class RecipeStep(models.Model):
@@ -98,7 +104,7 @@ class Unit(models.Model):
     name = models.CharField(
         max_length=NAME_MAX_LENGTH,
         unique=True,
-        validators=[is_alpha,]
+        validators=[is_alpha, ]
     )
 
     def __str__(self):

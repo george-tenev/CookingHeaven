@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 from pathlib import Path
 
 import cloudinary
@@ -6,11 +7,13 @@ from django.urls import reverse_lazy
 
 from CookingHeaven.utils import is_production, is_test
 
+load_dotenv()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'sk')
 
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 APP_ENVIRONMENT = os.getenv('APP_ENVIRONMENT', 'Development')
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1 localhost').split(' ')
 INSTALLED_APPS = [
@@ -21,6 +24,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.postgres',
+
+    'cloudinary',
 
     'CookingHeaven.main',
     'CookingHeaven.accounts',
@@ -99,11 +104,11 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_ROOT = BASE_DIR /'staticfiles'
+# STATIC_ROOT = BASE_DIR /'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'staticfiles'),
 )
 
 MEDIA_URL = 'media/'
@@ -159,8 +164,6 @@ AUTH_USER_MODEL = 'accounts.CookingHeavenUser'
 LOGIN_REDIRECT_URL = reverse_lazy('home')
 LOGOUT_REDIRECT_URL = reverse_lazy('home')
 LOGIN_URL = reverse_lazy('login')
-
-
 cloudinary.config(
     cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME', None),
     api_key=os.getenv('CLOUDINARY_API_KEY', None),

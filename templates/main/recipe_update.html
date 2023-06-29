@@ -37,9 +37,43 @@
         <div id='recipe-step-empty-form' class='hidden'>{{ recipe_step_formset.empty_form.as_p }}</div>
         <button class="btn btn-orange" id='add-recipe-step' type='button'>Add step</button>
 
+        <h3>Photos</h3>
+        {{ photo_formset.management_form }}
+        <div id='photo-form-list'>
+            {% for form in photo_formset %}
+                <div class='photo-form'>
+                    {{ form.as_p }}
+                </div>
+            {% endfor %}
+        </div>
+        <div id='photo-empty-form' class='hidden'>{{ photo_formset.empty_form.as_p }}</div>
+        <button class="btn btn-orange" id='add-photo' type='button'>Add photo</button>
+
+
+
         <button class="btn btn-orange d-block my-1">Update recipe</button>
     </form>
-
+    <script>
+        const addPhotoBtn = document.getElementById('add-photo')
+        const totalNewPhotoForms = document.getElementById('id_photo-form-TOTAL_FORMS')
+        addPhotoBtn.addEventListener('click', add_new_photo_form)
+        function add_new_photo_form(event) {
+            if (event) {
+                event.preventDefault()
+            }
+            const currentPhotoForms = document.getElementsByClassName('photo-form')
+            const currentPhotoFormCount = currentPhotoForms.length
+            const PhotoFormCopyTarget = document.getElementById('photo-form-list')
+            const copyEmptyPhotoFormEl = document.getElementById('photo-empty-form').cloneNode(true)
+            copyEmptyPhotoFormEl.setAttribute('class', 'photo-form')
+            copyEmptyPhotoFormEl.setAttribute('id', `photo-form-${currentPhotoFormCount}`)
+            const regex = new RegExp('__prefix__', 'g')
+            copyEmptyPhotoFormEl.innerHTML = copyEmptyPhotoFormEl.innerHTML.replace(regex, currentPhotoFormCount)
+            totalNewPhotoForms.setAttribute('value', currentPhotoFormCount + 1)
+            // now add new empty form element to our html form
+            PhotoFormCopyTarget.append(copyEmptyPhotoFormEl)
+        }
+    </script>
     <script>
         const addIngredientBtn = document.getElementById('add-ingredient')
         const totalNewIngredientForms = document.getElementById('id_ingredient-form-TOTAL_FORMS')
@@ -60,8 +94,8 @@
             // now add new empty form element to our html form
             IngredientFormCopyTarget.append(copyEmptyIngredientFormEl)
         }
-{#    </script>#}
-{#    <script>#}
+    </script>
+    <script>
         const addRecipeStepBtn = document.getElementById('add-recipe-step')
         const totalNewRecipeStepForms = document.getElementById('id_recipe-step-form-TOTAL_FORMS')
         addRecipeStepBtn.addEventListener('click', add_new_recipe_step_form)

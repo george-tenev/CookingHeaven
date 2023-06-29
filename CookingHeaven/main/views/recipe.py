@@ -7,8 +7,8 @@ from django.urls import reverse_lazy, reverse
 from django.views import generic as views, View
 from django.views.generic.detail import SingleObjectMixin
 
-from CookingHeaven.main.forms import IngredientFormset, RecipeStepFormset, RecipeCreateUpdateForm
-from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep, Category
+from CookingHeaven.main.forms import IngredientFormset, RecipeStepFormset, RecipePhotoFormSet, RecipeCreateUpdateForm
+from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep, Category, RecipePhoto
 
 
 class RecipeCheckCorrectUserMixin:
@@ -25,24 +25,35 @@ class RecipeCreateUpdateMixin:
     context_object_name = 'recipe'
     success_url = reverse_lazy('dashboard')
 
-    def get_formsets(self, recipe, request_method=None):
+    def get_formsets(self, recipe, request_method=None, request_files=None):
         ingredient_qs = Ingredient.objects.filter(recipe=recipe)
         recipe_step_qs = RecipeStep.objects.filter(recipe=recipe)
+        recipe_photo_qs = RecipePhoto.objects.filter(recipe=recipe)
+
         ingredient_formset = IngredientFormset(
             request_method,
             queryset=ingredient_qs,
             prefix='ingredient-form',
         )
+
         recipe_step_formset = RecipeStepFormset(
             request_method,
             queryset=recipe_step_qs,
             prefix='recipe-step-form'
         )
 
+        recipe_photo_formset = RecipePhotoFormSet(
+            request_method, request_files,
+            queryset=recipe_photo_qs,
+            prefix='recipe-photo-form'
+        )
+
         formsets = {
             'ingredient_formset': ingredient_formset,
-            'recipe_step_formset': recipe_step_formset
+            'recipe_step_formset': recipe_step_formset,
+            'recipe_photo_formset': recipe_photo_formset
         }
+
         return formsets
 
     def validate_forms(self, formsets):
@@ -67,7 +78,7 @@ class RecipeCreateUpdateMixin:
         return self.render_to_response(context)
 
     def post(self, request, *args, **kwargs):
-        formsets = self.get_formsets(self.object, request.POST)
+        formsets = self.get_formsets(self.object, request.POST, request.FILES)
 
         if self.validate_forms(formsets.values()):
             return redirect(self.success_url)

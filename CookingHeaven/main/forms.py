@@ -1,7 +1,8 @@
 from django import forms
 from django.forms import ModelForm, modelformset_factory, BaseModelFormSet
 
-from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep, Category, Unit
+from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep, Category, Unit, RecipePhoto
+from cloudinary.forms import CloudinaryFileField
 
 
 class RecipeCreateUpdateForm(ModelForm):
@@ -22,7 +23,7 @@ class RecipeCreateUpdateForm(ModelForm):
 
     class Meta:
         model = Recipe
-        fields = ('name', 'description', 'photo', 'preparation_time', 'cooking_time', 'category',)
+        fields = ('name', 'description', 'preparation_time', 'cooking_time', 'category',)
 
 
 class IngredientCreateForm(ModelForm):
@@ -68,9 +69,32 @@ IngredientFormset = modelformset_factory(
     can_delete=True,
     extra=0
 )
+
 RecipeStepFormset = modelformset_factory(
     RecipeStep,
     form=RecipeStepCreateForm,
+    formset=CustomModelFormSet,
+    can_delete=True,
+    extra=0
+)
+
+class RecipePhotoForm(forms.ModelForm):
+    photo = CloudinaryFileField(
+        options = {
+            'crop': 'scale',
+            'width': 800,
+            'height': 600,
+        }
+    )
+
+    class Meta:
+        model = RecipePhoto
+        fields = ('photo', )
+
+
+RecipePhotoFormSet = forms.modelformset_factory(
+    RecipePhoto,
+    form=RecipePhotoForm,
     formset=CustomModelFormSet,
     can_delete=True,
     extra=0

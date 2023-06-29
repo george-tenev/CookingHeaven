@@ -10,18 +10,20 @@
 
             <div class="row row-cols-1 row-cols-md-3 my-2 text-center">
                 {% for recipe in page_obj %}
-                    <div class="col">
-                        <div class="card mb-4 rounded-3 shadow-sm">
-                            <img class="card-img-top card-image" src="{{ recipe.photo.url }}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ recipe.name }}</h5>
-                                {% if recipe.description %}
-                                    <p class="card-text">{{ recipe.description }}</p>
-                                {% endif %}
-                                <a href="{% url 'recipe details' recipe.pk %}" class="btn btn-orange">View recipe</a>
-                            </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        {% with recipe.photos.first as first_photo %}
+                                <img class="card-img-top card-image" src="{{ first_photo.photo.url }}" alt="Card image cap">
+                        {% endwith %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ recipe.name }}</h5>
+                            {% if recipe.description %}
+                                <p class="card-text">{{ recipe.description }}</p>
+                            {% endif %}
+                            <a href="{% url 'recipe details' recipe.pk %}" class="btn btn-orange">View recipe</a>
                         </div>
                     </div>
+                </div>
                 {% endfor %}
             </div>
             <div class="pagination">
