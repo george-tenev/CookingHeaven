@@ -6,36 +6,54 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main', '0006_recipe_photo_delete_recipephoto'),
+        ("main", "0006_recipe_photo_delete_recipephoto"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Ingredient',
+            name="Ingredient",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50, validators=[CookingHeaven.common.validators.is_alpha])),
-                ('quantity', models.IntegerField()),
-                ('recipe', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main.recipe')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "name",
+                    models.CharField(
+                        max_length=50,
+                        validators=[CookingHeaven.common.validators.is_alpha],
+                    ),
+                ),
+                ("quantity", models.IntegerField()),
+                (
+                    "recipe",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="main.recipe"
+                    ),
+                ),
             ],
             options={
-                'unique_together': {('recipe', 'name')},
+                "unique_together": {("recipe", "name")},
             },
         ),
         migrations.RemoveField(
-            model_name='recipeproduct',
-            name='product',
+            model_name="recipeproduct",
+            name="product",
         ),
         migrations.RemoveField(
-            model_name='recipeproduct',
-            name='recipe',
+            model_name="recipeproduct",
+            name="recipe",
         ),
         migrations.DeleteModel(
-            name='Product',
+            name="Product",
         ),
         migrations.DeleteModel(
-            name='RecipeProduct',
+            name="RecipeProduct",
         ),
     ]

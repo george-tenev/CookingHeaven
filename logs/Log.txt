@@ -1239,3 +1239,8 @@ https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/forms.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/migrations/0023_alter_recipe_category.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader

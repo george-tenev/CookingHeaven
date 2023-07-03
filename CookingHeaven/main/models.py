@@ -35,13 +35,10 @@ class Recipe(models.Model):
         validators=[
             MinLengthValidator(NAME_MIN_LENGTH),
             is_alpha_and_space,
-        ]
+        ],
     )
 
-    publisher = models.ForeignKey(
-        to=UserModel,
-        on_delete=models.CASCADE
-    )
+    publisher = models.ForeignKey(to=UserModel, on_delete=models.CASCADE)
 
     description = models.TextField(
         null=True,
@@ -54,7 +51,7 @@ class Recipe(models.Model):
 
     likes = models.ManyToManyField(
         to=UserModel,
-        related_name='recipe_likes_set',
+        related_name="recipe_likes_set",
     )
 
     category = models.ManyToManyField(
@@ -63,12 +60,10 @@ class Recipe(models.Model):
         to=Category,
     )
 
-    created_at = models.DateTimeField(
-        auto_now_add=True
-    )
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_together = ('publisher', 'name')
+        unique_together = ("publisher", "name")
 
     def __str__(self):
         return self.name
@@ -76,9 +71,7 @@ class Recipe(models.Model):
 
 class RecipeCloudinaryField(cloudinary_models.CloudinaryField):
     def pre_save(self, model_instance, add):
-        self.options.update(
-            {'folder': os.getenv('APP_ENVIRONMENT', 'Development')}
-        )
+        self.options.update({"folder": os.getenv("APP_ENVIRONMENT", "Development")})
         return super(RecipeCloudinaryField, self).pre_save(model_instance, add)
 
 
@@ -87,16 +80,13 @@ class RecipePhoto(models.Model):
     recipe = models.ForeignKey(
         to=Recipe,
         on_delete=models.CASCADE,
-        related_name='photos',
+        related_name="photos",
     )
 
 
 class RecipeStep(models.Model):
     description = models.TextField()
-    recipe = models.ForeignKey(
-        to=Recipe,
-        on_delete=models.CASCADE
-    )
+    recipe = models.ForeignKey(to=Recipe, on_delete=models.CASCADE)
 
 
 class Unit(models.Model):
@@ -104,7 +94,9 @@ class Unit(models.Model):
     name = models.CharField(
         max_length=NAME_MAX_LENGTH,
         unique=True,
-        validators=[is_alpha, ]
+        validators=[
+            is_alpha,
+        ],
     )
 
     def __str__(self):
@@ -120,20 +112,12 @@ class Ingredient(models.Model):
     )
     amount = models.PositiveIntegerField()
 
-    unit = models.ForeignKey(
-        blank=True,
-        null=True,
-        to=Unit,
-        on_delete=models.PROTECT
-    )
+    unit = models.ForeignKey(blank=True, null=True, to=Unit, on_delete=models.PROTECT)
 
-    recipe = models.ForeignKey(
-        to=Recipe,
-        on_delete=models.CASCADE
-    )
+    recipe = models.ForeignKey(to=Recipe, on_delete=models.CASCADE)
 
     class Meta:
-        unique_together = ('recipe', 'name')
+        unique_together = ("recipe", "name")
 
     def __str__(self):
         return self.name

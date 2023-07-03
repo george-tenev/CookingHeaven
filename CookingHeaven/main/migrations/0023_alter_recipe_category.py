@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main', '0022_alter_category_name_alter_ingredient_name'),
+        ("main", "0022_alter_category_name_alter_ingredient_name"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='recipe',
-            name='category',
-            field=models.ManyToManyField(blank=True, to='main.category'),
+            model_name="recipe",
+            name="category",
+            field=models.ManyToManyField(blank=True, to="main.category"),
         ),
     ]

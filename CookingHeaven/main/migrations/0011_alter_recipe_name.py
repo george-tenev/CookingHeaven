@@ -5,15 +5,18 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main', '0010_alter_recipe_photo'),
+        ("main", "0010_alter_recipe_photo"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='recipe',
-            name='name',
-            field=models.CharField(max_length=50, unique=True, validators=[django.core.validators.MinLengthValidator(2)]),
+            model_name="recipe",
+            name="name",
+            field=models.CharField(
+                max_length=50,
+                unique=True,
+                validators=[django.core.validators.MinLengthValidator(2)],
+            ),
         ),
     ]

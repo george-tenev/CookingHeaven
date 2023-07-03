@@ -6,43 +6,56 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main', '0007_ingredient_remove_recipeproduct_product_and_more'),
+        ("main", "0007_ingredient_remove_recipeproduct_product_and_more"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Unit',
+            name="Unit",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=60, unique=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=60, unique=True)),
             ],
         ),
         migrations.RemoveField(
-            model_name='ingredient',
-            name='quantity',
+            model_name="ingredient",
+            name="quantity",
         ),
         migrations.AddField(
-            model_name='ingredient',
-            name='amount',
+            model_name="ingredient",
+            name="amount",
             field=models.PositiveIntegerField(default=1),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='foodtype',
-            name='name',
+            model_name="foodtype",
+            name="name",
             field=models.CharField(max_length=50, unique=True),
         ),
         migrations.AlterField(
-            model_name='recipe',
-            name='name',
-            field=models.CharField(max_length=50, unique=True, validators=[django.core.validators.MinLengthValidator(50)]),
+            model_name="recipe",
+            name="name",
+            field=models.CharField(
+                max_length=50,
+                unique=True,
+                validators=[django.core.validators.MinLengthValidator(50)],
+            ),
         ),
         migrations.AddField(
-            model_name='ingredient',
-            name='unit',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.PROTECT, to='main.unit'),
+            model_name="ingredient",
+            name="unit",
+            field=models.ForeignKey(
+                default=1, on_delete=django.db.models.deletion.PROTECT, to="main.unit"
+            ),
             preserve_default=False,
         ),
     ]

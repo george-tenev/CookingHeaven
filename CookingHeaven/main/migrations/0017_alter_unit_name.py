@@ -5,15 +5,18 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main', '0016_remove_recipe_types_recipe_category'),
+        ("main", "0016_remove_recipe_types_recipe_category"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='unit',
-            name='name',
-            field=models.CharField(max_length=60, unique=True, validators=[CookingHeaven.common.validators.is_alpha]),
+            model_name="unit",
+            name="name",
+            field=models.CharField(
+                max_length=60,
+                unique=True,
+                validators=[CookingHeaven.common.validators.is_alpha],
+            ),
         ),
     ]

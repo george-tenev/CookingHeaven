@@ -4,19 +4,18 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main', '0015_rename_foodtype_category'),
+        ("main", "0015_rename_foodtype_category"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='recipe',
-            name='types',
+            model_name="recipe",
+            name="types",
         ),
         migrations.AddField(
-            model_name='recipe',
-            name='category',
-            field=models.ManyToManyField(blank=True, null=True, to='main.category'),
+            model_name="recipe",
+            name="category",
+            field=models.ManyToManyField(blank=True, null=True, to="main.category"),
         ),
     ]

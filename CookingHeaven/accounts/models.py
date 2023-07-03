@@ -16,7 +16,9 @@ class CookingHeavenUser(AbstractBaseUser, PermissionsMixin):
         max_length=USERNAME_MAX_LENGTH,
         unique=True,
         validators=[username_validator],
-        error_messages={"unique": USERNAME_UNIQUE_ERROR_MESSAGE, },
+        error_messages={
+            "unique": USERNAME_UNIQUE_ERROR_MESSAGE,
+        },
     )
     email = models.EmailField(
         unique=True,
@@ -31,8 +33,8 @@ class CookingHeavenUser(AbstractBaseUser, PermissionsMixin):
         auto_now_add=True,
     )
 
-    USERNAME_FIELD = 'username'
-    EMAIL_FIELD = 'email'
+    USERNAME_FIELD = "username"
+    EMAIL_FIELD = "email"
     objects = CookingHeavenUsersManager()
 
 
@@ -44,18 +46,12 @@ class Profile(models.Model):
 
     first_name = models.CharField(
         max_length=FIRST_NAME_MAX_LENGTH,
-        validators=[
-            MinLengthValidator(FIRST_NAME_MIN_LENGTH),
-            is_alpha
-        ]
+        validators=[MinLengthValidator(FIRST_NAME_MIN_LENGTH), is_alpha],
     )
 
     last_name = models.CharField(
         max_length=LAST_NAME_MAX_LENGTH,
-        validators=[
-            MinLengthValidator(LAST_NAME_MIN_LENGTH),
-            is_alpha
-        ]
+        validators=[MinLengthValidator(LAST_NAME_MIN_LENGTH), is_alpha],
     )
 
     user = models.OneToOneField(
@@ -69,4 +65,4 @@ class Profile(models.Model):
 
     @property
     def full_name(self):
-        return f'{self.first_name} {self.last_name}'
+        return f"{self.first_name} {self.last_name}"

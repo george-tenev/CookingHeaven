@@ -8,24 +8,23 @@ from CookingHeaven.main.models import Category, Recipe
 UserModel = get_user_model()
 
 
-
 class RecipeModelTests(TestCase):
     VALID_USER_CREDENTIALS = {
-        'username': 'testuser',
-        'password': '12345qwe',
-        'email': 'test@test.com',
+        "username": "testuser",
+        "password": "12345qwe",
+        "email": "test@test.com",
     }
 
     VALID_PROFILE_DATA = {
-        'first_name': 'test',
-        'last_name': 'test',
+        "first_name": "test",
+        "last_name": "test",
     }
 
     VALID_RECIPE_DATA = {
-        'name': 'testrecipe',
-        'photo': 'asd.jpg',
-        'preparation_time': 1,
-        'cooking_time': 1,
+        "name": "testrecipe",
+        "photo": "asd.jpg",
+        "preparation_time": 1,
+        "cooking_time": 1,
     }
 
     def __create_user(self, **credentials):
@@ -51,16 +50,16 @@ class RecipeModelTests(TestCase):
     def test_recipe__all_valid_str(self):
         user, profile = self.__create_valid_user_and_profile()
         recipe = self.__create_recipe(user=user, **self.VALID_RECIPE_DATA)
-        self.assertEqual(str(recipe), self.VALID_RECIPE_DATA['name'])
+        self.assertEqual(str(recipe), self.VALID_RECIPE_DATA["name"])
 
     def test_recipe__name_not_valid(self):
         user, profile = self.__create_valid_user_and_profile()
         data = {
-        'name': 'testrecipe1',
-        'photo': 'asd.jpg',
-        'preparation_time': 1,
-        'cooking_time': 1,
-    }
+            "name": "testrecipe1",
+            "photo": "asd.jpg",
+            "preparation_time": 1,
+            "cooking_time": 1,
+        }
         recipe = Recipe(publisher=user, **data)
         with self.assertRaises(ValidationError) as context:
             recipe.full_clean()  # This is called in ModelForms implicitly

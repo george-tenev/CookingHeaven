@@ -6,8 +6,14 @@ from django.urls import reverse_lazy, reverse
 from django.views import generic as views
 from django.views.generic import DeleteView
 
-from CookingHeaven.accounts.forms import UserRegisterForm, SuperUserProfileCreationForm, \
-    SuperUserGroupCreateForm, ProfileUpdateForm, UserUpdateForm, AdminUserUpdateForm
+from CookingHeaven.accounts.forms import (
+    UserRegisterForm,
+    SuperUserProfileCreationForm,
+    SuperUserGroupCreateForm,
+    ProfileUpdateForm,
+    UserUpdateForm,
+    AdminUserUpdateForm,
+)
 from CookingHeaven.accounts.models import CookingHeavenUser, Profile
 from CookingHeaven.common.view_mixins import SuperuserRequiredMixin, AdminRequiredMixin
 from CookingHeaven.main.models import Recipe
@@ -24,107 +30,115 @@ class ProfileCheckCorrectUserMixin:
 
 
 class GroupCreateView(LoginRequiredMixin, PermissionRequiredMixin, views.CreateView):
-    template_name = 'admin/group_create.html'
-    success_url = reverse_lazy('home')
+    template_name = "admin/group_create.html"
+    success_url = reverse_lazy("home")
     form_class = SuperUserGroupCreateForm
-    permission_required = 'auth.add_group'
+    permission_required = "auth.add_group"
 
 
 class GroupUpdateView(LoginRequiredMixin, PermissionRequiredMixin, views.UpdateView):
     model = Group
-    template_name = 'admin/group_update.html'
-    success_url = reverse_lazy('home')
+    template_name = "admin/group_update.html"
+    success_url = reverse_lazy("home")
     form_class = SuperUserGroupCreateForm
-    permission_required = 'auth.change_group'
-    context_object_name = 'group'
+    permission_required = "auth.change_group"
+    context_object_name = "group"
 
 
-class GroupDeleteView(LoginRequiredMixin, AdminRequiredMixin, PermissionRequiredMixin, DeleteView):
+class GroupDeleteView(
+    LoginRequiredMixin, AdminRequiredMixin, PermissionRequiredMixin, DeleteView
+):
     model = Group
-    success_url = reverse_lazy('dashboard')
-    permission_required = 'main.delete_group'
+    success_url = reverse_lazy("dashboard")
+    permission_required = "main.delete_group"
 
 
 class GroupListView(PermissionRequiredMixin, views.ListView):
     model = Group
-    context_object_name = 'groups'
-    template_name = 'admin/group_list.html'
-    permission_required = 'auth.view_group'
+    context_object_name = "groups"
+    template_name = "admin/group_list.html"
+    permission_required = "auth.view_group"
 
 
-class SuperUserProfileCreateView(LoginRequiredMixin, SuperuserRequiredMixin, views.CreateView):
-    template_name = 'admin/profile_create.html'
-    success_url = reverse_lazy('home')
+class SuperUserProfileCreateView(
+    LoginRequiredMixin, SuperuserRequiredMixin, views.CreateView
+):
+    template_name = "admin/profile_create.html"
+    success_url = reverse_lazy("home")
     form_class = SuperUserProfileCreationForm
 
 
 class UserRegisterView(views.CreateView):
-    template_name = 'accounts/user_register.html'
+    template_name = "accounts/user_register.html"
     form_class = UserRegisterForm
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy("home")
 
     def form_valid(self, form):
         result = super().form_valid(form)
         login(self.request, self.object)
         return result
 
+
 class UserLoginView(auth_views.LoginView):
-    template_name = 'accounts/user_login.html'
+    template_name = "accounts/user_login.html"
 
 
 class UserLogoutView(LoginRequiredMixin, auth_views.LogoutView):
     pass
 
 
-class UserDeleteView(LoginRequiredMixin, ProfileCheckCorrectUserMixin, views.DeleteView):
+class UserDeleteView(
+    LoginRequiredMixin, ProfileCheckCorrectUserMixin, views.DeleteView
+):
     model = CookingHeavenUser
-    template_name = 'accounts/profile_delete.html'
-    success_url = reverse_lazy('home')
+    template_name = "accounts/profile_delete.html"
+    success_url = reverse_lazy("home")
 
 
-class ProfileUpdateView(LoginRequiredMixin, ProfileCheckCorrectUserMixin, views.UpdateView):
+class ProfileUpdateView(
+    LoginRequiredMixin, ProfileCheckCorrectUserMixin, views.UpdateView
+):
     model = UserModel
-    template_name = 'accounts/profile_update.html'
+    template_name = "accounts/profile_update.html"
     form_class = UserUpdateForm
-    context_object_name = 'profile'
+    context_object_name = "profile"
 
     def get_success_url(self):
-        return reverse(
-            'profile details',
-            kwargs={
-                'pk': self.object.pk
-            }
-        )
+        return reverse("profile details", kwargs={"pk": self.object.pk})
 
 
-class ProfileDetailsView(LoginRequiredMixin, ProfileCheckCorrectUserMixin, views.DetailView):
+class ProfileDetailsView(
+    LoginRequiredMixin, ProfileCheckCorrectUserMixin, views.DetailView
+):
     model = Profile
-    template_name = 'accounts/profile_details.html'
-    context_object_name = 'profile'
+    template_name = "accounts/profile_details.html"
+    context_object_name = "profile"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         recipes = list(Recipe.objects.filter(publisher=self.object.pk))
-        context['recipes'] = recipes
-        context['total_likes'] = sum(recipe.likes.count() for recipe in recipes)
+        context["recipes"] = recipes
+        context["total_likes"] = sum(recipe.likes.count() for recipe in recipes)
         return context
 
 
-class AdminUserUpdateView(LoginRequiredMixin, PermissionRequiredMixin, views.UpdateView):
+class AdminUserUpdateView(
+    LoginRequiredMixin, PermissionRequiredMixin, views.UpdateView
+):
     model = UserModel
-    template_name = 'admin/profile_update.html'
+    template_name = "admin/profile_update.html"
     form_class = AdminUserUpdateForm
-    context_object_name = 'profile'
-    permission_required = 'accounts.change_cookingheavenuser'
+    context_object_name = "profile"
+    permission_required = "accounts.change_cookingheavenuser"
 
 
 class ProfileListView(PermissionRequiredMixin, views.ListView):
     model = Profile
-    context_object_name = 'profiles'
-    template_name = 'admin/profile_list.html'
-    permission_required = 'accounts.view_cookingheavenuser'
+    context_object_name = "profiles"
+    template_name = "admin/profile_list.html"
+    permission_required = "accounts.view_cookingheavenuser"
 
 
 class PasswordChangeView(LoginRequiredMixin, auth_views.PasswordChangeView):
-    template_name = 'accounts/password_change.html'
-    success_url = reverse_lazy('dashboard')
+    template_name = "accounts/password_change.html"
+    success_url = reverse_lazy("dashboard")

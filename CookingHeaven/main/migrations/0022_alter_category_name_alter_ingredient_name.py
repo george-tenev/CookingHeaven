@@ -5,20 +5,26 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main', '0021_alter_recipe_name'),
+        ("main", "0021_alter_recipe_name"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='category',
-            name='name',
-            field=models.CharField(max_length=50, unique=True, validators=[CookingHeaven.common.validators.is_alpha_and_space]),
+            model_name="category",
+            name="name",
+            field=models.CharField(
+                max_length=50,
+                unique=True,
+                validators=[CookingHeaven.common.validators.is_alpha_and_space],
+            ),
         ),
         migrations.AlterField(
-            model_name='ingredient',
-            name='name',
-            field=models.CharField(max_length=50, validators=[CookingHeaven.common.validators.is_alpha_and_space]),
+            model_name="ingredient",
+            name="name",
+            field=models.CharField(
+                max_length=50,
+                validators=[CookingHeaven.common.validators.is_alpha_and_space],
+            ),
         ),
     ]

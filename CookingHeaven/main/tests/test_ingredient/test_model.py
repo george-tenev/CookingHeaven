@@ -10,21 +10,21 @@ UserModel = get_user_model()
 
 class IngredientModelTests(TestCase):
     VALID_USER_CREDENTIALS = {
-        'username': 'testuser',
-        'password': '12345qwe',
-        'email': 'test@test.com',
+        "username": "testuser",
+        "password": "12345qwe",
+        "email": "test@test.com",
     }
 
     VALID_PROFILE_DATA = {
-        'first_name': 'test',
-        'last_name': 'test',
+        "first_name": "test",
+        "last_name": "test",
     }
 
     VALID_RECIPE_DATA = {
-        'name': 'testrecipe',
-        'photo': 'asd.jpg',
-        'preparation_time': 1,
-        'cooking_time': 1,
+        "name": "testrecipe",
+        "photo": "asd.jpg",
+        "preparation_time": 1,
+        "cooking_time": 1,
     }
 
     def __create_user(self, **credentials):
@@ -42,21 +42,19 @@ class IngredientModelTests(TestCase):
         recipe = Recipe.objects.create(**recipe_data, publisher=user)
         return recipe
 
-
     def __create_unit(self):
-        unit = Unit.objects.create(name='gram')
+        unit = Unit.objects.create(name="gram")
         return unit
-
 
     def test_ingredient_model__all_valid(self):
         user, profile = self.__create_valid_user_and_profile()
         recipe = self.__create_recipe(user=user, **self.VALID_RECIPE_DATA)
         unit = self.__create_unit()
         data = {
-            'name': 'test',
-            'amount': 1,
-            'unit': unit,
-            'recipe': recipe,
+            "name": "test",
+            "amount": 1,
+            "unit": unit,
+            "recipe": recipe,
         }
         ingredient = Ingredient.objects.create(**data)
         self.assertTrue(isinstance(ingredient, Ingredient))
@@ -66,13 +64,14 @@ class IngredientModelTests(TestCase):
         recipe = self.__create_recipe(user=user, **self.VALID_RECIPE_DATA)
         unit = self.__create_unit()
         data = {
-            'name': 'test',
-            'amount': 1,
-            'unit': unit,
-            'recipe': recipe,
+            "name": "test",
+            "amount": 1,
+            "unit": unit,
+            "recipe": recipe,
         }
         ingredient = Ingredient.objects.create(**data)
-        self.assertEqual(str(ingredient), data['name'])
+        self.assertEqual(str(ingredient), data["name"])
+
     # def test_category_model__name_not_valid(self):
     #     ingredient = Ingredient.objects.create(name='gram123')
     #     with self.assertRaises(ValidationError) as context:

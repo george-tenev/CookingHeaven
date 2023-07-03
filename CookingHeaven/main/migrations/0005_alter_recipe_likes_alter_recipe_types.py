@@ -5,21 +5,25 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('main', '0004_remove_recipe_course'),
+        ("main", "0004_remove_recipe_course"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='recipe',
-            name='likes',
-            field=models.ManyToManyField(blank=True, null=True, related_name='recipe_likes_set', to=settings.AUTH_USER_MODEL),
+            model_name="recipe",
+            name="likes",
+            field=models.ManyToManyField(
+                blank=True,
+                null=True,
+                related_name="recipe_likes_set",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
         migrations.AlterField(
-            model_name='recipe',
-            name='types',
-            field=models.ManyToManyField(blank=True, null=True, to='main.foodtype'),
+            model_name="recipe",
+            name="types",
+            field=models.ManyToManyField(blank=True, null=True, to="main.foodtype"),
         ),
     ]

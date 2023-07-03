@@ -14,24 +14,24 @@ UserModel = get_user_model()
 
 
 class RecipeDeleteViewTests(django_test.TestCase):
-
     VALID_USER_CREDENTIALS = {
-        'username': 'testuser',
-        'password': '12345qwe',
-        'email': 'test@test.com',
+        "username": "testuser",
+        "password": "12345qwe",
+        "email": "test@test.com",
     }
 
     VALID_PROFILE_DATA = {
-        'first_name': 'test',
-        'last_name': 'test',
+        "first_name": "test",
+        "last_name": "test",
     }
 
     VALID_RECIPE_DATA = {
-        'name': 'testrecipe',
-        'photo': 'asd.jpg',
-        'preparation_time': 1,
-        'cooking_time': 1,
+        "name": "testrecipe",
+        "photo": "asd.jpg",
+        "preparation_time": 1,
+        "cooking_time": 1,
     }
+
     def __create_user(self, **credentials):
         return UserModel.objects.create_user(**credentials)
 
@@ -51,42 +51,45 @@ class RecipeDeleteViewTests(django_test.TestCase):
         user, profile = self.__create_valid_user_and_profile()
         recipe = self.__create_recipe(user=user, **self.VALID_RECIPE_DATA)
         self.client.login(**self.VALID_USER_CREDENTIALS)
-        self.client.post(reverse('recipe delete', kwargs={'pk': recipe.pk}))
+        self.client.post(reverse("recipe delete", kwargs={"pk": recipe.pk}))
         deleted_recipe = list(Recipe.objects.filter(pk=recipe.pk))
         self.assertListEqual(deleted_recipe, [])
 
-    def test_delete_recipe_not_owner__expect_recipe_not_deleted_and_raise_permission_error(self):
+    def test_delete_recipe_not_owner__expect_recipe_not_deleted_and_raise_permission_error(
+        self,
+    ):
         user, profile = self.__create_valid_user_and_profile()
-        credentials ={
-            'username': 'testuser2',
-            'password': '12345qwe',
-            'email': 'test@test2.com',
+        credentials = {
+            "username": "testuser2",
+            "password": "12345qwe",
+            "email": "test@test2.com",
         }
         user2 = self.__create_user(**credentials)
 
         expected_recipe = self.__create_recipe(user=user, **self.VALID_RECIPE_DATA)
         self.client.login(**credentials)
         # with self.assertRaises(PermissionError) as context:
-        response = self.client.post(reverse('recipe delete', kwargs={'pk': expected_recipe.pk}))
+        response = self.client.post(
+            reverse("recipe delete", kwargs={"pk": expected_recipe.pk})
+        )
 
         recipe = list(Recipe.objects.filter(pk=expected_recipe.pk))
-        self.assertEqual('/error_page/', response.url)
+        self.assertEqual("/error_page/", response.url)
         self.assertListEqual([expected_recipe], recipe)
-
 
     def test_delete_recipe__not_owner__is_staff_true_expect_success(self):
         user, profile = self.__create_valid_user_and_profile()
-        credentials ={
-            'username': 'testuser2',
-            'password': '12345qwe',
-            'email': 'test@test2.com',
+        credentials = {
+            "username": "testuser2",
+            "password": "12345qwe",
+            "email": "test@test2.com",
         }
         user2 = self.__create_user(**credentials)
         user2.is_staff = True
         user2.save()
         recipe = self.__create_recipe(user=user, **self.VALID_RECIPE_DATA)
         self.client.login(**credentials)
-        self.client.post(reverse('recipe delete', kwargs={'pk': recipe.pk}))
+        self.client.post(reverse("recipe delete", kwargs={"pk": recipe.pk}))
 
         deleted_recipe = list(Recipe.objects.filter(pk=recipe.pk))
 

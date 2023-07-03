@@ -7,23 +7,36 @@ from django.urls import reverse_lazy, reverse
 from django.views import generic as views, View
 from django.views.generic.detail import SingleObjectMixin
 
-from CookingHeaven.main.forms import IngredientFormset, RecipeStepFormset, RecipePhotoFormSet, RecipeCreateUpdateForm
-from CookingHeaven.main.models import Recipe, Ingredient, RecipeStep, Category, RecipePhoto
+from CookingHeaven.main.forms import (
+    IngredientFormset,
+    RecipeStepFormset,
+    RecipePhotoFormSet,
+    RecipeCreateUpdateForm,
+)
+from CookingHeaven.main.models import (
+    Recipe,
+    Ingredient,
+    RecipeStep,
+    Category,
+    RecipePhoto,
+)
 
 
 class RecipeCheckCorrectUserMixin:
     def dispatch(self, request, *args, **kwargs):
         recipe = self.get_object()
         if request.user != recipe.publisher and not request.user.is_staff:
-            raise PermissionError('You have no permission for this page')
-        return super(RecipeCheckCorrectUserMixin, self).dispatch(request, *args, **kwargs)
+            raise PermissionError("You have no permission for this page")
+        return super(RecipeCheckCorrectUserMixin, self).dispatch(
+            request, *args, **kwargs
+        )
 
 
 class RecipeCreateUpdateMixin:
     model = Recipe
     form_class = RecipeCreateUpdateForm
-    context_object_name = 'recipe'
-    success_url = reverse_lazy('dashboard')
+    context_object_name = "recipe"
+    success_url = reverse_lazy("dashboard")
 
     def get_formsets(self, recipe, request_method=None, request_files=None):
         ingredient_qs = Ingredient.objects.filter(recipe=recipe)
@@ -33,25 +46,24 @@ class RecipeCreateUpdateMixin:
         ingredient_formset = IngredientFormset(
             request_method,
             queryset=ingredient_qs,
-            prefix='ingredient-form',
+            prefix="ingredient-form",
         )
 
         recipe_step_formset = RecipeStepFormset(
-            request_method,
-            queryset=recipe_step_qs,
-            prefix='recipe-step-form'
+            request_method, queryset=recipe_step_qs, prefix="recipe-step-form"
         )
 
         recipe_photo_formset = RecipePhotoFormSet(
-            request_method, request_files,
+            request_method,
+            request_files,
             queryset=recipe_photo_qs,
-            prefix='recipe-photo-form'
+            prefix="recipe-photo-form",
         )
 
         formsets = {
-            'ingredient_formset': ingredient_formset,
-            'recipe_step_formset': recipe_step_formset,
-            'recipe_photo_formset': recipe_photo_formset
+            "ingredient_formset": ingredient_formset,
+            "recipe_step_formset": recipe_step_formset,
+            "recipe_photo_formset": recipe_photo_formset,
         }
 
         return formsets
@@ -90,28 +102,36 @@ class RecipeCreateUpdateMixin:
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
-        kwargs['user'] = self.request.user
+        kwargs["user"] = self.request.user
         return kwargs
 
 
 class RecipeCreateView(LoginRequiredMixin, RecipeCreateUpdateMixin, views.CreateView):
-    template_name = 'main/recipe_create.html'
+    template_name = "main/recipe_create.html"
 
     def post(self, request, *args, **kwargs):
         self.object = None
-        return  super().post(request, *args, **kwargs)
+        return super().post(request, *args, **kwargs)
 
 
-class RecipeUpdateView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, RecipeCreateUpdateMixin, views.UpdateView):
-    template_name = 'main/recipe_update.html'
+class RecipeUpdateView(
+    LoginRequiredMixin,
+    RecipeCheckCorrectUserMixin,
+    RecipeCreateUpdateMixin,
+    views.UpdateView,
+):
+    template_name = "main/recipe_update.html"
 
     def post(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().post(request, *args, **kwargs)
 
-class RecipeDeleteView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, views.DeleteView):
+
+class RecipeDeleteView(
+    LoginRequiredMixin, RecipeCheckCorrectUserMixin, views.DeleteView
+):
     model = Recipe
-    success_url = reverse_lazy('dashboard')
+    success_url = reverse_lazy("dashboard")
 
     def form_valid(self, form):
         cloudinary.uploader.destroy(self.object.photo.public_id, invalidate=True)
@@ -120,15 +140,15 @@ class RecipeDeleteView(LoginRequiredMixin, RecipeCheckCorrectUserMixin, views.De
 
 class RecipeDetailsView(views.DetailView):
     model = Recipe
-    template_name = 'main/recipe_details.html'
-    context_object_name = 'recipe'
+    template_name = "main/recipe_details.html"
+    context_object_name = "recipe"
 
     def get_context_data(self, **kwargs):
         context = super(RecipeDetailsView, self).get_context_data(**kwargs)
         data = {
-            'categories': Category.objects.filter(recipe=self.object),
-            'recipe_steps': RecipeStep.objects.filter(recipe=self.object),
-            'ingredients': Ingredient.objects.filter(recipe=self.object),
+            "categories": Category.objects.filter(recipe=self.object),
+            "recipe_steps": RecipeStep.objects.filter(recipe=self.object),
+            "ingredients": Ingredient.objects.filter(recipe=self.object),
         }
         context.update(data)
         return context
@@ -136,15 +156,20 @@ class RecipeDetailsView(views.DetailView):
 
 class RecipeSearchView(views.ListView):
     model = Recipe
-    context_object_name = 'recipes'
-    template_name = 'main/recipe_search_results.html'
+    context_object_name = "recipes"
+    template_name = "main/recipe_search_results.html"
 
     def get_queryset(self):
         query = self.request.GET.get("q")
-        vector = SearchVector('name', 'category', 'description', StringAgg('ingredient__name', delimiter=' '))
-        recipes =  Recipe.objects.annotate(
+        vector = SearchVector(
+            "name",
+            "category",
+            "description",
+            StringAgg("ingredient__name", delimiter=" "),
+        )
+        recipes = Recipe.objects.annotate(
             rank=SearchRank(vector, SearchQuery(query))
-        ).order_by('-rank')
+        ).order_by("-rank")
         return recipes
 
 
@@ -159,9 +184,4 @@ class LikeButtonView(LoginRequiredMixin, View, SingleObjectMixin):
             recipe.likes.remove(request.user)
             recipe.save()
 
-        return redirect(
-            reverse(
-                'recipe details',
-                kwargs={'pk': recipe.pk}
-            )
-        )
+        return redirect(reverse("recipe details", kwargs={"pk": recipe.pk}))
