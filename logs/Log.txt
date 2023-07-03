@@ -1224,3 +1224,18 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 Starting new HTTPS connection (1): api.cloudinary.com:443
 https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Path: /recipe/details/9/ Excpetion: TypeError("'RelatedManager' object is not iterable")
+Path: /recipe/details/9/ Excpetion: TypeError("'RelatedManager' object is not iterable")
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader

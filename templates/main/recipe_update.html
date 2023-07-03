@@ -5,6 +5,9 @@
             border-bottom: 1px solid black;
         }
 
+        .photo-form {
+            border-bottom: 1px solid black;
+        }
         .hidden {
             display: none
         }
@@ -38,15 +41,15 @@
         <button class="btn btn-orange" id='add-recipe-step' type='button'>Add step</button>
 
         <h3>Photos</h3>
-        {{ photo_formset.management_form }}
+        {{ recipe_photo_formset.management_form }}
         <div id='photo-form-list'>
-            {% for form in photo_formset %}
+            {% for form in recipe_photo_formset %}
                 <div class='photo-form'>
                     {{ form.as_p }}
                 </div>
             {% endfor %}
         </div>
-        <div id='photo-empty-form' class='hidden'>{{ photo_formset.empty_form.as_p }}</div>
+        <div id='photo-empty-form' class='hidden'>{{ recipe_photo_formset.empty_form.as_p }}</div>
         <button class="btn btn-orange" id='add-photo' type='button'>Add photo</button>
 
 
@@ -55,7 +58,7 @@
     </form>
     <script>
         const addPhotoBtn = document.getElementById('add-photo')
-        const totalNewPhotoForms = document.getElementById('id_photo-form-TOTAL_FORMS')
+        const totalNewPhotoForms = document.getElementById('id_recipe-photo-form-TOTAL_FORMS')
         addPhotoBtn.addEventListener('click', add_new_photo_form)
         function add_new_photo_form(event) {
             if (event) {
@@ -73,8 +76,7 @@
             // now add new empty form element to our html form
             PhotoFormCopyTarget.append(copyEmptyPhotoFormEl)
         }
-    </script>
-    <script>
+
         const addIngredientBtn = document.getElementById('add-ingredient')
         const totalNewIngredientForms = document.getElementById('id_ingredient-form-TOTAL_FORMS')
         addIngredientBtn.addEventListener('click', add_new_ingredient_form)
@@ -94,8 +96,7 @@
             // now add new empty form element to our html form
             IngredientFormCopyTarget.append(copyEmptyIngredientFormEl)
         }
-    </script>
-    <script>
+
         const addRecipeStepBtn = document.getElementById('add-recipe-step')
         const totalNewRecipeStepForms = document.getElementById('id_recipe-step-form-TOTAL_FORMS')
         addRecipeStepBtn.addEventListener('click', add_new_recipe_step_form)
