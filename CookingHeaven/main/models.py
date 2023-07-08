@@ -69,6 +69,38 @@ class Recipe(models.Model):
         return self.name
 
 
+class Comment(models.Model):
+    recipe = models.ForeignKey(
+        Recipe, on_delete=models.CASCADE, related_name="comments"
+    )
+    user = models.ForeignKey(UserModel, on_delete=models.CASCADE)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    parent = models.ForeignKey(
+        "self", null=True, blank=True, on_delete=models.CASCADE, related_name="replies"
+    )
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return "Comment {} by {}".format(self.body, self.user)
+
+    def count_likes(self):
+        return self.likes.count()
+
+    @property
+    def children(self):
+        return Comment.objects.filter(parent=self).reverse()
+
+    @property
+    def is_parent(self):
+        if self.parent is None:
+            return True
+        return False
+
+
+
 class RecipeCloudinaryField(cloudinary_models.CloudinaryField):
     def pre_save(self, model_instance, add):
         self.options.update({"folder": os.getenv("APP_ENVIRONMENT", "Development")})

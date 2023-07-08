@@ -1,5 +1,6 @@
 from django import forms
 from django.forms import ModelForm, modelformset_factory, BaseModelFormSet
+from django.utils.translation import gettext_lazy as _
 
 from CookingHeaven.main.models import (
     Recipe,
@@ -8,6 +9,7 @@ from CookingHeaven.main.models import (
     Category,
     Unit,
     RecipePhoto,
+    Comment,
 )
 from cloudinary.forms import CloudinaryFileField
 
@@ -121,3 +123,18 @@ RecipePhotoFormSet = forms.modelformset_factory(
     can_delete=True,
     extra=0,
 )
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+
+        fields = ['body', 'parent']
+
+        labels = {
+            'body': _(''),
+        }
+
+        widgets = {
+            'body': forms.TextInput(),
+        }

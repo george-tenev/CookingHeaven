@@ -2,7 +2,7 @@ import cloudinary
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.postgres.aggregates import StringAgg
 from django.contrib.postgres.search import SearchVector, SearchRank, SearchQuery
-from django.shortcuts import redirect
+from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.views import generic as views, View
 from django.views.generic.detail import SingleObjectMixin
@@ -12,6 +12,7 @@ from CookingHeaven.main.forms import (
     RecipeStepFormset,
     RecipePhotoFormSet,
     RecipeCreateUpdateForm,
+    CommentForm,
 )
 from CookingHeaven.main.models import (
     Recipe,
@@ -19,6 +20,7 @@ from CookingHeaven.main.models import (
     RecipeStep,
     Category,
     RecipePhoto,
+    Comment,
 )
 
 
@@ -144,15 +146,44 @@ class RecipeDetailsView(views.DetailView):
     context_object_name = "recipe"
 
     def get_context_data(self, **kwargs):
-        context = super(RecipeDetailsView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
+        recipe = get_object_or_404(Recipe, pk=self.kwargs["pk"])
+        comments = Comment.objects.filter(
+            recipe=recipe, parent=None
+        )  # we only get the parent comments
+        replies = Comment.objects.filter(recipe=recipe).exclude(
+            parent=None
+        )  # all other comments are replies
+
+
+        comment_form = CommentForm()
+
         data = {
             "categories": Category.objects.filter(recipe=self.object),
             "recipe_steps": RecipeStep.objects.filter(recipe=self.object),
             "ingredients": Ingredient.objects.filter(recipe=self.object),
+            "comments": comments,
+            "replies": replies,
+            "comment_form": comment_form,
         }
         context.update(data)
         return context
 
+    def post(self, request, *args, **kwargs):
+        if self.request.method == 'POST':
+            print('-------------------------------------------------------------------------------Reached here')
+            comment_form = CommentForm(self.request.POST)
+            if comment_form.is_valid():
+                body = comment_form.cleaned_data['body']
+                try:
+                    parent = comment_form.cleaned_data['parent']
+                except:
+                    parent = None
+
+            new_comment = Comment(body=body, user=self.request.user, recipe=self.get_object(),
+                                  parent=parent)
+            new_comment.save()
+            return redirect(self.request.path_info)
 
 class RecipeSearchView(views.ListView):
     model = Recipe
