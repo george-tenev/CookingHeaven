@@ -44,6 +44,12 @@ class RecipeCreateTests(django_test.TestCase):
         "recipe-step-form-MAX_NUM_FORMS": ["1000"],
         "recipe-step-form-__prefix__-description": [""],
         "recipe-step-form-__prefix__-id": [""],
+        "recipe-photo-form-TOTAL_FORMS": ["0"],
+        "recipe-photo-form-INITIAL_FORMS": ["0"],
+        "recipe-photo-form-MIN_NUM_FORMS": ["0"],
+        "recipe-photo-form-MAX_NUM_FORMS": ["1000"],
+        "recipe-photo-form-__prefix__-description": [""],
+        "recipe-photo-form-__prefix__-id": [""],
     }
 
     UNVALID_RECIPE_FORM_DATA = {
@@ -78,6 +84,9 @@ class RecipeCreateTests(django_test.TestCase):
         )
         return user, profile
 
+    def __create_photo(self, user, **recipe_data):
+        recipe = Photo.objects.create(**recipe_data, publisher=user)
+        return recipe
     def test_create_recipe__all_valid(self):
         self.__create_valid_user_and_profile()
         self.client.login(**self.VALID_USER_CREDENTIALS)
@@ -107,13 +116,13 @@ class RecipeCreateTests(django_test.TestCase):
         recipe = Recipe.objects.first()
         self.assertIsNone(recipe)
 
-    def test_create_recipe__all_valid__epecetd_success_url_dashboard(self):
+    def test_create_recipe__all_valid__expecetd_success_url_dashboard(self):
         self.__create_valid_user_and_profile()
         self.client.login(**self.VALID_USER_CREDENTIALS)
-        with open(BASE_DIR / "imagetest.jpg", mode="rb") as photo:
-            response = self.client.post(
-                reverse("recipe create"),
-                data={"photo": photo, **self.VALID_RECIPE_FORM_DATA},
-            )
+        # Create a recipe
+        response = self.client.post(
+            reverse("recipe create"),
+            data=self.VALID_RECIPE_FORM_DATA,
+        )
         recipe = Recipe.objects.first()
         self.assertRedirects(response, reverse("dashboard"))

@@ -27,7 +27,6 @@ class RecipeDeleteViewTests(django_test.TestCase):
 
     VALID_RECIPE_DATA = {
         "name": "testrecipe",
-        "photo": "asd.jpg",
         "preparation_time": 1,
         "cooking_time": 1,
     }
@@ -51,7 +50,8 @@ class RecipeDeleteViewTests(django_test.TestCase):
         user, profile = self.__create_valid_user_and_profile()
         recipe = self.__create_recipe(user=user, **self.VALID_RECIPE_DATA)
         self.client.login(**self.VALID_USER_CREDENTIALS)
-        self.client.post(reverse("recipe delete", kwargs={"pk": recipe.pk}))
+        response = self.client.post(reverse("recipe delete", kwargs={"pk": recipe.pk}))
+        print(f"RESPONSE: {response.content}")
         deleted_recipe = list(Recipe.objects.filter(pk=recipe.pk))
         self.assertListEqual(deleted_recipe, [])
 

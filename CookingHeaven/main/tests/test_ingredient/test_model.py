@@ -22,7 +22,6 @@ class IngredientModelTests(TestCase):
 
     VALID_RECIPE_DATA = {
         "name": "testrecipe",
-        "photo": "asd.jpg",
         "preparation_time": 1,
         "cooking_time": 1,
     }

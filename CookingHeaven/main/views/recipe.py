@@ -136,7 +136,8 @@ class RecipeDeleteView(
     success_url = reverse_lazy("dashboard")
 
     def form_valid(self, form):
-        cloudinary.uploader.destroy(self.object.photo.public_id, invalidate=True)
+        for recipe_photo in self.object.photos.all():
+            cloudinary.uploader.destroy(recipe_photo.photo.public_id, invalidate=True)
         return super(RecipeDeleteView, self).form_valid(form)
 
 

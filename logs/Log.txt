@@ -1306,3 +1306,21 @@ Watching for file changes with StatReloader
 /home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/forms.py changed, reloading.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /recipe/delete/11/ Excpetion: AttributeError("'Recipe' object has no attribute 'photo'")
+Watching for file changes with StatReloader
+Path: /recipe/delete/11/ Excpetion: AttributeError("'Recipe' object has no attribute 'photo'")
+Watching for file changes with StatReloader
+Path: /recipe/delete/11/ Excpetion: AttributeError("'Recipe' object has no attribute 'photo'")
+Path: /recipe/delete/11/ Excpetion: AttributeError("'Recipe' object has no attribute 'photo'")
+Watching for file changes with StatReloader
+Not Found: /favicon.ico

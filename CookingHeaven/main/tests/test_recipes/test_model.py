@@ -22,7 +22,6 @@ class RecipeModelTests(TestCase):
 
     VALID_RECIPE_DATA = {
         "name": "testrecipe",
-        "photo": "asd.jpg",
         "preparation_time": 1,
         "cooking_time": 1,
     }
@@ -56,7 +55,6 @@ class RecipeModelTests(TestCase):
         user, profile = self.__create_valid_user_and_profile()
         data = {
             "name": "testrecipe1",
-            "photo": "asd.jpg",
             "preparation_time": 1,
             "cooking_time": 1,
         }

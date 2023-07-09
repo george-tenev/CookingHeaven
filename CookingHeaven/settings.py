@@ -24,7 +24,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.postgres",
+
     "cloudinary",
+
     "CookingHeaven.main",
     "CookingHeaven.accounts",
 ]
@@ -154,6 +156,7 @@ AUTH_USER_MODEL = "accounts.CookingHeavenUser"
 LOGIN_REDIRECT_URL = reverse_lazy("home")
 LOGOUT_REDIRECT_URL = reverse_lazy("home")
 LOGIN_URL = reverse_lazy("login")
+
 cloudinary.config(
     cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME", None),
     api_key=os.getenv("CLOUDINARY_API_KEY", None),
