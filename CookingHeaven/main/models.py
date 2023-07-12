@@ -100,7 +100,6 @@ class Comment(models.Model):
         return False
 
 
-
 class RecipeCloudinaryField(cloudinary_models.CloudinaryField):
     def pre_save(self, model_instance, add):
         self.options.update({"folder": os.getenv("APP_ENVIRONMENT", "Development")})

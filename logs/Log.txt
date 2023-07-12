@@ -1324,3 +1324,12 @@ Path: /recipe/delete/11/ Excpetion: AttributeError("'Recipe' object has no attri
 Path: /recipe/delete/11/ Excpetion: AttributeError("'Recipe' object has no attribute 'photo'")
 Watching for file changes with StatReloader
 Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): api.cloudinary.com:443
+https://api.cloudinary.com:443 "POST /v1_1/dibhjxbxk/image/upload HTTP/1.1" 200 None
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader

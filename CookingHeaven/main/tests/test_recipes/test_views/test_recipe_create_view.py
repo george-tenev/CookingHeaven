@@ -87,6 +87,7 @@ class RecipeCreateTests(django_test.TestCase):
     def __create_photo(self, user, **recipe_data):
         recipe = Photo.objects.create(**recipe_data, publisher=user)
         return recipe
+
     def test_create_recipe__all_valid(self):
         self.__create_valid_user_and_profile()
         self.client.login(**self.VALID_USER_CREDENTIALS)

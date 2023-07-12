@@ -129,12 +129,12 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
 
-        fields = ['body', 'parent']
+        fields = ["body", "parent"]
 
         labels = {
-            'body': _(''),
+            "body": _(""),
         }
 
         widgets = {
-            'body': forms.TextInput(),
+            "body": forms.TextInput(),
         }

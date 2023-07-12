@@ -156,7 +156,6 @@ class RecipeDetailsView(views.DetailView):
             parent=None
         )  # all other comments are replies
 
-
         comment_form = CommentForm()
 
         data = {
@@ -171,20 +170,27 @@ class RecipeDetailsView(views.DetailView):
         return context
 
     def post(self, request, *args, **kwargs):
-        if self.request.method == 'POST':
-            print('-------------------------------------------------------------------------------Reached here')
+        if self.request.method == "POST":
+            print(
+                "-------------------------------------------------------------------------------Reached here"
+            )
             comment_form = CommentForm(self.request.POST)
             if comment_form.is_valid():
-                body = comment_form.cleaned_data['body']
+                body = comment_form.cleaned_data["body"]
                 try:
-                    parent = comment_form.cleaned_data['parent']
+                    parent = comment_form.cleaned_data["parent"]
                 except:
                     parent = None
 
-            new_comment = Comment(body=body, user=self.request.user, recipe=self.get_object(),
-                                  parent=parent)
+            new_comment = Comment(
+                body=body,
+                user=self.request.user,
+                recipe=self.get_object(),
+                parent=parent,
+            )
             new_comment.save()
             return redirect(self.request.path_info)
+
 
 class RecipeSearchView(views.ListView):
     model = Recipe
