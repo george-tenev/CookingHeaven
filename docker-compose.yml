@@ -1,0 +1,45 @@
+version: '3.4'
+
+services:
+#  web:
+#    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    restart: always
+#    ports:
+#      - "8000:8000"
+#    networks:
+#      - web_nw
+#    depends_on:
+#      - postgres
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: test
+    command: ["python", "manage.py", "test"]
+    networks:
+      - web_nw
+    depends_on:
+      - postgres
+
+  postgres:    
+    image: postgres
+    restart: always
+    networks:
+      - web_nw
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: 1123QwER
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+#    volumes:
+#      - ./postgresql:/var/lib/postgresql/data
+
+networks:
+  web_nw:
+    driver: bridge
