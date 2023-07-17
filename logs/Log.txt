@@ -1338,3 +1338,8 @@ Bad Request: /
 Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
 Bad Request: /favicon.ico
 Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Path: /accounts/details/1/ Excpetion: Http404('No profile found matching the query')

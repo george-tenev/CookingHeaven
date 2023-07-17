@@ -8,10 +8,7 @@ WORKDIR /app
 COPY . /app
 
 RUN pip install -r requirements.txt
-EXPOSE 5000
-
-FROM base as test
-CMD ["python", "manage.py", "test"]
+EXPOSE 8080
 
 FROM base as prod
-ENTRYPOINT ["gunicorn","--bind", ":8000", "CookingHeaven.wsgi"]
+ENTRYPOINT ["gunicorn","--bind", "0.0.0.0:8080", "CookingHeaven.wsgi"]
