@@ -7,6 +7,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("CookingHeaven.main.urls")),
     path("accounts/", include("CookingHeaven.accounts.urls")),
+    path('hitcount/', include(('hitcount.urls', 'hitcount'), namespace='hitcount')),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

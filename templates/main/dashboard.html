@@ -1,58 +1,60 @@
 {% extends 'base/base.html' %}
+{% load hitcount_tags %}
 {% block page_content %}
-    <div class="container p-5">
-        {% if recipes %}
-            <form action="." method="get">
-                {% csrf_token %}
-                <button class="btn btn-orange">Filter by category</button>
-            {{ filter_form }}
-            </form>
+<div class="container p-5">
+    {% if recipes %}
+    <form action="." method="get">
+        {% csrf_token %}
+        <button class="btn btn-orange">Filter by category</button>
+        {{ filter_form }}
+    </form>
 
-            <div class="row row-cols-1 row-cols-md-3 my-2 text-center">
-                {% for recipe in page_obj %}
-                <div class="col">
-                    <div class="card mb-4 rounded-3 shadow-sm">
-                        {% with recipe.photos.first as first_photo %}
-                                <img class="card-img-top card-image" src="{{ first_photo.photo.url }}" alt="Card image cap">
-                        {% endwith %}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ recipe.name }}</h5>
-                            {% if recipe.description %}
-                                <p class="card-text">{{ recipe.description }}</p>
-                            {% endif %}
-                            <a href="{% url 'recipe details' recipe.pk %}" class="btn btn-orange">View recipe</a>
-                        </div>
-                    </div>
+    <div class="row row-cols-1 row-cols-md-3 my-2 text-center">
+        {% for recipe in page_obj %}
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                {% with recipe.photos.first as first_photo %}
+                <img class="card-img-top card-image" src="{{ first_photo.photo.url }}" alt="Card image cap">
+                {% endwith %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ recipe.name }}</h5>
+                    {% if recipe.description %}
+                    <p class="card-text">{{ recipe.description }}</p>
+                    {% endif %}
+                    <p>Views: {% get_hit_count for recipe %}</p>
+                    <a href="{% url 'recipe details' recipe.pk %}" class="btn btn-orange">View recipe</a>
                 </div>
-                {% endfor %}
             </div>
-            <div class="pagination">
-    <span class="step-links">
-        {% if page_obj.has_previous %}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
             <a class="btn btn-orange" href="?page=1">&laquo; first</a>
             <a class="btn btn-orange" href="?page={{ page_obj.previous_page_number }}">previous</a>
-        {% endif %}
+            {% endif %}
 
-        <span class="current">
-            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-        </span>
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
 
-        {% if page_obj.has_next %}
+            {% if page_obj.has_next %}
             <a class="btn btn-orange" href="?page={{ page_obj.next_page_number }}">next</a>
             <a class="btn btn-orange" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-        {% endif %}
-    </span>
-            </div>
-        {% else %}
-            <div class="d-flex justify-content-center">
-                <h3>There are no Any Recipes</h3>
-            </div>
-            {% if request.user %}
-                <div class="d-flex justify-content-center pt-2">
-                    <a class="btn btn-orange" role="button" href="{% url 'recipe create' %} ">Add Recipe</a>
-                </div>
             {% endif %}
-        {% endif %}
+        </span>
     </div>
+    {% else %}
+    <div class="d-flex justify-content-center">
+        <h3>There are no Any Recipes</h3>
+    </div>
+    {% if request.user %}
+    <div class="d-flex justify-content-center pt-2">
+        <a class="btn btn-orange" role="button" href="{% url 'recipe create' %} ">Add Recipe</a>
+    </div>
+    {% endif %}
+    {% endif %}
+</div>
 
 {% endblock %}

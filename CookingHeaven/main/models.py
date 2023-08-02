@@ -1,13 +1,13 @@
 import os
 
 from cloudinary import models as cloudinary_models
+from hitcount.models import HitCountMixin, HitCount
+
+from django.contrib.contenttypes.fields import GenericRelation
 from django.contrib.auth import get_user_model
-from django.contrib.auth.base_user import AbstractBaseUser
-from django.contrib.auth.models import PermissionsMixin
 from django.core.validators import MinLengthValidator
 from django.db import models
 
-from CookingHeaven.accounts.models import CookingHeavenUser
 from CookingHeaven.common.validators import is_alpha, is_alpha_and_space
 
 UserModel = get_user_model()
@@ -25,7 +25,7 @@ class Category(models.Model):
         return self.name
 
 
-class Recipe(models.Model):
+class Recipe(models.Model, HitCountMixin):
     NAME_MIN_LENGTH = 2
     NAME_MAX_LENGTH = 50
 
@@ -58,6 +58,11 @@ class Recipe(models.Model):
         # null=True,
         blank=True,
         to=Category,
+    )
+
+    hit_count_generic = GenericRelation(
+        HitCount, object_id_field='object_pk',
+        related_query_name='hit_count_generic_relation'
     )
 
     created_at = models.DateTimeField(auto_now_add=True)

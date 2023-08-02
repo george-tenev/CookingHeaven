@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     "django.contrib.postgres",
 
     "cloudinary",
+    "hitcount",
 
     "CookingHeaven.main",
     "CookingHeaven.accounts",

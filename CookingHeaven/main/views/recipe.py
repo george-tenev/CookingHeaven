@@ -6,6 +6,7 @@ from django.shortcuts import redirect, get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.views import generic as views, View
 from django.views.generic.detail import SingleObjectMixin
+from hitcount.views import HitCountDetailView
 
 from CookingHeaven.main.forms import (
     IngredientFormset,
@@ -141,10 +142,11 @@ class RecipeDeleteView(
         return super(RecipeDeleteView, self).form_valid(form)
 
 
-class RecipeDetailsView(views.DetailView):
+class RecipeDetailsView(HitCountDetailView):
     model = Recipe
     template_name = "main/recipe_details.html"
     context_object_name = "recipe"
+    count_hit = True
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -165,6 +167,8 @@ class RecipeDetailsView(views.DetailView):
             "comments": comments,
             "replies": replies,
             "comment_form": comment_form,
+            'popular_recipes': Recipe.objects.order_by('-hit_count_generic__hits')[:3],
+
         }
         context.update(data)
         return context

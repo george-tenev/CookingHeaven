@@ -1343,3 +1343,12 @@ Not Found: /favicon.ico
 Watching for file changes with StatReloader
 Not Found: /favicon.ico
 Path: /accounts/details/1/ Excpetion: Http404('No profile found matching the query')
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /dashboard/ Excpetion: TemplateSyntaxError("Invalid block tag on line 23: 'get_hit_count', expected 'empty' or 'endfor'. Did you forget to register or load this tag?")
+Path: /recipe/details/12/ Excpetion: ValueError('Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f91669c2c50>>": "Comment.user" must be a "CookingHeavenUser" instance.')
+Path: /recipe/details/12/ Excpetion: ValueError('Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f91665a2680>>": "Comment.user" must be a "CookingHeavenUser" instance.')
