@@ -98,29 +98,19 @@
                         {% if user.is_authenticated %}
                         <form action="" method="POST" id="main_form" class="comment_form">
                             <div class="d-flex pt-3 pb-2">
-                                <label for="comment">Type Comment here</label>
-                        {{ comment_form.body }} {% csrf_token %} <input type="submit" value="Post">
-                    </div>
-                </form>
+                                <label for="comment" class="form-label"> Comment </label>
+                                {{ comment_form.body }} {% csrf_token %} <input  type="submit" value="Post">
+                            </div>
+                        </form>
                 {% else %}
                 <h2>You need to login to comment</h2>
                 {% endif %}
-                <ul class="list-group-flush">
+                        <ul class="list-group-flush">
                     {% for comment in comments %}
-                    <li class="list-group-item bg-custom-green text-white">
+                            <li class="list-group-item bg-custom-green text-white">
                         {% if comment.is_parent %}
-                            <div class="d-flex py-2">
+                            <div class="flex-grow-1 flex-shrink-1">
                                 <h3> <b>{{ comment.user }} : </b> {{ comment.body }}</h3>
-                                {% if user.is_authenticated %}
-                                <form action="" method="POST" class="comment_form">
-                                    <div>
-                                        <label for="comment">Reply here</label>
-                                        <input type="text" name="body">
-                                        <input type="hidden" value="{{ comment.pk }}" name="parent"> {% csrf_token %}
-                                        <input type="submit" value="Post">
-                                    </div>
-                                </form>
-                                {% endif %}
                                 {% endif %}
                                 <ul class="list-group-flush">
                                 {% for replies in comment.children %}
@@ -129,6 +119,16 @@
                                     </li>
                                 {% endfor %}
                                 </ul>
+                                {% if user.is_authenticated %}
+                                <form action="" method="POST" class="comment_form">
+                                    <div class="mt-1">
+                                        <label for="comment">Reply here</label>
+                                        <input type="text" name="body">
+                                        <input type="hidden" value="{{ comment.pk }}" name="parent"> {% csrf_token %}
+                                        <input type="submit" value="Post">
+                                    </div>
+                                </form>
+                                {% endif %}
                             </div>
                     </li>
                     {% endfor %}
@@ -139,3 +139,4 @@
         </div>
     </section>
 {% endblock %}
+
