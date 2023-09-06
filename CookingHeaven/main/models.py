@@ -5,7 +5,8 @@ from hitcount.models import HitCountMixin, HitCount
 
 from django.contrib.contenttypes.fields import GenericRelation
 from django.contrib.auth import get_user_model
-from django.core.validators import MinLengthValidator
+from django.core.validators import (MinLengthValidator, MinValueValidator)
+
 from django.db import models
 
 from CookingHeaven.common.validators import is_alpha, is_alpha_and_space
@@ -141,12 +142,13 @@ class Unit(models.Model):
 
 class Ingredient(models.Model):
     NAME_MAX_LENGTH = 50
+    AMOUNT_MIN_VAALUE = 0.0
 
     name = models.CharField(
         max_length=NAME_MAX_LENGTH,
         validators=[is_alpha_and_space],
     )
-    amount = models.PositiveIntegerField()
+    amount = models.FloatField(validators=[MinValueValidator(AMOUNT_MIN_VAALUE)])
 
     unit = models.ForeignKey(blank=True, null=True, to=Unit, on_delete=models.PROTECT)
 

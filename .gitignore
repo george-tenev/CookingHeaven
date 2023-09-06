@@ -132,3 +132,5 @@ postgresql/
 
 # logs
 logs/
+
+Log.txt

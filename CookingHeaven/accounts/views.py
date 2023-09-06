@@ -130,6 +130,7 @@ class AdminUserUpdateView(
     form_class = AdminUserUpdateForm
     context_object_name = "profile"
     permission_required = "accounts.change_cookingheavenuser"
+    success_url = reverse_lazy("home")
 
 
 class ProfileListView(PermissionRequiredMixin, views.ListView):

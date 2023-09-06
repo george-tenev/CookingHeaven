@@ -167,17 +167,12 @@ class RecipeDetailsView(HitCountDetailView):
             "comments": comments,
             "replies": replies,
             "comment_form": comment_form,
-            'popular_recipes': Recipe.objects.order_by('-hit_count_generic__hits')[:3],
-
         }
         context.update(data)
         return context
 
     def post(self, request, *args, **kwargs):
         if self.request.method == "POST":
-            print(
-                "-------------------------------------------------------------------------------Reached here"
-            )
             comment_form = CommentForm(self.request.POST)
             if comment_form.is_valid():
                 body = comment_form.cleaned_data["body"]

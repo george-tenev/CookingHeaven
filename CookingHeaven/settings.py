@@ -14,8 +14,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY", "sk")
 
 DEBUG = os.getenv("DEBUG", "True") == "True"
+
 APP_ENVIRONMENT = os.getenv("APP_ENVIRONMENT", "Development")
+
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "127.0.0.1 localhost 0.0.0.0").split(" ")
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -27,6 +30,7 @@ INSTALLED_APPS = [
 
     "cloudinary",
     "hitcount",
+    "django_extensions",
 
     "CookingHeaven.main",
     "CookingHeaven.accounts",
@@ -76,6 +80,7 @@ DATABASES = {
 }
 
 AUTH_PASSWORD_VALIDATORS = []
+
 if is_production():
     AUTH_PASSWORD_VALIDATORS.extend(
         [
@@ -163,3 +168,7 @@ cloudinary.config(
     api_key=os.getenv("CLOUDINARY_API_KEY", None),
     api_secret=os.getenv("CLOUDINARY_API_SECRET", None),
 )
+
+GRAPH_MODELS ={
+    'app_labels': ["main", "accounts"],
+}

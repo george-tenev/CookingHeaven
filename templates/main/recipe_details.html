@@ -13,7 +13,6 @@
                             </div>
                             {% endfor %}
                         </div>
-
                         <!-- Left and right controls/icons -->
                         <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
@@ -40,6 +39,9 @@
                         {% for category in categories %}
                             <li class="list-inline-item">{{ category }}</li>
                         {% endfor %}
+                        <li><h4 class="d-inline ">Preparation time: </h4>{{ recipe.preparation_time }} minutes</li>
+                        <li><h4 class="d-inline ">Cooking time: </h4>{{ recipe.cooking_time }} minutes</li>
+
                     </ul>
 
                     <h1 class="display-5 fw-bolder">{{ recipe.name }}</h1>
@@ -68,7 +70,7 @@
                         <ul class="list-group-flush">
                             {% for ingredient in ingredients %}
                                 <li class="list-group-item bg-custom-green text-white">
-                                    {{ ingredient.name }} {{ ingredient.amount }} {{ ingredient.unit.name }}
+                                    <b>{{ ingredient.amount }} {{ ingredient.unit.name }}</b> {{ ingredient.name }}
                                 </li>
                             {% endfor %}
                         </ul>
@@ -113,9 +115,9 @@
                                 <h3> <b>{{ comment.user }} : </b> {{ comment.body }}</h3>
                                 {% endif %}
                                 <ul class="list-group-flush">
-                                {% for replies in comment.children %}
+                                {% for reply in comment.children %}
                                     <li class="list-group-item bg-light-orange text-white">
-                                        <h5> <b>{{ comment.user }} : </b> {{ replies.body }}</h5>
+                                        <h5> <b>{{ reply.user }} : </b> {{ reply.body }}</h5>
                                     </li>
                                 {% endfor %}
                                 </ul>
