@@ -32,10 +32,15 @@ class CookingHeavenUser(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(
         auto_now_add=True,
     )
+    is_active = models.BooleanField(default=True)
 
     USERNAME_FIELD = "username"
     EMAIL_FIELD = "email"
     objects = CookingHeavenUsersManager()
+
+    # @property
+    # def is_active(self):
+    #     return self.active
 
 
 class Profile(models.Model):

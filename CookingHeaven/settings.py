@@ -27,11 +27,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.postgres",
-
     "cloudinary",
     "hitcount",
     "django_extensions",
-
     "CookingHeaven.main",
     "CookingHeaven.accounts",
 ]
@@ -107,7 +105,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # STATIC_ROOT = BASE_DIR /'staticfiles'
 STATIC_URL = "/static/"
 
@@ -117,7 +114,6 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
 
 LOGGING_LEVEL = "DEBUG"
 
@@ -132,7 +128,6 @@ try:
     os.mkdir(LOGS_DIR)
 except:
     pass
-
 
 LOGGING = {
     "version": 1,
@@ -156,7 +151,6 @@ LOGGING = {
     },
 }
 
-
 AUTH_USER_MODEL = "accounts.CookingHeavenUser"
 
 LOGIN_REDIRECT_URL = reverse_lazy("home")
@@ -169,6 +163,13 @@ cloudinary.config(
     api_secret=os.getenv("CLOUDINARY_API_SECRET", None),
 )
 
-GRAPH_MODELS ={
-    'app_labels': ["main", "accounts"],
+GRAPH_MODELS = {
+    "app_labels": ["main", "accounts"],
 }
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.elasticemail.com"
+EMAIL_HOST_PORT = 465
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "georgiev.georgi1999@gmail.com"
+EMAIL_HOST_PASSWORD = "0FB176558472F01794F3A91923E1D07F881C"
+DEFAULT_FROM_EMAIL = 'georgiev.georgi1999@gmail.com'

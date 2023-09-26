@@ -5,15 +5,16 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main', '0026_delete_like'),
+        ("main", "0026_delete_like"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='ingredient',
-            name='amount',
-            field=models.FloatField(validators=[django.core.validators.MinValueValidator(0.0)]),
+            model_name="ingredient",
+            name="amount",
+            field=models.FloatField(
+                validators=[django.core.validators.MinValueValidator(0.0)]
+            ),
         ),
     ]

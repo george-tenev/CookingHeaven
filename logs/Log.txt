@@ -1352,3 +1352,108 @@ Watching for file changes with StatReloader
 Path: /dashboard/ Excpetion: TemplateSyntaxError("Invalid block tag on line 23: 'get_hit_count', expected 'empty' or 'endfor'. Did you forget to register or load this tag?")
 Path: /recipe/details/12/ Excpetion: ValueError('Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f91669c2c50>>": "Comment.user" must be a "CookingHeavenUser" instance.')
 Path: /recipe/details/12/ Excpetion: ValueError('Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f91665a2680>>": "Comment.user" must be a "CookingHeavenUser" instance.')
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Not Found: /accounts/password_reset
+Not Found: /accounts/password_reset/1
+Not Found: /accounts/password_reset/2
+Not Found: /accounts/password_reset/done/
+Not Found: /accounts/password_rest/
+Not Found: /accounts/password_reset/
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /accounts/password_rest/
+Not Found: /accounts/password_reset/
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: TemplateDoesNotExist('users/password_reset.html')
+Watching for file changes with StatReloader
+Not Found: /password-reset/
+Not Found: /password-reset/
+Path: /accounts/password-reset/ Excpetion: TemplateDoesNotExist('users/password_reset.html')
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /accounts/reset-password/
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: TemplateSyntaxError("Invalid block tag on line 21: 'endblock', expected 'endblock' or 'endblock page_content'. Did you forget to register or load this tag?")
+Not Found: /accounts/passowrd-reset/
+Path: /accounts/password-reset/ Excpetion: FieldError("Cannot resolve keyword 'is_active' into field. Choices are: comment, date_joined, email, groups, hit, id, is_staff, is_superuser, last_login, logentry, password, profile, recipe, recipe_likes_set, user_permissions, username")
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: FieldError("Cannot resolve keyword 'is_active' into field. Choices are: comment, date_joined, email, groups, hit, id, is_staff, is_superuser, last_login, logentry, password, profile, recipe, recipe_likes_set, user_permissions, username")
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: FieldError("Cannot resolve keyword 'is_active' into field. Choices are: comment, date_joined, email, groups, hit, id, is_staff, is_superuser, last_login, logentry, password, profile, recipe, recipe_likes_set, user_permissions, username")
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/models.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: FieldError("Cannot resolve keyword 'is_active' into field. Choices are: comment, date_joined, email, groups, hit, id, is_staff, is_superuser, last_login, logentry, password, profile, recipe, recipe_likes_set, user_permissions, username")
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: FieldError("Cannot resolve keyword 'is_active' into field. Choices are: comment, date_joined, email, groups, hit, id, is_staff, is_superuser, last_login, logentry, password, profile, recipe, recipe_likes_set, user_permissions, username")
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: FieldError("Cannot resolve keyword 'is_active' into field. Choices are: comment, date_joined, email, groups, hit, id, is_staff, is_superuser, last_login, logentry, password, profile, recipe, recipe_likes_set, user_permissions, username")
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: FieldError("Cannot resolve keyword 'is_active' into field. Choices are: comment, date_joined, email, groups, hit, id, is_staff, is_superuser, last_login, logentry, password, profile, recipe, recipe_likes_set, user_permissions, username")
+Path: /accounts/password-reset/ Excpetion: FieldError("Cannot resolve keyword 'is_active' into field. Choices are: comment, date_joined, email, groups, hit, id, is_staff, is_superuser, last_login, logentry, password, profile, recipe, recipe_likes_set, user_permissions, username")
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: FieldError("Cannot resolve keyword 'is_active' into field. Choices are: active, comment, date_joined, email, groups, hit, id, is_staff, is_superuser, last_login, logentry, password, profile, recipe, recipe_likes_set, user_permissions, username")
+Watching for file changes with StatReloader
+Forbidden (CSRF token from POST incorrect.): /accounts/password-reset/
+Path: /accounts/password-reset/ Excpetion: FieldError("Cannot resolve keyword 'is_active' into field. Choices are: active, comment, date_joined, email, groups, hit, id, is_staff, is_superuser, last_login, logentry, password, profile, recipe, recipe_likes_set, user_permissions, username")
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: FieldError("Cannot resolve keyword 'is_active' into field. Choices are: active, comment, date_joined, email, groups, hit, id, is_staff, is_superuser, last_login, logentry, password, profile, recipe, recipe_likes_set, user_permissions, username")
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/accounts/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: SMTPSenderRefused(553, b"Envelope FROM 'webmaster@localhost' email address not allowed.", 'webmaster@localhost')
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1007)')
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1007)')
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1007)')
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/ Excpetion: SMTPSenderRefused(553, b"Envelope FROM 'webmaster@localhost' email address not allowed.", 'webmaster@localhost')
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/password-reset/done/ Excpetion: TemplateDoesNotExist('accounts/password_reset_done.html')
+Not Found: /accounts/password_reset_done.html
+Not Found: /accounts/password_reset_done
+Not Found: /accounts/password_reset/done
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
+Watching for file changes with StatReloader

@@ -5,7 +5,7 @@ from hitcount.models import HitCountMixin, HitCount
 
 from django.contrib.contenttypes.fields import GenericRelation
 from django.contrib.auth import get_user_model
-from django.core.validators import (MinLengthValidator, MinValueValidator)
+from django.core.validators import MinLengthValidator, MinValueValidator
 
 from django.db import models
 
@@ -62,8 +62,9 @@ class Recipe(models.Model, HitCountMixin):
     )
 
     hit_count_generic = GenericRelation(
-        HitCount, object_id_field='object_pk',
-        related_query_name='hit_count_generic_relation'
+        HitCount,
+        object_id_field="object_pk",
+        related_query_name="hit_count_generic_relation",
     )
 
     created_at = models.DateTimeField(auto_now_add=True)
