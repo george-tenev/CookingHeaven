@@ -1,6 +1,9 @@
 import os
+import cloudinary
 
 from cloudinary import models as cloudinary_models
+from django.db.models.signals import pre_delete
+from django.dispatch import receiver
 from hitcount.models import HitCountMixin, HitCount
 
 from django.contrib.contenttypes.fields import GenericRelation
@@ -120,6 +123,11 @@ class RecipePhoto(models.Model):
         on_delete=models.CASCADE,
         related_name="photos",
     )
+
+
+@receiver(pre_delete, sender=RecipePhoto)
+def photo_delete(sender, instance, **kwargs):
+    cloudinary.uploader.destroy(instance.photo.public_id)
 
 
 class RecipeStep(models.Model):

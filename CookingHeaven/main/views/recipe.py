@@ -129,7 +129,6 @@ class RecipeUpdateView(
         self.object = self.get_object()
         return super().post(request, *args, **kwargs)
 
-
 class RecipeDeleteView(
     LoginRequiredMixin, RecipeCheckCorrectUserMixin, views.DeleteView
 ):

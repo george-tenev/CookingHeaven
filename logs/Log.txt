@@ -1457,3 +1457,31 @@ Not Found: /accounts/password_reset_done
 Not Found: /accounts/password_reset/done
 /home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/settings.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Not Found: /accounts/password-reset/complete
+Not Found: /accounts/password-reset/confirm/
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/views/recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/views/recipe.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/views/recipe.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/views/recipe.py changed, reloading.
+Watching for file changes with StatReloader
+Connection pool is full, discarding connection: api.cloudinary.com. Connection pool size: 1
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Path: /recipe/update/16/ Excpetion: AttributeError("'RecipePhoto' object has no attribute 'image'")
+Watching for file changes with StatReloader
+Path: /recipe/update/16/ Excpetion: AttributeError("'RecipePhoto' object has no attribute 'image'")
+/home/ontotext/Diplomna_rabota/CookingHeaven/CookingHeaven/main/models.py changed, reloading.
+Watching for file changes with StatReloader
+Path: /accounts/details/1/ Excpetion: Http404('No profile found matching the query')
+Path: /accounts/details/1/ Excpetion: Http404('No profile found matching the query')
